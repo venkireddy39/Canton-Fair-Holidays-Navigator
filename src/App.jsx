@@ -8,6 +8,7 @@ import LocationMap from './components/LocationMap';
 import WhyChooseUs from './components/WhyChooseUs';
 import ContactCTA from './components/ContactCTA';
 import Chatbot from './components/Chatbot';
+import { AnimatePresence } from 'framer-motion';
 import BookingModal from './components/BookingModal';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import './App.css';
@@ -16,11 +17,13 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = (e) => {
-    if (e) e.preventDefault();
+    console.log("Opening Modal...");
+    if (e && e.preventDefault) e.preventDefault();
     setIsModalOpen(true);
   };
 
   const handleCloseModal = () => {
+    console.log("Closing Modal...");
     setIsModalOpen(false);
   };
 
@@ -28,7 +31,7 @@ function App() {
     <div className="app">
       <Header onBookNow={handleOpenModal} />
       <main>
-        <Hero />
+        <Hero onBookNow={handleOpenModal} />
         <PackageOverview onBookNow={handleOpenModal} />
         <Services />
         <PhaseTimeline />
@@ -50,7 +53,9 @@ function App() {
       <FloatingWhatsApp />
 
       {/* Booking Modal */}
-      <BookingModal isOpen={isModalOpen} onClose={handleCloseModal} />
+      {isModalOpen && (
+        <BookingModal onClose={handleCloseModal} />
+      )}
     </div>
   );
 }

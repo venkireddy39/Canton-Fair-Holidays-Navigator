@@ -45,7 +45,18 @@ const PackageOverview = ({ onBookNow }) => {
             <h3 style={{ fontSize: '24px', color: 'var(--text-light)' }}>All-Inclusive Package</h3>
             <div className="price-value">INR 35,000/-</div>
             <p style={{ color: 'var(--text-muted)', marginBottom: '30px' }}>Per Person on Twin Sharing</p>
-            <button onClick={onBookNow} className="cta-button" style={{ justifyContent: 'center', border: 'none', cursor: 'pointer', width: '100%' }}>
+            <button 
+              onClick={() => onBookNow()} 
+              className="cta-button" 
+              style={{ 
+                justifyContent: 'center', 
+                border: 'none', 
+                cursor: 'pointer', 
+                width: '100%',
+                display: 'flex',
+                alignItems: 'center'
+              }}
+            >
               Secure Your Spot
             </button>
           </motion.div>

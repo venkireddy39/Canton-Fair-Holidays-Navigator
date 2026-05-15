@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, MapPin } from 'lucide-react';
 
-const Hero = () => {
+const Hero = ({ onBookNow }) => {
   return (
     <section className="hero">
       <div className="container">
@@ -20,9 +20,16 @@ const Hero = () => {
             <a href="#overview" className="cta-button" style={{ padding: '16px 32px', fontSize: '18px' }}>
               View Package Details
             </a>
-            <a href="#contact" className="outline-button">
-              Contact Us
-            </a>
+            <button 
+              onClick={(e) => {
+                e.preventDefault();
+                onBookNow();
+              }} 
+              className="outline-button"
+              style={{ background: 'transparent', cursor: 'pointer', fontSize: '16px' }}
+            >
+              Secure Spot Now
+            </button>
           </div>
 
           <motion.div 
