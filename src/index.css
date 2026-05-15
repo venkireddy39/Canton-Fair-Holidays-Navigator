@@ -1,0 +1,68 @@
+:root {
+  --primary-blue: #0A192F;
+  --secondary-blue: #112240;
+  --accent-gold: #FFD700;
+  --accent-green: #00B4D8;
+  --text-light: #E6F1FF;
+  --text-muted: #8892B0;
+  --bg-dark: #020C1B;
+  
+  --font-sans: 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--text-light);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: var(--font-sans);
+}
+
+.glass-card {
+  background: rgba(17, 34, 64, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--accent-gold), var(--accent-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}

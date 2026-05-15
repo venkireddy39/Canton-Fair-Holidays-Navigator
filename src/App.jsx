@@ -1,0 +1,58 @@
+import React, { useState } from 'react';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import PackageOverview from './components/PackageOverview';
+import Services from './components/Services';
+import PhaseTimeline from './components/PhaseTimeline';
+import LocationMap from './components/LocationMap';
+import WhyChooseUs from './components/WhyChooseUs';
+import ContactCTA from './components/ContactCTA';
+import Chatbot from './components/Chatbot';
+import BookingModal from './components/BookingModal';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
+import './App.css';
+
+function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = (e) => {
+    if (e) e.preventDefault();
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
+  return (
+    <div className="app">
+      <Header onBookNow={handleOpenModal} />
+      <main>
+        <Hero />
+        <PackageOverview onBookNow={handleOpenModal} />
+        <Services />
+        <PhaseTimeline />
+        <WhyChooseUs />
+        <LocationMap />
+        <ContactCTA />
+      </main>
+
+      <footer style={{ padding: '20px 0', textAlign: 'center', background: 'var(--bg-dark)', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+        <p style={{ color: 'var(--text-muted)' }}>
+          &copy; {new Date().getFullYear()} Holidays Navigator. All Rights Reserved.
+        </p>
+      </footer>
+
+      {/* Floating Chatbot (Left) */}
+      <Chatbot />
+
+      {/* Floating WhatsApp (Right) */}
+      <FloatingWhatsApp />
+
+      {/* Booking Modal */}
+      <BookingModal isOpen={isModalOpen} onClose={handleCloseModal} />
+    </div>
+  );
+}
+
+export default App;
