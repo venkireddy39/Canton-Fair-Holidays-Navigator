@@ -12,10 +12,17 @@ const InquiryModal = ({ isOpen, onClose, onSubmitSuccess }) => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  // Prevent background scrolling when modal is active
+  // Prevent background scrolling and play chime sound when modal is active
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+
+      // Play premium notification chime sound
+      const audio = new Audio('/sound.wav');
+      audio.volume = 0.4; // Set a pleasant, non-startling volume level
+      audio.play().catch((err) => {
+        console.warn("Audio autoplay blocked by browser autoplay policy. User interaction is required first.", err);
+      });
     }
     return () => {
       document.body.style.overflow = 'unset';
