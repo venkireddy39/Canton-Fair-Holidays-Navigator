@@ -40,8 +40,8 @@ const Header = ({ onBookNow }) => {
           <a href="#timeline">Phases</a>
           <a href="#products">Products</a>
           <a href="#markets">Guangzhou Markets</a>
-          <a href="#visa">Visa</a>
           <a href="#packages">Packages</a>
+          <a href="#services">Our services</a>
           <a href="#faq">FAQ</a>
           <a href="#contact">Contact</a>
         </nav>

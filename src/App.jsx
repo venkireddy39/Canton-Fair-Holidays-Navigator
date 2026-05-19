@@ -14,57 +14,11 @@ import ContactCTA from './components/ContactCTA';
 import Chatbot from './components/Chatbot';
 import { AnimatePresence } from 'framer-motion';
 import BookingModal from './components/BookingModal';
-import InquiryModal from './components/InquiryModal';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import './App.css';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isInquiryOpen, setIsInquiryOpen] = useState(false);
-  const [hasSubmittedInquiry, setHasSubmittedInquiry] = useState(false);
-  const [inquiryCloseCount, setInquiryCloseCount] = useState(0); // Track close counts
-
-  // Initial 10-second auto-trigger on page visit
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      if (!isModalOpen) {
-        setIsInquiryOpen(true);
-      }
-    }, 10000); // 10 seconds initial delay
-    return () => clearTimeout(timer);
-  }, []);
-
-  const handleCloseInquiry = () => {
-    setIsInquiryOpen(false);
-
-    // If they closed without submitting, pop it up again after progressively longer delays!
-    if (!hasSubmittedInquiry) {
-      // Progressive delay logic:
-      // - 1st Close (closeCount 0) -> 5 seconds
-      // - 2nd Close (closeCount 1) -> 10 seconds
-      // - 3rd Close and onwards (closeCount >= 2) -> 15 seconds
-      let delay = 5000;
-      if (inquiryCloseCount === 1) {
-        delay = 10000;
-      } else if (inquiryCloseCount >= 2) {
-        delay = 15000;
-      }
-
-      setTimeout(() => {
-        // Double check they haven't submitted or opened the booking modal in the meantime
-        if (!hasSubmittedInquiry && !isModalOpen) {
-          setIsInquiryOpen(true);
-        }
-      }, delay);
-
-      // Increment close count for the next close event
-      setInquiryCloseCount((prev) => prev + 1);
-    }
-  };
-
-  const handleInquirySubmitSuccess = () => {
-    setHasSubmittedInquiry(true);
-  };
 
   const handleOpenModal = (e) => {
     console.log("Opening Modal...");
@@ -83,14 +37,14 @@ function App() {
       <main>
         <Hero onBookNow={handleOpenModal} />
         <AboutFair />
-        <PhaseTimeline />
+        <PhaseTimeline onBookNow={handleOpenModal} />
         <Products />
         <GuangzhouMarkets />
         <PackageOverview onBookNow={handleOpenModal} />
         <Services />
         <WhyChooseUs />
-        <LocationMap />
         <FAQ />
+        <LocationMap />
         <ContactCTA />
       </main>
 
@@ -110,13 +64,6 @@ function App() {
       {isModalOpen && (
         <BookingModal onClose={handleCloseModal} />
       )}
-
-      {/* Inquiry Modal (10s Auto-trigger) */}
-      <InquiryModal 
-        isOpen={isInquiryOpen} 
-        onClose={handleCloseInquiry} 
-        onSubmitSuccess={handleInquirySubmitSuccess} 
-      />
     </div>
   );
 }
