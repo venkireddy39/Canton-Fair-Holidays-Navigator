@@ -9,6 +9,7 @@
 section {
   padding: 80px 0;
   position: relative;
+  scroll-margin-top: 80px; /* Prevent sticky header overlap */
 }
 
 /* Premium Header */
@@ -19,7 +20,7 @@ section {
   width: 100%;
   z-index: 100;
   transition: all 0.3s ease;
-  padding: 20px 0;
+  padding: 12px 0; /* Decreased to reduce navbar height */
   background: transparent;
 }
 
@@ -27,7 +28,7 @@ section {
   background: rgba(2, 12, 27, 0.9);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 15px 0;
+  padding: 8px 0; /* Decreased to reduce navbar height */
 }
 
 .header .container {
@@ -51,13 +52,14 @@ section {
 
 .nav-links {
   display: flex;
-  gap: 30px;
+  gap: 15px;
 }
 
 .nav-links a {
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 600;
   transition: color 0.3s ease;
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -87,7 +89,7 @@ section {
   display: flex;
   align-items: center;
   position: relative;
-  background: url('https://images.unsplash.com/photo-1548345680-f5475ea90f14?auto=format&fit=crop&q=80') center/cover;
+  background: url('/cantonimg.png') center/cover;
 }
 
 .hero::before {
@@ -113,17 +115,18 @@ section {
   display: block;
 }
 
-.hero h2 {
-  font-size: 64px;
+.hero h1 {
+  font-size: 72px; /* Increased size to make it grand and premium */
   line-height: 1.1;
   margin-bottom: 24px;
+  font-weight: 800;
 }
 
 .hero p {
-  font-size: 20px;
+  font-size: 21px; /* Increased from 20px */
   color: var(--text-muted);
   margin-bottom: 40px;
-  max-width: 600px;
+  max-width: 650px; /* Increased from 600px */
 }
 
 .hero-buttons {
@@ -213,6 +216,14 @@ section {
 
 .detail-icon {
   color: var(--accent-green);
+}
+
+/* About Fair Section */
+.about-fair-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 50px;
+  align-items: center;
 }
 
 /* Services Section */
@@ -396,19 +407,20 @@ section {
 /* Responsive */
 @media (max-width: 1024px) {
   section { padding: 60px 0; }
-  .hero h2 { font-size: 52px; }
+  .hero h1 { font-size: 56px; }
   .overview-details h3 { font-size: 30px; }
   .section-header h2 { font-size: 34px; }
   .features-grid { gap: 20px; }
   .price-value { font-size: 40px; }
   .timeline-content { width: 45%; padding: 15px; }
+  .about-fair-grid { grid-template-columns: 1fr; gap: 40px; }
 }
 
 @media (max-width: 768px) {
   section { padding: 50px 0; }
   .nav-links { display: none; }
-  .hero h2 { font-size: 40px; word-wrap: break-word; }
-  .hero p { font-size: 18px; }
+  .hero h1 { font-size: 44px; word-wrap: break-word; }
+  .hero p { font-size: 19px; }
   .hero-highlights { flex-direction: column; gap: 15px !important; }
   
   .overview-grid { grid-template-columns: 1fr; gap: 30px; }
@@ -433,7 +445,7 @@ section {
 @media (max-width: 480px) {
   section { padding: 40px 0; }
   .hero { min-height: auto; padding-top: 120px; padding-bottom: 60px; }
-  .hero h2 { font-size: 32px; }
+  .hero h1 { font-size: 36px; }
   .hero-buttons { flex-direction: column; width: 100%; }
   .hero-buttons .cta-button, .hero-buttons .outline-button { 
     width: 100%; 

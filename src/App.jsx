@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import AboutFair from './components/AboutFair';
 import PackageOverview from './components/PackageOverview';
 import Services from './components/Services';
 import PhaseTimeline from './components/PhaseTimeline';
+import Products from './components/Products';
+import GuangzhouMarkets from './components/GuangzhouMarkets';
+import FAQ from './components/FAQ';
 import LocationMap from './components/LocationMap';
 import WhyChooseUs from './components/WhyChooseUs';
 import ContactCTA from './components/ContactCTA';
@@ -32,11 +36,15 @@ function App() {
       <Header onBookNow={handleOpenModal} />
       <main>
         <Hero onBookNow={handleOpenModal} />
+        <AboutFair />
+        <PhaseTimeline />
+        <Products />
+        <GuangzhouMarkets />
         <PackageOverview onBookNow={handleOpenModal} />
         <Services />
-        <PhaseTimeline />
         <WhyChooseUs />
         <LocationMap />
+        <FAQ />
         <ContactCTA />
       </main>
 

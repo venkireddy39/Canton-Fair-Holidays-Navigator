@@ -4,35 +4,35 @@ import { Calendar, MapPin } from 'lucide-react';
 
 const Hero = ({ onBookNow }) => {
   return (
-    <section className="hero">
+    <section id="home" className="hero">
       <div className="container">
-        <motion.div 
+        <motion.div
           className="hero-content"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           <span className="hero-subtitle">Entrepreneur Travel Package</span>
-          <h1>Canton Fair 139 <br /><span className="gradient-text">2026 Edition</span></h1>
+          <h1>Canton Fair 140 <br /><span className="gradient-text">2026 Edition</span></h1>
           <p>Join the world's largest trade fair. Experience seamless business travel with our all-inclusive premium package designed exclusively for entrepreneurs and business professionals.</p>
-          
+
           <div className="hero-buttons">
-            <a href="#overview" className="cta-button" style={{ padding: '16px 32px', fontSize: '18px' }}>
+            <a href="#packages" className="cta-button" style={{ padding: '16px 32px', fontSize: '18px' }}>
               View Package Details
             </a>
-            <button 
+            <button
               onClick={(e) => {
                 e.preventDefault();
                 onBookNow();
-              }} 
+              }}
               className="outline-button"
-              style={{ background: 'transparent', cursor: 'pointer', fontSize: '16px' }}
+              style={{ background: 'transparent', cursor: 'pointer', fontSize: '18px' }}
             >
               Secure Spot Now
             </button>
           </div>
 
-          <motion.div 
+          <motion.div
             className="hero-highlights"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

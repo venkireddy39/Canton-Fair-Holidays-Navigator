@@ -4,7 +4,7 @@ import { Clock, CheckCircle2, ShieldCheck } from 'lucide-react';
 
 const PackageOverview = ({ onBookNow }) => {
   return (
-    <section id="overview" style={{ background: 'var(--secondary-blue)' }}>
+    <section id="packages" style={{ background: 'var(--secondary-blue)' }}>
       <div className="container">
         <div className="overview-grid">
           <motion.div 

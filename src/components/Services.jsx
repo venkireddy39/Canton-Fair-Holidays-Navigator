@@ -24,6 +24,7 @@ const Services = () => {
           {services.map((service, index) => (
             <motion.div 
               key={index} 
+              id={service.title === "Visa Processing" ? "visa" : undefined}
               className="glass-card service-card"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

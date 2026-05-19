@@ -25,22 +25,25 @@ const Header = ({ onBookNow }) => {
   return (
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <div className="logo" style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-          <img src="/logo.jpeg" alt="Holidays Navigator Logo" style={{ height: '40px', width: 'auto' }} />
-          <h1 style={{ fontSize: '24px', margin: 0, display: 'flex', flexDirection: 'column' }}>
-            Holidays Navigator
-            <span style={{ fontSize: '14px', fontFamily: 'var(--font-sans)', color: 'var(--accent-gold)' }}>Premium Travel Experiences</span>
-          </h1>
+        <div className="logo" style={{ position: 'relative', width: '120px', height: '45px', display: 'flex', alignItems: 'center' }}>
+          <img
+            src="/nobg.png"
+            alt="Holidays Navigator Logo"
+            style={{ height: '85px', width: 'auto', display: 'block', position: 'absolute', top: '-40px', left: '-40px' }}
+          />
         </div>
 
         {/* Desktop Nav */}
         <nav className="nav-links desktop-nav">
-          <a href="#overview">Overview</a>
-          <a href="#services">Includes</a>
+          <a href="#home" className="home-link">Home</a>
+          <a href="#about-fair">Canton Fair</a>
           <a href="#timeline">Phases</a>
-
-          <a href="#why-us">Why Us</a>
-          <a href="#location">Location</a>
+          <a href="#products">Products</a>
+          <a href="#markets">Guangzhou Markets</a>
+          <a href="#visa">Visa</a>
+          <a href="#packages">Packages</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
         </nav>
 
         <button onClick={onBookNow} className="cta-button desktop-cta" style={{ border: 'none', cursor: 'pointer' }}>
@@ -57,16 +60,20 @@ const Header = ({ onBookNow }) => {
       {/* Mobile Menu Overlay */}
       <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
         <nav className="mobile-nav-links">
-          <a href="#overview" onClick={closeMenu}>Overview</a>
-          <a href="#services" onClick={closeMenu}>Includes</a>
+          <a href="#home" onClick={closeMenu}>Home</a>
+          <a href="#about-fair" onClick={closeMenu}>Canton Fair</a>
           <a href="#timeline" onClick={closeMenu}>Phases</a>
-          <a href="#location" onClick={closeMenu}>Location</a>
-          <a href="#why-us" onClick={closeMenu}>Why Us</a>
-          <button 
+          <a href="#products" onClick={closeMenu}>Products</a>
+          <a href="#markets" onClick={closeMenu}>Guangzhou Markets</a>
+          <a href="#visa" onClick={closeMenu}>Visa</a>
+          <a href="#packages" onClick={closeMenu}>Packages</a>
+          <a href="#faq" onClick={closeMenu}>FAQ</a>
+          <a href="#contact" onClick={closeMenu}>Contact</a>
+          <button
             onClick={(e) => {
               closeMenu();
               onBookNow(e);
-            }} 
+            }}
             className="mobile-cta-button"
             style={{ border: 'none', cursor: 'pointer' }}
           >
