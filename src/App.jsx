@@ -21,18 +21,35 @@ import './App.css';
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
+  const [hasSubmittedInquiry, setHasSubmittedInquiry] = useState(false);
 
-  // Auto-trigger inquiry form after 10 seconds (once per session)
+  // Initial 10-second auto-trigger on page visit
   useEffect(() => {
-    const hasShown = sessionStorage.getItem('hasShownInquiry');
-    if (!hasShown) {
-      const timer = setTimeout(() => {
+    const timer = setTimeout(() => {
+      if (!isModalOpen) {
         setIsInquiryOpen(true);
-        sessionStorage.setItem('hasShownInquiry', 'true');
-      }, 10000); // 10000ms = 10s
-      return () => clearTimeout(timer);
-    }
+      }
+    }, 10000); // 10 seconds initial delay
+    return () => clearTimeout(timer);
   }, []);
+
+  const handleCloseInquiry = () => {
+    setIsInquiryOpen(false);
+
+    // If they closed without submitting, pop it up again after 5 seconds!
+    if (!hasSubmittedInquiry) {
+      setTimeout(() => {
+        // Double check they haven't submitted or opened the booking modal in the meantime
+        if (!hasSubmittedInquiry && !isModalOpen) {
+          setIsInquiryOpen(true);
+        }
+      }, 5000); // 5 seconds repeat delay
+    }
+  };
+
+  const handleInquirySubmitSuccess = () => {
+    setHasSubmittedInquiry(true);
+  };
 
   const handleOpenModal = (e) => {
     console.log("Opening Modal...");
@@ -80,7 +97,11 @@ function App() {
       )}
 
       {/* Inquiry Modal (10s Auto-trigger) */}
-      <InquiryModal isOpen={isInquiryOpen} onClose={() => setIsInquiryOpen(false)} />
+      <InquiryModal 
+        isOpen={isInquiryOpen} 
+        onClose={handleCloseInquiry} 
+        onSubmitSuccess={handleInquirySubmitSuccess} 
+      />
     </div>
   );
 }

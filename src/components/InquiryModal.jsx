@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { X, User, Phone, Mail, Send, CheckCircle } from 'lucide-react';
 import './InquiryModal.css';
 
-const InquiryModal = ({ isOpen, onClose }) => {
+const InquiryModal = ({ isOpen, onClose, onSubmitSuccess }) => {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -38,6 +38,9 @@ const InquiryModal = ({ isOpen, onClose }) => {
     setTimeout(() => {
       setLoading(false);
       setSubmitted(true);
+      if (onSubmitSuccess) {
+        onSubmitSuccess();
+      }
     }, 1200);
   };
 
