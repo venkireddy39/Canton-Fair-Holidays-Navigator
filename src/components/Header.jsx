@@ -25,11 +25,11 @@ const Header = ({ onBookNow }) => {
   return (
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <div className="logo" style={{ position: 'relative', width: '120px', height: '45px', display: 'flex', alignItems: 'center' }}>
+        <div className="logo logo-container">
           <img
             src="/nobg.png"
             alt="Holidays Navigator Logo"
-            style={{ height: '85px', width: 'auto', display: 'block', position: 'absolute', top: '-40px', left: '-40px' }}
+            className="logo-img"
           />
         </div>
 

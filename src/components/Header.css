@@ -64,7 +64,34 @@
   margin-top: 20px;
 }
 
+/* Responsive Logo Styles */
+.logo-container {
+  position: relative;
+  width: 120px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 85px;
+  width: auto;
+  display: block;
+  position: absolute;
+  top: -40px;
+  left: -40px;
+}
+
 @media (max-width: 768px) {
+  .logo-container {
+    width: 90px;
+    height: 35px;
+  }
+  .logo-img {
+    height: 58px;
+    top: -24px;
+    left: -15px;
+  }
   .desktop-nav {
     display: none !important;
   }
