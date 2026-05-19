@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import AboutFair from './components/AboutFair';
@@ -14,11 +14,25 @@ import ContactCTA from './components/ContactCTA';
 import Chatbot from './components/Chatbot';
 import { AnimatePresence } from 'framer-motion';
 import BookingModal from './components/BookingModal';
+import InquiryModal from './components/InquiryModal';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import './App.css';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isInquiryOpen, setIsInquiryOpen] = useState(false);
+
+  // Auto-trigger inquiry form after 10 seconds (once per session)
+  useEffect(() => {
+    const hasShown = sessionStorage.getItem('hasShownInquiry');
+    if (!hasShown) {
+      const timer = setTimeout(() => {
+        setIsInquiryOpen(true);
+        sessionStorage.setItem('hasShownInquiry', 'true');
+      }, 10000); // 10000ms = 10s
+      return () => clearTimeout(timer);
+    }
+  }, []);
 
   const handleOpenModal = (e) => {
     console.log("Opening Modal...");
@@ -64,6 +78,9 @@ function App() {
       {isModalOpen && (
         <BookingModal onClose={handleCloseModal} />
       )}
+
+      {/* Inquiry Modal (10s Auto-trigger) */}
+      <InquiryModal isOpen={isInquiryOpen} onClose={() => setIsInquiryOpen(false)} />
     </div>
   );
 }
