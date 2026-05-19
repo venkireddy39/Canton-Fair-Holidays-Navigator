@@ -22,6 +22,7 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
   const [hasSubmittedInquiry, setHasSubmittedInquiry] = useState(false);
+  const [inquiryCloseCount, setInquiryCloseCount] = useState(0); // Track close counts
 
   // Initial 10-second auto-trigger on page visit
   useEffect(() => {
@@ -36,14 +37,28 @@ function App() {
   const handleCloseInquiry = () => {
     setIsInquiryOpen(false);
 
-    // If they closed without submitting, pop it up again after 5 seconds!
+    // If they closed without submitting, pop it up again after progressively longer delays!
     if (!hasSubmittedInquiry) {
+      // Progressive delay logic:
+      // - 1st Close (closeCount 0) -> 5 seconds
+      // - 2nd Close (closeCount 1) -> 10 seconds
+      // - 3rd Close and onwards (closeCount >= 2) -> 15 seconds
+      let delay = 5000;
+      if (inquiryCloseCount === 1) {
+        delay = 10000;
+      } else if (inquiryCloseCount >= 2) {
+        delay = 15000;
+      }
+
       setTimeout(() => {
         // Double check they haven't submitted or opened the booking modal in the meantime
         if (!hasSubmittedInquiry && !isModalOpen) {
           setIsInquiryOpen(true);
         }
-      }, 5000); // 5 seconds repeat delay
+      }, delay);
+
+      // Increment close count for the next close event
+      setInquiryCloseCount((prev) => prev + 1);
     }
   };
 
