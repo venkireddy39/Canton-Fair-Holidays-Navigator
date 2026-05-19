@@ -1,7 +1,39 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { X, User, Phone, Mail, Send, CheckCircle } from 'lucide-react';
-import './InquiryModal.css';
+// Pre-instantiate a single global audio instance to unlock it on user gesture
+let globalAudio = null;
+let isAudioUnlocked = false;
+
+const initAudio = () => {
+  if (typeof window !== 'undefined' && !globalAudio) {
+    globalAudio = new Audio('/sound.wav');
+    globalAudio.volume = 0.5;
+
+    const unlock = () => {
+      if (globalAudio && !isAudioUnlocked) {
+        globalAudio.play()
+          .then(() => {
+            globalAudio.pause();
+            globalAudio.currentTime = 0;
+            isAudioUnlocked = true;
+            console.log("Mobile audio successfully unlocked!");
+          })
+          .catch((err) => {
+            console.log("Audio unlock gesture deferred:", err);
+          });
+      }
+      document.removeEventListener('click', unlock);
+      document.removeEventListener('touchstart', unlock);
+    };
+
+    document.addEventListener('click', unlock);
+    document.addEventListener('touchstart', unlock);
+  }
+};
+
+// Initialize the unlock listeners
+initAudio();
 
 const InquiryModal = ({ isOpen, onClose, onSubmitSuccess }) => {
   const [formData, setFormData] = useState({
@@ -17,12 +49,13 @@ const InquiryModal = ({ isOpen, onClose, onSubmitSuccess }) => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
 
-      // Play premium notification chime sound
-      const audio = new Audio('/sound.wav');
-      audio.volume = 0.4; // Set a pleasant, non-startling volume level
-      audio.play().catch((err) => {
-        console.warn("Audio autoplay blocked by browser autoplay policy. User interaction is required first.", err);
-      });
+      // Play the pre-unlocked notification chime
+      if (globalAudio) {
+        globalAudio.currentTime = 0;
+        globalAudio.play().catch((err) => {
+          console.warn("Audio play blocked even after unlock attempt. Browser policy restriction:", err);
+        });
+      }
     }
     return () => {
       document.body.style.overflow = 'unset';
