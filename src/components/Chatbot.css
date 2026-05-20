@@ -203,25 +203,25 @@
   align-items: center;
   gap: 8px;
   padding: 8px 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.07);
-  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid var(--border-color);
+  background: var(--card-highlight-bg);
 }
 
 .chat-input-area input {
   flex: 1;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(0, 180, 216, 0.2);
+  background: var(--secondary-blue);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 7px 10px;
   color: var(--text-light);
   font-family: var(--font-sans);
   font-size: 12.5px;
   outline: none;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, background-color 0.2s;
 }
 
 .chat-input-area input:focus {
-  border-color: rgba(0, 180, 216, 0.5);
+  border-color: var(--accent-green);
 }
 
 .chat-input-area input::placeholder {

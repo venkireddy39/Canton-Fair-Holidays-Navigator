@@ -39,11 +39,11 @@ const Hero = ({ onBookNow }) => {
             transition={{ delay: 0.5, duration: 0.8 }}
             style={{ display: 'flex', gap: '30px', marginTop: '40px' }}
           >
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'var(--text-light)' }}>
+            <div className="hero-highlight-item">
               <Calendar className="detail-icon" />
               <span>05 Nights / 06 Days</span>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'var(--text-light)' }}>
+            <div className="hero-highlight-item">
               <MapPin className="detail-icon" />
               <span>Guangzhou, China</span>
             </div>

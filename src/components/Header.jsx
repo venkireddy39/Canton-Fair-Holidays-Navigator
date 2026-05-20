@@ -64,7 +64,7 @@ const Header = ({ onBookNow, theme, onToggleTheme }) => {
 
         {/* Mobile Menu Button */}
         <button className="mobile-menu-btn" onClick={toggleMenu}>
-          {mobileMenuOpen ? <X size={28} color="white" /> : <Menu size={28} color="white" />}
+          {mobileMenuOpen ? <X size={28} color="white" /> : <Menu size={28} />}
         </button>
       </div>
 

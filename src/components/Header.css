@@ -10,6 +10,8 @@
   border: none;
   cursor: pointer;
   z-index: 101; /* Above the overlay */
+  color: #E6F1FF;
+  transition: color 0.3s ease;
 }
 
 .mobile-menu {
@@ -44,7 +46,7 @@
 .mobile-nav-links a {
   font-size: 24px;
   font-weight: 600;
-  color: var(--text-light);
+  color: #E6F1FF;
   transition: color 0.3s ease;
 }
 

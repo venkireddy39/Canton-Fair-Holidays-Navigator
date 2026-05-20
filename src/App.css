@@ -25,10 +25,14 @@ section {
 }
 
 .header.scrolled {
-  background: rgba(2, 12, 27, 0.9);
+  background: var(--header-bg);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--border-color);
   padding: 8px 0; /* Decreased to reduce navbar height */
+}
+
+.header.scrolled .mobile-menu-btn {
+  color: var(--text-light); /* Adapt dynamically in light/dark mode on scrolled background */
 }
 
 .header .container {
@@ -58,8 +62,13 @@ section {
 .nav-links a {
   font-size: 14px;
   font-weight: 600;
+  color: var(--text-light);
   transition: color 0.3s ease;
   white-space: nowrap;
+}
+
+.header:not(.scrolled) .nav-links a {
+  color: #E6F1FF; /* Keep links light on dark hero background when transparent */
 }
 
 .nav-links a:hover {
@@ -120,13 +129,21 @@ section {
   line-height: 1.1;
   margin-bottom: 24px;
   font-weight: 800;
+  color: #E6F1FF; /* Ensure white text is highly readable against dark hero image */
 }
 
 .hero p {
   font-size: 21px; /* Increased from 20px */
-  color: var(--text-muted);
+  color: #A8B2D0; /* Ensure light-muted text is highly readable against dark hero image */
   margin-bottom: 40px;
   max-width: 650px; /* Increased from 600px */
+}
+
+.hero-highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #E6F1FF; /* Ensure light color for icons/text inside hero highlights */
 }
 
 .hero-buttons {
