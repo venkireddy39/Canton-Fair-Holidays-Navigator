@@ -84,7 +84,7 @@ const AboutFair = () => {
             </p>
             
             {/* Highlighted box */}
-            <div className="glass-card" style={{ padding: '20px', borderLeft: '4px solid var(--accent-gold)', background: 'rgba(17, 34, 64, 0.4)' }}>
+            <div className="glass-card" style={{ padding: '20px', borderLeft: '4px solid var(--accent-gold)', background: 'var(--card-highlight-bg)' }}>
               <p style={{ fontSize: '15px', color: 'var(--text-light)', margin: 0, fontStyle: 'italic' }}>
                 "Canton Fair is not just an exhibition—it is the birthplace of global retail trends and international joint ventures."
               </p>

@@ -54,7 +54,7 @@ const FAQ = () => {
                   borderRadius: '12px',
                   border: '1px solid rgba(255, 255, 255, 0.08)',
                   overflow: 'hidden',
-                  background: isOpen ? 'rgba(17, 34, 64, 0.6)' : 'rgba(17, 34, 64, 0.3)',
+                  background: isOpen ? 'var(--faq-open-bg)' : 'var(--faq-closed-bg)',
                   transition: 'background 0.3s ease, border-color 0.3s ease'
                 }}
               >

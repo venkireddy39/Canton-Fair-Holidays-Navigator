@@ -42,7 +42,7 @@ const PhaseTimeline = ({ onBookNow }) => {
   const ActiveIconComponent = activePhaseInfo.icon;
 
   return (
-    <section id="timeline" style={{ background: '#020c1b', padding: '40px 0', position: 'relative' }}>
+    <section id="timeline" style={{ background: 'var(--bg-dark)', padding: '40px 0', position: 'relative' }}>
       <style>{`
         #timeline .section-header {
           margin-bottom: 24px;
@@ -56,7 +56,7 @@ const PhaseTimeline = ({ onBookNow }) => {
         }
 
         .phase-tab {
-          background: rgba(10, 25, 47, 0.4);
+          background: var(--card-highlight-bg, rgba(10, 25, 47, 0.4));
           border: 1px solid rgba(255, 255, 255, 0.08);
           border-radius: 12px;
           padding: 12px 8px;
@@ -75,7 +75,7 @@ const PhaseTimeline = ({ onBookNow }) => {
         .phase-tab:hover {
           transform: translateY(-2px);
           border-color: rgba(236, 72, 153, 0.3);
-          background: rgba(10, 25, 47, 0.7);
+          background: var(--card-bg, rgba(10, 25, 47, 0.7));
           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
 
@@ -119,7 +119,7 @@ const PhaseTimeline = ({ onBookNow }) => {
         .phase-tab-title {
           font-size: 14px;
           font-weight: 700;
-          color: #ffffff;
+          color: var(--text-light);
           margin-bottom: 2px;
           letter-spacing: 0.3px;
         }
@@ -135,7 +135,7 @@ const PhaseTimeline = ({ onBookNow }) => {
         }
 
         .phase-details-box {
-          background: linear-gradient(135deg, rgba(10, 25, 47, 0.8) 0%, rgba(2, 12, 27, 0.9) 100%);
+          background: var(--details-box-bg);
           border: 1px solid rgba(255, 255, 255, 0.06);
           border-radius: 16px;
           padding: 20px 24px;
@@ -156,7 +156,7 @@ const PhaseTimeline = ({ onBookNow }) => {
         .phase-details-title-group h3 {
           font-size: 20px;
           font-weight: 800;
-          color: #ffffff;
+          color: var(--text-light);
           margin-bottom: 2px;
         }
 
@@ -356,7 +356,7 @@ const PhaseTimeline = ({ onBookNow }) => {
               <div className="phase-details-left">
                 <p>{activePhaseInfo.desc}</p>
                 
-                <h4 style={{ color: '#ffffff', fontSize: '16px', marginBottom: '16px', fontWeight: '700' }}>
+                <h4 style={{ color: 'var(--text-light)', fontSize: '16px', marginBottom: '16px', fontWeight: '700' }}>
                   Major Categories Highlighted:
                 </h4>
                 

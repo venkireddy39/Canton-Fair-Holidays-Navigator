@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { PhoneCall, Menu, X } from 'lucide-react';
 import './Header.css'; // Let's import specific Header styles for the menu
 
-const Header = ({ onBookNow }) => {
+const Header = ({ onBookNow, theme, onToggleTheme }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -46,10 +46,21 @@ const Header = ({ onBookNow }) => {
           <a href="#contact">Contact</a>
         </nav>
 
-        <button onClick={onBookNow} className="cta-button desktop-cta" style={{ border: 'none', cursor: 'pointer' }}>
-          <PhoneCall size={18} />
-          <span>Book Now</span>
-        </button>
+        <div className="header-actions" style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+          <button onClick={onBookNow} className="cta-button desktop-cta" style={{ border: 'none', cursor: 'pointer' }}>
+            <PhoneCall size={18} />
+            <span>Book Now</span>
+          </button>
+
+          {/* Theme Toggle Button */}
+          <button className="theme-toggle-btn" onClick={onToggleTheme} aria-label="Toggle Theme">
+            {theme === 'light' ? (
+              <span className="theme-icon">☀️</span>
+            ) : (
+              <span className="theme-icon">🌙</span>
+            )}
+          </button>
+        </div>
 
         {/* Mobile Menu Button */}
         <button className="mobile-menu-btn" onClick={toggleMenu}>

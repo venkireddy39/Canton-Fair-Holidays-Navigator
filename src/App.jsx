@@ -19,6 +19,23 @@ import './App.css';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem('theme');
+    return savedTheme ? savedTheme : 'dark';
+  });
+
+  useEffect(() => {
+    if (theme === 'light') {
+      document.body.classList.add('light');
+    } else {
+      document.body.classList.remove('light');
+    }
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const handleToggleTheme = () => {
+    setTheme(prev => prev === 'light' ? 'dark' : 'light');
+  };
 
   const handleOpenModal = (e) => {
     console.log("Opening Modal...");
@@ -33,7 +50,7 @@ function App() {
 
   return (
     <div className="app">
-      <Header onBookNow={handleOpenModal} />
+      <Header onBookNow={handleOpenModal} theme={theme} onToggleTheme={handleToggleTheme} />
       <main>
         <Hero onBookNow={handleOpenModal} />
         <AboutFair />

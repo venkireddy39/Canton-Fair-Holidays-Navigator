@@ -124,3 +124,49 @@
   margin-right: 0;
   pointer-events: auto;
 }
+
+/* Theme Toggle Button Sizing, Layout, and Micro-Animations */
+.theme-toggle-btn {
+  background: var(--secondary-blue);
+  color: var(--accent-gold);
+  border: 1px solid var(--border-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.1) rotate(15deg);
+  background: var(--primary-blue);
+  border-color: var(--accent-green);
+  box-shadow: 0 6px 16px rgba(0, 180, 216, 0.25);
+}
+
+.theme-icon {
+  font-size: 18px;
+  display: block;
+  line-height: 1;
+  user-select: none;
+  transition: transform 0.5s ease;
+}
+
+.theme-toggle-btn:active .theme-icon {
+  transform: scale(0.85);
+}
+
+@media (max-width: 768px) {
+  .theme-toggle-btn {
+    width: 36px;
+    height: 36px;
+  }
+  .theme-icon {
+    font-size: 16px;
+  }
+}

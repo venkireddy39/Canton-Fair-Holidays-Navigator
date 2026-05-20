@@ -146,7 +146,7 @@
   justify-content: space-between;
   border-radius: 20px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-  background: rgba(10, 25, 47, 0.4);
+  background: var(--card-highlight-bg, rgba(10, 25, 47, 0.4));
   position: relative;
   overflow: hidden;
   transform-style: preserve-3d;
@@ -157,7 +157,7 @@
 
 .office-details-card:hover {
   border-color: rgba(0, 180, 216, 0.3);
-  background: rgba(10, 25, 47, 0.6);
+  background: var(--card-bg, rgba(10, 25, 47, 0.6));
 }
 
 .office-details-card:focus-visible {
