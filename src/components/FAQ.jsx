@@ -52,7 +52,7 @@ const FAQ = () => {
                 className="glass-card"
                 style={{ 
                   borderRadius: '12px',
-                  border: '1px solid rgba(255, 255, 255, 0.08)',
+                  border: '1px solid var(--border-color)',
                   overflow: 'hidden',
                   background: isOpen ? 'var(--faq-open-bg)' : 'var(--faq-closed-bg)',
                   transition: 'background 0.3s ease, border-color 0.3s ease'

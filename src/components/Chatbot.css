@@ -33,7 +33,7 @@
   left: 62px;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(17, 34, 64, 0.9);
+  background: var(--secondary-blue);
   backdrop-filter: blur(8px);
   color: var(--text-light);
   padding: 6px 12px;
@@ -45,7 +45,7 @@
   opacity: 0;
   transition: all 0.3s ease;
   border: 1px solid rgba(0, 180, 216, 0.3);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .chatbot-fab:hover .chatbot-tooltip {
@@ -74,7 +74,7 @@
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid rgba(0, 180, 216, 0.25);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15), 0 0 0 1px var(--border-color);
   background: var(--chatbot-window-bg);
   backdrop-filter: blur(20px);
 }
@@ -171,7 +171,7 @@
 }
 
 .message-bubble.user .message-icon {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 119, 182, 0.08);
   color: var(--text-muted);
 }
 

@@ -49,7 +49,7 @@ const Products = () => {
               className="glass-card"
               style={{
                 padding: '30px 24px',
-                border: '1px solid rgba(255, 255, 255, 0.08)',
+                border: '1px solid var(--border-color)',
                 display: 'flex',
                 flexDirection: 'column',
                 height: '100%',
@@ -62,7 +62,7 @@ const Products = () => {
               whileHover={{
                 transform: 'translateY(-5px)',
                 borderColor: 'rgba(0, 180, 216, 0.3)',
-                boxShadow: '0 10px 25px rgba(2, 12, 27, 0.4)'
+                boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)'
               }}
             >
               <div 

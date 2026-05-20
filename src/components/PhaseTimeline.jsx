@@ -57,7 +57,7 @@ const PhaseTimeline = ({ onBookNow }) => {
 
         .phase-tab {
           background: var(--card-highlight-bg, rgba(10, 25, 47, 0.4));
-          border: 1px solid rgba(255, 255, 255, 0.08);
+          border: 1px solid var(--border-color);
           border-radius: 12px;
           padding: 12px 8px;
           text-align: center;
@@ -76,7 +76,7 @@ const PhaseTimeline = ({ onBookNow }) => {
           transform: translateY(-2px);
           border-color: rgba(236, 72, 153, 0.3);
           background: var(--card-bg, rgba(10, 25, 47, 0.7));
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .phase-tab.active {
@@ -90,7 +90,7 @@ const PhaseTimeline = ({ onBookNow }) => {
           width: 36px;
           height: 36px;
           border-radius: 8px;
-          background: rgba(255, 255, 255, 0.05);
+          background: rgba(0, 119, 182, 0.08);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -136,10 +136,10 @@ const PhaseTimeline = ({ onBookNow }) => {
 
         .phase-details-box {
           background: var(--details-box-bg);
-          border: 1px solid rgba(255, 255, 255, 0.06);
+          border: 1px solid var(--border-color);
           border-radius: 16px;
           padding: 20px 24px;
-          box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
           position: relative;
         }
 
@@ -148,7 +148,7 @@ const PhaseTimeline = ({ onBookNow }) => {
           justify-content: space-between;
           align-items: center;
           margin-bottom: 16px;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+          border-bottom: 1px solid var(--border-color);
           padding-bottom: 12px;
           gap: 10px;
         }
@@ -227,9 +227,9 @@ const PhaseTimeline = ({ onBookNow }) => {
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          background: rgba(255, 255, 255, 0.015);
+          background: rgba(0, 119, 182, 0.02);
           border-radius: 12px;
-          border: 1px solid rgba(255, 255, 255, 0.04);
+          border: 1px solid var(--border-color);
           padding: 16px;
           text-align: center;
         }
@@ -265,7 +265,7 @@ const PhaseTimeline = ({ onBookNow }) => {
         }
 
         .phase-action-btn.disabled {
-          background: rgba(255, 255, 255, 0.05) !important;
+          background: rgba(0, 0, 0, 0.05) !important;
           color: var(--text-muted) !important;
           cursor: not-allowed;
           box-shadow: none !important;
