@@ -1,0 +1,80 @@
+.animated-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.input-group {
+  position: relative;
+  width: 100%;
+}
+
+.animated-input {
+  width: 100%;
+  padding: 16px 16px 16px 45px;
+  background-color: #121212;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.animated-input:focus {
+  border-color: #fff;
+}
+
+.animated-input::placeholder {
+  color: transparent; /* Hide placeholder until focus/floating */
+  transition: color 0.3s ease;
+}
+
+.animated-input:focus::placeholder {
+  color: #555; /* Show placeholder text like 'Choose a username' when focused */
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  pointer-events: none;
+  transition: color 0.3s ease;
+}
+
+.animated-input:focus ~ .input-icon {
+  color: #fff;
+}
+
+.floating-label {
+  position: absolute;
+  left: 45px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 16px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  padding: 0 6px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+
+.animated-input:focus ~ .floating-label,
+.animated-input:not(:placeholder-shown) ~ .floating-label {
+  top: 0;
+  left: 16px;
+  font-size: 13px;
+  color: #ff3366;
+  background-color: #121212; /* Match input background */
+  border-color: #ff3366;
+}
+
+.animated-input:not(:focus):not(:placeholder-shown) ~ .floating-label {
+  color: #888;
+  border-color: #333;
+}

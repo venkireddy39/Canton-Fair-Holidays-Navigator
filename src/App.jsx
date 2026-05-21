@@ -15,10 +15,20 @@ import Chatbot from './components/Chatbot';
 import { AnimatePresence } from 'framer-motion';
 import BookingModal from './components/BookingModal';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
+import PopupForm from './components/PopupForm';
 import './App.css';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isPopupFormOpen, setIsPopupFormOpen] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsPopupFormOpen(true);
+    }, 15000); // 15 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleOpenModal = (e) => {
     console.log("Opening Modal...");
@@ -63,6 +73,11 @@ function App() {
       {/* Booking Modal */}
       {isModalOpen && (
         <BookingModal onClose={handleCloseModal} />
+      )}
+
+      {/* 15 Second Popup Form */}
+      {isPopupFormOpen && (
+        <PopupForm onClose={() => setIsPopupFormOpen(false)} />
       )}
     </div>
   );

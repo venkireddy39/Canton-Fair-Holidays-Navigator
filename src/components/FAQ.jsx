@@ -4,7 +4,7 @@ import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
 
 const faqs = [
   {
-    question: "What is included in the INR 35,000/- package?",
+    question: "What is included in the INR 60,000/- package?",
     answer: "Our premium package includes expert Business Visa processing assistance, comfortable premium twin-sharing business hotel stay, return flight booking assistance, Canton Fair official buyer badge registration, shared daily coach transfers between your hotel and the Pazhou Exhibition Complex, and 24/7 support throughout your travel."
   },
   {
@@ -47,10 +47,10 @@ const FAQ = () => {
           {faqs.map((faq, index) => {
             const isOpen = activeIndex === index;
             return (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="glass-card"
-                style={{ 
+                style={{
                   borderRadius: '12px',
                   border: '1px solid var(--border-color)',
                   overflow: 'hidden',
@@ -93,12 +93,12 @@ const FAQ = () => {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3, ease: 'easeInOut' }}
                     >
-                      <div 
-                        style={{ 
-                          padding: '0 30px 24px 65px', 
-                          color: 'var(--text-muted)', 
-                          fontSize: '15px', 
-                          lineHeight: '1.7' 
+                      <div
+                        style={{
+                          padding: '0 30px 24px 65px',
+                          color: 'var(--text-muted)',
+                          fontSize: '15px',
+                          lineHeight: '1.7'
                         }}
                       >
                         {faq.answer}

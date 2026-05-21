@@ -27,7 +27,7 @@ const Header = ({ onBookNow }) => {
       <div className="header-container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div className="logo logo-container">
           <img
-            src="/nobg.png"
+            src={scrolled ? "/nobackgrounddark.png" : "/nobackgroundlight.png"}
             alt="Holidays Navigator Logo"
             className="logo-img"
           />
