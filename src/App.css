@@ -137,6 +137,21 @@ section {
   color: #A8B2D0; /* Ensure light-muted text is highly readable against dark hero image */
   margin-bottom: 40px;
   max-width: 650px; /* Increased from 600px */
+  line-height: 1.8; /* Provide enough line height for the text highlights */
+}
+
+.text-highlight {
+  background-image: linear-gradient(to right, rgba(212, 122, 0, 0.12) 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  color: #ffcc66 !important; /* Soft, warm gold for cozy reading */
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline;
+  border: 1px solid transparent; /* Subtle, elegant borders */
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 .hero-highlight-item {

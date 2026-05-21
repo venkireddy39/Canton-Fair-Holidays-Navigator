@@ -78,3 +78,60 @@
   color: #888;
   border-color: #333;
 }
+
+/* Success Modal Styles */
+.success-modal-green {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background-color: #064e3b; /* Dark emerald background */
+  border-radius: 12px;
+  border: 1px solid #10b981; /* Emerald border */
+  text-align: center;
+  color: #ecfdf5;
+  animation: scaleUp 0.3s ease-out;
+  width: 100%;
+  max-width: 450px;
+}
+
+.success-tick-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background-color: #ecfdf5;
+  border-radius: 50%;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4);
+}
+
+.success-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #fff;
+  font-family: 'Outfit', 'Inter', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.success-desc {
+  font-size: 16px;
+  color: #a7f3d0;
+  max-width: 300px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

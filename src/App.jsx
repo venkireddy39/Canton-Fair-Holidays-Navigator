@@ -23,12 +23,30 @@ function App() {
   const [isPopupFormOpen, setIsPopupFormOpen] = useState(false);
 
   useEffect(() => {
+    const alreadySubmitted = localStorage.getItem('hasSubmittedPopup') === 'true';
+    if (alreadySubmitted) return;
+
     const timer = setTimeout(() => {
       setIsPopupFormOpen(true);
     }, 15000); // 15 seconds
 
     return () => clearTimeout(timer);
   }, []);
+
+  const handleClosePopup = (submitted = false) => {
+    setIsPopupFormOpen(false);
+    if (submitted) {
+      localStorage.setItem('hasSubmittedPopup', 'true');
+    } else {
+      // Re-trigger popup after 10 seconds if closed without submitting
+      setTimeout(() => {
+        const alreadySubmitted = localStorage.getItem('hasSubmittedPopup') === 'true';
+        if (!alreadySubmitted) {
+          setIsPopupFormOpen(true);
+        }
+      }, 10000);
+    }
+  };
 
   const handleOpenModal = (e) => {
     console.log("Opening Modal...");
@@ -77,7 +95,7 @@ function App() {
 
       {/* 15 Second Popup Form */}
       {isPopupFormOpen && (
-        <PopupForm onClose={() => setIsPopupFormOpen(false)} />
+        <PopupForm onClose={handleClosePopup} />
       )}
     </div>
   );
