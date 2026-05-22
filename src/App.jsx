@@ -2,20 +2,23 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import AboutFair from './components/AboutFair';
-import PackageOverview from './components/PackageOverview';
-import Services from './components/Services';
-import PhaseTimeline from './components/PhaseTimeline';
-import Products from './components/Products';
-import GuangzhouMarkets from './components/GuangzhouMarkets';
-import FAQ from './components/FAQ';
-import LocationMap from './components/LocationMap';
-import WhyChooseUs from './components/WhyChooseUs';
-import ContactCTA from './components/ContactCTA';
-import Chatbot from './components/Chatbot';
 import { AnimatePresence } from 'framer-motion';
-import BookingModal from './components/BookingModal';
-import FloatingWhatsApp from './components/FloatingWhatsApp';
-import PopupForm from './components/PopupForm';
+import './App.css';
+
+// Lazy loaded components for performance optimization (Code Splitting)
+const PackageOverview = React.lazy(() => import('./components/PackageOverview'));
+const Services = React.lazy(() => import('./components/Services'));
+const PhaseTimeline = React.lazy(() => import('./components/PhaseTimeline'));
+const Products = React.lazy(() => import('./components/Products'));
+const GuangzhouMarkets = React.lazy(() => import('./components/GuangzhouMarkets'));
+const FAQ = React.lazy(() => import('./components/FAQ'));
+const LocationMap = React.lazy(() => import('./components/LocationMap'));
+const WhyChooseUs = React.lazy(() => import('./components/WhyChooseUs'));
+const ContactCTA = React.lazy(() => import('./components/ContactCTA'));
+const Chatbot = React.lazy(() => import('./components/Chatbot'));
+const BookingModal = React.lazy(() => import('./components/BookingModal'));
+const FloatingWhatsApp = React.lazy(() => import('./components/FloatingWhatsApp'));
+const PopupForm = React.lazy(() => import('./components/PopupForm'));
 import './App.css';
 
 function App() {
@@ -24,13 +27,19 @@ function App() {
 
   useEffect(() => {
     const alreadySubmitted = localStorage.getItem('hasSubmittedPopup') === 'true';
+    console.log("App mounted. alreadySubmitted:", alreadySubmitted);
     if (alreadySubmitted) return;
 
+    console.log("Setting timer for popup...");
     const timer = setTimeout(() => {
+      console.log("Timer fired! Setting isPopupFormOpen to true");
       setIsPopupFormOpen(true);
     }, 15000); // 15 seconds
 
-    return () => clearTimeout(timer);
+    return () => {
+      console.log("Clearing popup timer");
+      clearTimeout(timer);
+    };
   }, []);
 
   const handleClosePopup = (submitted = false) => {
@@ -49,13 +58,11 @@ function App() {
   };
 
   const handleOpenModal = (e) => {
-    console.log("Opening Modal...");
     if (e && e.preventDefault) e.preventDefault();
     setIsModalOpen(true);
   };
 
   const handleCloseModal = () => {
-    console.log("Closing Modal...");
     setIsModalOpen(false);
   };
 
@@ -65,15 +72,18 @@ function App() {
       <main>
         <Hero onBookNow={handleOpenModal} />
         <AboutFair />
-        <PhaseTimeline onBookNow={handleOpenModal} />
-        <Products />
-        <GuangzhouMarkets />
-        <PackageOverview onBookNow={handleOpenModal} />
-        <Services />
-        <WhyChooseUs />
-        <FAQ />
-        <LocationMap />
-        <ContactCTA />
+        
+        <React.Suspense fallback={<div style={{ padding: '50px', textAlign: 'center', color: 'var(--text-light)' }}>Loading...</div>}>
+          <PhaseTimeline onBookNow={handleOpenModal} />
+          <Products />
+          <GuangzhouMarkets />
+          <PackageOverview onBookNow={handleOpenModal} />
+          <Services />
+          <WhyChooseUs />
+          <FAQ />
+          <LocationMap />
+          <ContactCTA />
+        </React.Suspense>
       </main>
 
       <footer style={{ padding: '20px 0', textAlign: 'center', background: 'var(--bg-dark)', borderTop: '1px solid var(--border-color)' }}>
@@ -82,21 +92,23 @@ function App() {
         </p>
       </footer>
 
-      {/* Floating Chatbot (Left) */}
-      <Chatbot />
+      <React.Suspense fallback={null}>
+        {/* Floating Chatbot (Left) */}
+        <Chatbot />
 
-      {/* Floating WhatsApp (Right) */}
-      <FloatingWhatsApp />
+        {/* Floating WhatsApp (Right) */}
+        <FloatingWhatsApp />
 
-      {/* Booking Modal */}
-      {isModalOpen && (
-        <BookingModal onClose={handleCloseModal} />
-      )}
+        {/* Booking Modal */}
+        {isModalOpen && (
+          <BookingModal onClose={handleCloseModal} />
+        )}
 
-      {/* 15 Second Popup Form */}
-      {isPopupFormOpen && (
-        <PopupForm onClose={handleClosePopup} />
-      )}
+        {/* 15 Second Popup Form */}
+        {isPopupFormOpen && (
+          <PopupForm onClose={handleClosePopup} />
+        )}
+      </React.Suspense>
     </div>
   );
 }

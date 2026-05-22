@@ -305,16 +305,28 @@ const PhaseTimeline = ({ onBookNow }) => {
         </div>
 
         {/* Phase tab items matching user image layout */}
-        <div className="phase-tabs-container">
+        <div className="phase-tabs-container" role="tablist" aria-label="Canton Fair Phases">
           {phases.map((item, index) => {
             const Icon = item.icon;
             return (
-              <motion.div
+              <motion.button
                 key={index}
+                id={`phase-tab-${index}`}
+                role="tab"
+                aria-selected={activeTab === index}
+                aria-controls={`phase-panel-${index}`}
+                tabIndex={0}
                 className={`phase-tab ${activeTab === index ? 'active' : ''}`}
                 onClick={() => setActiveTab(index)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setActiveTab(index);
+                  }
+                }}
                 whileHover={{ y: -5 }}
                 transition={{ duration: 0.2 }}
+                style={{ border: 'none', background: 'none', width: '100%', fontFamily: 'inherit' }}
               >
                 <div className="phase-tab-icon-wrapper">
                   <Icon size={20} className="phase-tab-icon" />
@@ -323,7 +335,7 @@ const PhaseTimeline = ({ onBookNow }) => {
                   <div className="phase-tab-title">{item.phase}</div>
                   <div className="phase-tab-dates">{item.dates}</div>
                 </div>
-              </motion.div>
+              </motion.button>
             );
           })}
         </div>
@@ -332,6 +344,9 @@ const PhaseTimeline = ({ onBookNow }) => {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeTab}
+            id={`phase-panel-${activeTab}`}
+            role="tabpanel"
+            aria-labelledby={`phase-tab-${activeTab}`}
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}

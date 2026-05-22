@@ -21,7 +21,8 @@ const ContactCTA = () => {
           <a
             href="https://wa.me/919533444455?text=Hi%20Holidays%20Navigator,%20I%20want%20to%20plan%20my%20Canton%20Fair%20tour.%20Let%20me%20know%20the%20details."
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
+            aria-label="Chat with us on WhatsApp"
             className="whatsapp-btn"
           >
             <MessageCircle size={24} />

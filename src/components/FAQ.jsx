@@ -60,6 +60,9 @@ const FAQ = () => {
               >
                 <button
                   onClick={() => toggleFAQ(index)}
+                  id={`faq-btn-${index}`}
+                  aria-expanded={isOpen}
+                  aria-controls={`faq-answer-${index}`}
                   style={{
                     width: '100%',
                     padding: '24px 30px',
@@ -88,6 +91,9 @@ const FAQ = () => {
                 <AnimatePresence initial={false}>
                   {isOpen && (
                     <motion.div
+                      id={`faq-answer-${index}`}
+                      role="region"
+                      aria-labelledby={`faq-btn-${index}`}
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: 'auto', opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}

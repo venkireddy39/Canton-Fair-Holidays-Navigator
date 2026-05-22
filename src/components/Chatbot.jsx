@@ -101,10 +101,10 @@ const Chatbot = () => {
           >
             <div className="chat-header">
               <div className="chat-title">
-                <img src="/chat.png" alt="Assistant" style={{ width: '24px', height: '24px', objectFit: 'cover', borderRadius: '50%' }} />
+                <img src="/chat.png" alt="Assistant" loading="lazy" style={{ width: '24px', height: '24px', objectFit: 'cover', borderRadius: '50%' }} />
                 <span>Travel Assistant</span>
               </div>
-              <button className="close-btn" onClick={() => setIsOpen(false)}>
+              <button className="close-btn" aria-label="Close Chat" onClick={() => setIsOpen(false)}>
                 <X size={18} />
               </button>
             </div>
@@ -114,7 +114,7 @@ const Chatbot = () => {
                 <div key={msg.id} className={`message-bubble ${msg.sender}`}>
                   <div className="message-icon">
                     {msg.sender === 'bot' ? (
-                      <img src="/chat.png" alt="Bot" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
+                      <img src="/chat.png" alt="Bot" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
                     ) : (
                       <User size={12} />
                     )}
@@ -130,11 +130,12 @@ const Chatbot = () => {
             <form className="chat-input-area" onSubmit={handleSendMessage}>
               <input 
                 type="text" 
+                aria-label="Type your message"
                 placeholder="Type your message..." 
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
               />
-              <button type="submit" className="send-btn" disabled={!inputValue.trim()}>
+              <button type="submit" className="send-btn" aria-label="Send message" disabled={!inputValue.trim()}>
                 <Send size={15} />
               </button>
             </form>
@@ -144,12 +145,13 @@ const Chatbot = () => {
 
       <motion.button 
         className={`chatbot-fab ${isOpen ? 'active' : ''}`}
+        aria-label="Toggle chat assistant"
         onClick={() => setIsOpen(!isOpen)}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
         {!isOpen && <span className="chatbot-tooltip">Ask our travel guru!</span>}
-        {isOpen ? <X size={22} /> : <img src="/chat.png" alt="Chat" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />}
+        {isOpen ? <X size={22} /> : <img src="/chat.png" alt="Chat" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />}
       </motion.button>
     </div>
   );

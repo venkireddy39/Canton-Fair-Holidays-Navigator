@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import { X, User, Phone } from 'lucide-react';
 import './BookingModal.css';
@@ -7,12 +7,54 @@ import './PopupForm.css';
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
 const PopupForm = ({ onClose }) => {
+  const modalRef = useRef(null);
+
   useEffect(() => {
     document.body.style.overflow = 'hidden';
+    const previousFocus = document.activeElement;
+
+    // Focus the first interactive element inside the modal
+    if (modalRef.current) {
+      const focusable = modalRef.current.querySelectorAll('button, a, input, select, textarea, [tabindex="0"]');
+      if (focusable.length) {
+        focusable[0].focus();
+      }
+    }
+
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        onClose(false);
+      }
+      if (e.key === 'Tab') {
+        if (!modalRef.current) return;
+        const focusable = modalRef.current.querySelectorAll('button, a, [href], input, select, textarea, [tabindex="0"]');
+        if (focusable.length === 0) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+
+        if (e.shiftKey) {
+          if (document.activeElement === first) {
+            last.focus();
+            e.preventDefault();
+          }
+        } else {
+          if (document.activeElement === last) {
+            first.focus();
+            e.preventDefault();
+          }
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
     return () => {
       document.body.style.overflow = 'unset';
+      window.removeEventListener('keydown', handleKeyDown);
+      if (previousFocus) {
+        previousFocus.focus();
+      }
     };
-  }, []);
+  }, [onClose]);
 
   const [formData, setFormData] = useState({ name: '', phone: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -84,10 +126,15 @@ const PopupForm = ({ onClose }) => {
   };
 
   const modalContent = (
-    <div className="modal-overlay">
+    <div className="modal-overlay popup-right-overlay" ref={modalRef}>
       <div className="modal-backdrop" onClick={() => onClose(false)} />
 
-      <div className="modal-container">
+      <div 
+        className="modal-container popup-right-container"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="popup-title"
+      >
         {showSuccess ? (
           <div className="success-modal-green">
             <div className="success-tick-circle">
@@ -105,7 +152,7 @@ const PopupForm = ({ onClose }) => {
               </svg>
             </div>
 
-            <h2 className="success-title">Thank You!</h2>
+            <h2 className="success-title" id="popup-title">Thank You!</h2>
             <p className="success-desc">Your details have been successfully submitted.</p>
           </div>
         ) : (
@@ -113,13 +160,13 @@ const PopupForm = ({ onClose }) => {
             <button
               className="modal-close-btn"
               onClick={() => onClose(false)}
-              aria-label="Close modal"
+              aria-label="Close lead form modal"
             >
               <X size={28} />
             </button>
 
             <div className="modal-header">
-              <h2>
+              <h2 id="popup-title">
                 <span className="title-gold">Let's Connect!</span>
               </h2>
               <p>Please enter your details to learn more about the Canton Fair packages.</p>

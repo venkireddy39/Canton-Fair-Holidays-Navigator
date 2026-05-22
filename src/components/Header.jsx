@@ -30,6 +30,7 @@ const Header = ({ onBookNow }) => {
             src={scrolled ? "/nobackgrounddark.png" : "/nobackgroundlight.png"}
             alt="Holidays Navigator Logo"
             className="logo-img"
+            fetchpriority="high"
           />
         </div>
 
@@ -54,7 +55,7 @@ const Header = ({ onBookNow }) => {
         </div>
 
         {/* Mobile Menu Button */}
-        <button className="mobile-menu-btn" onClick={toggleMenu}>
+        <button className="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded={mobileMenuOpen} onClick={toggleMenu}>
           {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>

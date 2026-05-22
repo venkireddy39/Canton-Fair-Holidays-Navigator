@@ -170,7 +170,7 @@ AddressCard3D.displayName = 'AddressCard3D';
 const LocationMap = () => {
   // Exact Office Coordinates
   const officeLocation = [17.4426077, 78.3981897];
-  const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${officeLocation[0]},${officeLocation[1]}`;
+  const directionsUrl = 'https://www.google.com/maps/place/Holidays+Navigator/@17.4426128,78.3956148,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb9960394cb051:0x7f298b8b46d990d5!8m2!3d17.4426077!4d78.3981897!16s%2Fg%2F11tdtddp9b?entry=ttu&g_ep=EgoyMDI2MDUxNy4wIKXMDSoASAFQAw%3D%3D';
 
   return (
     <section id="location" className="location-section">
