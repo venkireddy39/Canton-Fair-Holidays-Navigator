@@ -12,8 +12,8 @@ const Hero = ({ onBookNow }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="hero-subtitle">Entrepreneur Travel Package</span>
-          <h1>Canton Fair 140 <br /><span className="gradient-text">2026 Edition</span></h1>
+          <span className="hero-subtitle" aria-hidden="true">Entrepreneur Travel Package</span>
+          <h1>Official Canton Fair 140 <br /><span className="gradient-text">2026 Business Travel Package</span></h1>
           <p>
             <motion.span 
               className="text-highlight"

@@ -74,7 +74,7 @@ const AboutFair = () => {
           >
             <span className="hero-subtitle" style={{ fontSize: '14px', marginBottom: '10px' }}>Global Business Gateway</span>
             <h2 style={{ fontSize: '38px', marginBottom: '20px', lineHeight: '1.2' }}>
-              About the <span className="gradient-text">Canton Fair</span>
+              About <span className="gradient-text">Canton Fair 140</span>
             </h2>
             <p style={{ color: 'var(--text-light)', fontSize: '17px', marginBottom: '20px', lineHeight: '1.7' }}>
               The <strong>China Import and Export Fair</strong>, commonly known as the <strong>Canton Fair</strong>, is the ultimate platform for global sourcing. Established in 1957 and co-hosted twice a year by China's Ministry of Commerce, it stands as the absolute pinnacle of international trade exhibitions.
@@ -115,12 +115,12 @@ const AboutFair = () => {
                 <div style={{ marginBottom: '15px', display: 'inline-block' }}>
                   {stat.icon}
                 </div>
-                <h3 style={{ fontSize: '28px', color: 'var(--text-light)', marginBottom: '5px', fontFamily: 'var(--font-sans)', fontWeight: '700' }}>
+                <div style={{ fontSize: '28px', color: 'var(--text-light)', marginBottom: '5px', fontFamily: 'var(--font-sans)', fontWeight: '700' }}>
                   {stat.value}
-                </h3>
-                <h4 style={{ fontSize: '16px', color: 'var(--accent-gold)', marginBottom: '10px', fontWeight: '600', fontFamily: 'var(--font-sans)' }}>
+                </div>
+                <h3 style={{ fontSize: '16px', color: 'var(--accent-gold)', marginBottom: '10px', fontWeight: '600', fontFamily: 'var(--font-sans)' }}>
                   {stat.title}
-                </h4>
+                </h3>
                 <p style={{ color: 'var(--text-muted)', fontSize: '13px', margin: 0, lineHeight: '1.5' }}>
                   {stat.desc}
                 </p>

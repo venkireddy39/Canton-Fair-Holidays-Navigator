@@ -26,15 +26,22 @@ function App() {
   const [isPopupFormOpen, setIsPopupFormOpen] = useState(false);
 
   useEffect(() => {
+    // For testing purposes, you can uncomment the line below to reset the popup state every time you refresh:
+    // localStorage.removeItem('hasSubmittedPopup');
+
     const alreadySubmitted = localStorage.getItem('hasSubmittedPopup') === 'true';
     console.log("App mounted. alreadySubmitted:", alreadySubmitted);
-    if (alreadySubmitted) return;
+    
+    if (alreadySubmitted) {
+      console.log("Popup was already submitted previously. It will not show again unless localStorage is cleared.");
+      return;
+    }
 
-    console.log("Setting timer for popup...");
+    console.log("Setting timer for popup... waiting 5 seconds.");
     const timer = setTimeout(() => {
       console.log("Timer fired! Setting isPopupFormOpen to true");
       setIsPopupFormOpen(true);
-    }, 15000); // 15 seconds
+    }, 5000); // Reduced to 5 seconds for easier testing
 
     return () => {
       console.log("Clearing popup timer");

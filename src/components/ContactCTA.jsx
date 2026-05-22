@@ -13,7 +13,7 @@ const ContactCTA = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 style={{ fontSize: '36px', marginBottom: '20px' }}>Ready to Grow Your Business?</h2>
+          <h2 style={{ fontSize: '36px', marginBottom: '20px' }}>Contact and Booking</h2>
           <p style={{ fontSize: '18px', color: 'var(--text-light)', marginBottom: '30px' }}>
             Book your Canton Fair 140 package today and secure your spot among India's top entrepreneurs.
           </p>

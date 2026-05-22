@@ -14,7 +14,7 @@ const PackageOverview = ({ onBookNow }) => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2>Premium Entrepreneur Package</h2>
+            <h2>Canton Fair Travel Package</h2>
             <h3>Elevate Your Business Journey</h3>
             <p style={{ color: 'var(--text-muted)', marginBottom: '30px', fontSize: '18px' }}>
               We've meticulously planned every detail of your Canton Fair experience. From smooth visa processing to premium accommodations, focus on your business while we handle the logistics.
