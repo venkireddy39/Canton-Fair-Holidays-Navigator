@@ -29,8 +29,11 @@ const Header = ({ onBookNow }) => {
           <img
             src={scrolled ? "/nobackgrounddark.png" : "/nobackgroundlight.png"}
             alt="Holidays Navigator Logo"
+            title="Holidays Navigator"
             className="logo-img"
             fetchpriority="high"
+            width="200"
+            height="50"
           />
         </div>
 

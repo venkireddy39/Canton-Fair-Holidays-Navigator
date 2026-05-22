@@ -101,7 +101,7 @@ const Chatbot = () => {
           >
             <div className="chat-header">
               <div className="chat-title">
-                <img src="/chat.png" alt="Assistant" loading="lazy" style={{ width: '24px', height: '24px', objectFit: 'cover', borderRadius: '50%' }} />
+                <img src="/chat.png" alt="Customer Support Chat Assistant" title="Chat with Holidays Navigator" loading="lazy" width="24" height="24" style={{ width: '24px', height: '24px', objectFit: 'cover', borderRadius: '50%' }} />
                 <span>Travel Assistant</span>
               </div>
               <button className="close-btn" aria-label="Close Chat" onClick={() => setIsOpen(false)}>
@@ -114,7 +114,7 @@ const Chatbot = () => {
                 <div key={msg.id} className={`message-bubble ${msg.sender}`}>
                   <div className="message-icon">
                     {msg.sender === 'bot' ? (
-                      <img src="/chat.png" alt="Bot" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
+                      <img src="/chat.png" alt="Customer Support Chat Bot" title="Holidays Navigator Support" loading="lazy" width="24" height="24" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
                     ) : (
                       <User size={12} />
                     )}
@@ -151,7 +151,7 @@ const Chatbot = () => {
         whileTap={{ scale: 0.95 }}
       >
         {!isOpen && <span className="chatbot-tooltip">Ask our travel guru!</span>}
-        {isOpen ? <X size={22} /> : <img src="/chat.png" alt="Chat" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />}
+        {isOpen ? <X size={22} /> : <img src="/chat.png" alt="Customer Support Chat Icon" title="Open Chat with Holidays Navigator" loading="lazy" width="60" height="60" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />}
       </motion.button>
     </div>
   );
