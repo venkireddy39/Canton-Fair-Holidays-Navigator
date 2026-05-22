@@ -13,9 +13,9 @@ const Hero = ({ onBookNow }) => {
           transition={{ duration: 0.8 }}
         >
           <span className="hero-subtitle" aria-hidden="true">Entrepreneur Travel Package</span>
-          <h1>Official Canton Fair 140 <br /><span className="gradient-text">2026 Business Travel Package</span></h1>
+          <h1>Canton Fair 140 <br /><span className="gradient-text">2026 Edition</span></h1>
           <p>
-            <motion.span 
+            <motion.span
               className="text-highlight"
               initial={{ backgroundPosition: '100% 0', borderColor: 'transparent' }}
               whileInView={{ backgroundPosition: '0% 0', borderColor: 'rgba(212, 122, 0, 0.35)' }}
@@ -23,7 +23,7 @@ const Hero = ({ onBookNow }) => {
               transition={{ duration: 1.2, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
             >
               Join the world's largest trade fair.
-            </motion.span> Experience seamless business travel with our all-inclusive premium package designed exclusively for <motion.span 
+            </motion.span> Experience seamless business travel with our all-inclusive premium package designed exclusively for <motion.span
               className="text-highlight"
               initial={{ backgroundPosition: '100% 0', borderColor: 'transparent' }}
               whileInView={{ backgroundPosition: '0% 0', borderColor: 'rgba(212, 122, 0, 0.35)' }}

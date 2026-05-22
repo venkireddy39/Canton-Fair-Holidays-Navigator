@@ -326,7 +326,7 @@ const PhaseTimeline = ({ onBookNow }) => {
                 }}
                 whileHover={{ y: -5 }}
                 transition={{ duration: 0.2 }}
-                style={{ border: 'none', background: 'none', width: '100%', fontFamily: 'inherit' }}
+                style={{ width: '100%', fontFamily: 'inherit' }}
               >
                 <div className="phase-tab-icon-wrapper">
                   <Icon size={20} className="phase-tab-icon" />
