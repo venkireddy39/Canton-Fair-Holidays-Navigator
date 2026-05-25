@@ -104,31 +104,24 @@ Hello Holidays Navigator Team,
 
 You have received a new Canton Fair lead.
 
-━━━━━━━━━━━━━━━━━━━━━━
+
 Lead Details
-━━━━━━━━━━━━━━━━━━━━━━
 
-Name:
-${name}
 
-Phone:
-${phone}
+Name:  ${name}
 
-Email ID:
-${email}
+Phone: ${phone}
 
-Business Name:
-${business_name}
+Email ID: ${email}
 
-Business Category:
-${business_category}
+Business Name: ${business_name}
 
-━━━━━━━━━━━━━━━━━━━━━━
+Business Category: ${business_category}
 
 Please contact this lead.
 
 Regards,
-Holidays Navigator Website
+Holidays Navigator Canton Fair Website
         `,
       })
       .then(() => {
