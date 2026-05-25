@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import AboutFair from './components/AboutFair';
+import PopupForm from './components/PopupForm';
 import { AnimatePresence } from 'framer-motion';
 import './App.css';
 
@@ -18,16 +19,15 @@ const ContactCTA = React.lazy(() => import('./components/ContactCTA'));
 const Chatbot = React.lazy(() => import('./components/Chatbot'));
 const BookingModal = React.lazy(() => import('./components/BookingModal'));
 const FloatingWhatsApp = React.lazy(() => import('./components/FloatingWhatsApp'));
-const PopupForm = React.lazy(() => import('./components/PopupForm'));
-import './App.css';
+// PopupForm is now eagerly imported above to avoid lazy-loading issues
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isPopupFormOpen, setIsPopupFormOpen] = useState(false);
 
   useEffect(() => {
-    // For testing purposes, you can uncomment the line below to reset the popup state every time you refresh:
-    // localStorage.removeItem('hasSubmittedPopup');
+    // Reset popup state on every page load for testing — remove this line once popup works
+    localStorage.removeItem('hasSubmittedPopup');
 
     const alreadySubmitted = localStorage.getItem('hasSubmittedPopup') === 'true';
     console.log("App mounted. alreadySubmitted:", alreadySubmitted);
@@ -41,7 +41,7 @@ function App() {
     const timer = setTimeout(() => {
       console.log("Timer fired! Setting isPopupFormOpen to true");
       setIsPopupFormOpen(true);
-    }, 5000); // Reduced to 5 seconds for easier testing
+    }, 5000); // 5 seconds for easier testing
 
     return () => {
       console.log("Clearing popup timer");
@@ -111,11 +111,12 @@ function App() {
           <BookingModal onClose={handleCloseModal} />
         )}
 
-        {/* 15 Second Popup Form */}
-        {isPopupFormOpen && (
-          <PopupForm onClose={handleClosePopup} />
-        )}
       </React.Suspense>
+
+      {/* Popup Form — rendered outside Suspense to avoid lazy-load issues */}
+      {isPopupFormOpen && (
+        <PopupForm onClose={handleClosePopup} />
+      )}
     </div>
   );
 }

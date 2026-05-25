@@ -387,12 +387,10 @@ section {
 /* Contact Footer */
 .contact-section {
   background: linear-gradient(180deg, var(--bg-dark) 0%, var(--secondary-blue) 100%);
-  text-align: center;
   padding: 100px 0;
 }
 
 .contact-card {
-  max-width: 600px;
   margin: 0 auto;
   padding: 50px;
 }
