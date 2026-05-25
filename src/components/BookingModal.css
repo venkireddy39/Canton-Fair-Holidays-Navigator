@@ -32,58 +32,109 @@
   padding: 20px;
 }
 
-.modal-content {
+.modal-content.premium-modal {
   pointer-events: auto;
   width: 100%;
-  max-width: 480px;
-  background: var(--secondary-blue, #0f172a); /* Deep dark blue/navy or white */
-  padding: 40px;
+  max-width: 880px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-radius: 24px;
   position: relative;
   text-align: center;
-  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 119, 182, 0.1);
+  overflow: hidden;
+}
+
+.modal-hero-image {
+  width: 100%;
+  height: 180px;
+  background: url('/cantonimg.png') center/cover;
+  position: relative;
+}
+
+.modal-hero-image::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.95) 90%, rgba(255,255,255,1));
+}
+
+.modal-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  color: #FFD700;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 700;
+  z-index: 2;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.modal-body {
+  padding: 0 40px 40px;
+  position: relative;
+  z-index: 2;
+  margin-top: -30px;
 }
 
 .modal-close-btn {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  background: transparent;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   border: none;
-  color: var(--text-muted);
+  color: #0f172a;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .modal-close-btn:hover {
-  color: var(--text-light);
+  background: rgba(255, 255, 255, 1);
+  transform: rotate(90deg) scale(1.1);
 }
 
 .modal-header h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
+  font-size: 34px;
+  margin-bottom: 16px;
   font-family: var(--font-serif);
   line-height: 1.2;
 }
 
 .title-gold {
-  color: #FFD700;
+  background: linear-gradient(135deg, #D47A00, #f5a623);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .title-cyan {
-  color: #22d3ee;
+  color: #0077B6;
 }
 
 .modal-header p {
-  color: var(--text-muted);
-  font-size: 18px;
+  color: #475569;
+  font-size: 16px;
   margin-bottom: 35px;
-  line-height: 1.5;
-  font-weight: 400;
+  line-height: 1.6;
+  font-weight: 500;
 }
 
 .modal-actions {
@@ -99,34 +150,34 @@
   justify-content: center;
   gap: 12px;
   padding: 16px;
-  border-radius: 50px; /* Pill shaped buttons from screenshot */
-  font-size: 18px;
+  border-radius: 14px;
+  font-size: 17px;
   font-weight: 700;
   transition: all 0.3s ease;
   text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .call-btn {
-  background: transparent;
-  border: 2px solid #FFD700;
-  color: #FFD700;
+  background: linear-gradient(135deg, #0077B6, #0096c7);
+  border: none;
+  color: white;
 }
 
 .call-btn:hover {
-  background: rgba(255, 215, 0, 0.1);
-  transform: translateY(-2px);
+  background: linear-gradient(135deg, #005f8f, #0077B6);
+  box-shadow: 0 8px 20px rgba(0, 119, 182, 0.3);
 }
 
 .whatsapp-btn {
-  background: #22c55e; /* Vibrant green from screenshot */
+  background: linear-gradient(135deg, #25D366, #22c55e);
   color: white;
   border: none;
 }
 
 .whatsapp-btn:hover {
-  transform: translateY(-2px);
-  filter: brightness(1.1);
-  box-shadow: 0 10px 20px rgba(34, 197, 94, 0.3);
+  background: linear-gradient(135deg, #1fa851, #16a34a);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
 }
 
 .modal-footer p {

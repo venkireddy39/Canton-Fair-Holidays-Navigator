@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import { X, Phone, MessageCircle } from 'lucide-react';
+import { motion } from 'framer-motion';
 import './BookingModal.css';
 
 const BookingModal = ({ onClose }) => {
@@ -57,48 +58,85 @@ const BookingModal = ({ onClose }) => {
   const modalContent = (
     <div className="modal-overlay" ref={modalRef}>
       {/* Backdrop */}
-      <div className="modal-backdrop" onClick={onClose} />
+      <motion.div 
+        className="modal-backdrop" 
+        onClick={onClose} 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.3 }}
+      />
 
       {/* Modal Content */}
       <div className="modal-container">
-        <div 
-          className="modal-content"
+        <motion.div 
+          className="modal-content premium-modal"
           role="dialog"
           aria-modal="true"
           aria-labelledby="modal-title"
+          initial={{ scale: 0.9, opacity: 0, y: 30 }}
+          animate={{ scale: 1, opacity: 1, y: 0 }}
+          transition={{ type: "spring", damping: 25, stiffness: 300 }}
         >
           <button className="modal-close-btn" onClick={onClose} aria-label="Close booking modal">
-            <X size={28} />
+            <X size={24} />
           </button>
 
-          <div className="modal-header">
-            <h2 id="modal-title">
-              <span className="title-gold">Secure Your Spot</span> <span className="title-cyan">Now</span>
-            </h2>
-            <p>Contact Holidays Navigator to reserve your Canton Fair 2026 package.</p>
+          <div className="modal-hero-image">
+            <div className="modal-badge">VIP Travel Package</div>
           </div>
 
-          <div className="modal-actions">
-            <a href="tel:+919533444455" className="modal-btn call-btn">
-              <Phone size={22} fill="currentColor" aria-hidden="true" />
-              <span>Call Now</span>
-            </a>
-
-            <a
-              href="https://wa.me/919533444455?text=Hi%20Holidays%20Navigator,%20I%20want%20to%20plan%20my%20Canton%20Fair%20tour.%20Let%20me%20know%20the%20details."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="modal-btn whatsapp-btn"
+          <div className="modal-body">
+            <motion.div 
+              className="modal-header"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
             >
-              <MessageCircle size={22} fill="currentColor" aria-hidden="true" />
-              <span>WhatsApp Now</span>
-            </a>
-          </div>
+              <h2 id="modal-title">
+                <span className="title-gold">Secure Your Spot</span> <span className="title-cyan">Now</span>
+              </h2>
+              <p>Experience seamless business travel with our all-inclusive premium package designed for Canton Fair 2026.</p>
+            </motion.div>
 
-          <div className="modal-footer">
-            <p>Limited slots available. Book early to ensure visa processing.</p>
+            <motion.div 
+              className="modal-actions"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+              <motion.a 
+                href="tel:+919533444455" 
+                className="modal-btn call-btn"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <Phone size={22} fill="currentColor" aria-hidden="true" />
+                <span>Call Now</span>
+              </motion.a>
+
+              <motion.a
+                href="https://wa.me/919533444455?text=Hi%20Holidays%20Navigator,%20I%20want%20to%20plan%20my%20Canton%20Fair%20tour.%20Let%20me%20know%20the%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="modal-btn whatsapp-btn"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <MessageCircle size={22} fill="currentColor" aria-hidden="true" />
+                <span>WhatsApp Now</span>
+              </motion.a>
+            </motion.div>
+
+            <motion.div 
+              className="modal-footer"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+            >
+              <p>Limited slots available. Book early to ensure visa processing.</p>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

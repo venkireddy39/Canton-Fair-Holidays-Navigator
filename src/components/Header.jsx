@@ -63,6 +63,12 @@ const Header = ({ onBookNow }) => {
         </button>
       </div>
 
+      {/* Mobile Menu Backdrop */}
+      <div 
+        className={`mobile-menu-backdrop ${mobileMenuOpen ? 'open' : ''}`}
+        onClick={closeMenu}
+      />
+
       {/* Mobile Menu Overlay */}
       <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
         <nav className="mobile-nav-links">

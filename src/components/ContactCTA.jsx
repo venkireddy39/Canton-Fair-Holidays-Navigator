@@ -167,27 +167,44 @@ const ContactCTA = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 style={{ fontSize: '36px', marginBottom: '20px' }}>
-              Contact and Booking
-            </h2>
+            <div className="contact-hero-image"></div>
+            
+            <div className="contact-info-body">
+              <h2 style={{ fontSize: '36px', marginBottom: '20px' }}>
+                Contact and Booking
+              </h2>
 
-            <p style={{
-              fontSize: '18px',
-              color: 'var(--text-light)',
-              marginBottom: '30px'
-            }}>
-              Book your Canton Fair package today.
-            </p>
+              <p style={{
+                fontSize: '18px',
+                color: 'var(--text-light)',
+                marginBottom: '30px'
+              }}>
+                Book your Canton Fair package today.
+              </p>
 
-            <a
-              href="https://wa.me/919533444455"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="whatsapp-btn"
-            >
-              <MessageCircle size={24} />
-              Chat on WhatsApp
-            </a>
+              <div className="contact-action-buttons">
+                <a
+                  href="https://wa.me/919533444455"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="whatsapp-btn"
+                >
+                  <MessageCircle size={24} />
+                  Chat on WhatsApp
+                </a>
+
+                <div className="mobile-call-buttons">
+                  <a href="tel:+919533444455" className="call-btn">
+                    <Phone size={20} />
+                    Call +91 9533444455
+                  </a>
+                  <a href="tel:+919121388338" className="call-btn">
+                    <Phone size={20} />
+                    Call +91 9121388338
+                  </a>
+                </div>
+              </div>
+            </div>
           </motion.div>
 
           <motion.div

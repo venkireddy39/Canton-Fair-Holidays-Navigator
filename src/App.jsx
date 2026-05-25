@@ -26,22 +26,19 @@ function App() {
   const [isPopupFormOpen, setIsPopupFormOpen] = useState(false);
 
   useEffect(() => {
-    // Reset popup state on every page load for testing — remove this line once popup works
-    localStorage.removeItem('hasSubmittedPopup');
-
     const alreadySubmitted = localStorage.getItem('hasSubmittedPopup') === 'true';
     console.log("App mounted. alreadySubmitted:", alreadySubmitted);
-    
+
     if (alreadySubmitted) {
-      console.log("Popup was already submitted previously. It will not show again unless localStorage is cleared.");
+      console.log("Popup was already submitted previously. It will not show again.");
       return;
     }
 
-    console.log("Setting timer for popup... waiting 5 seconds.");
+    console.log("Setting timer for popup... waiting 25 seconds.");
     const timer = setTimeout(() => {
       console.log("Timer fired! Setting isPopupFormOpen to true");
       setIsPopupFormOpen(true);
-    }, 5000); // 5 seconds for easier testing
+    }, 25000); // 25 seconds for first time
 
     return () => {
       console.log("Clearing popup timer");
@@ -54,13 +51,13 @@ function App() {
     if (submitted) {
       localStorage.setItem('hasSubmittedPopup', 'true');
     } else {
-      // Re-trigger popup after 10 seconds if closed without submitting
+      // Re-trigger popup after 20 seconds if closed without submitting
       setTimeout(() => {
         const alreadySubmitted = localStorage.getItem('hasSubmittedPopup') === 'true';
         if (!alreadySubmitted) {
           setIsPopupFormOpen(true);
         }
-      }, 10000);
+      }, 20000);
     }
   };
 
@@ -79,7 +76,7 @@ function App() {
       <main>
         <Hero onBookNow={handleOpenModal} />
         <AboutFair />
-        
+
         <React.Suspense fallback={<div style={{ padding: '50px', textAlign: 'center', color: 'var(--text-light)' }}>Loading...</div>}>
           <PhaseTimeline onBookNow={handleOpenModal} />
           <Products />
