@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://holidaysnavigator.com/sitemap.xml
+Sitemap: https://canton-fair-holidays-navigator.vercel.app/
