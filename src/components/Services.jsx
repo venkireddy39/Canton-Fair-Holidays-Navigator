@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FileText, Building2, Headset, Plane, Ticket, Bus } from 'lucide-react';
+import { FileText, Building2, Car, MessageSquare, Factory, Navigation } from 'lucide-react';
 
 const services = [
-  { icon: <FileText size={32} />, title: "Visa Processing", desc: "Expert assistance with China Business Visa applications." },
-  { icon: <Building2 size={32} />, title: "Premium Hotel", desc: "Comfortable stay in handpicked premium business hotels." },
-  { icon: <Plane size={32} />, title: "Flight Booking", desc: "Hassle-free return flight arrangements included." },
-  { icon: <Ticket size={32} />, title: "Canton Registration", desc: "Official Canton Fair buyer badge registration assistance." },
-  { icon: <Bus size={32} />, title: "SIC Transfers", desc: "Comfortable shared transfers between hotel and exhibition." },
-  { icon: <Headset size={32} />, title: "24/7 Assistance", desc: "On-ground and virtual support throughout your journey." }
+  { icon: <Building2 size={32} />, title: "Hotels", desc: "Premium business hotel accommodation near the Canton Fair complex." },
+  { icon: <FileText size={32} />, title: "Visa Support", desc: "Expert processing assistance for your China Business Visa." },
+  { icon: <Car size={32} />, title: "Airport Pickup", desc: "Seamless airport transfers and daily exhibition shuttle services." },
+  { icon: <MessageSquare size={32} />, title: "Translation Assistance", desc: "Professional interpreters to help you negotiate smoothly." },
+  { icon: <Factory size={32} />, title: "Factory Visits", desc: "Arranged trips to local manufacturing hubs and wholesale markets." },
+  { icon: <Navigation size={32} />, title: "Exhibition Guidance", desc: "Strategic planning to help you navigate the 1.5 million sqm fair." }
 ];
 
 const Services = () => {
@@ -16,8 +16,8 @@ const Services = () => {
     <section id="services">
       <div className="container">
         <div className="section-header">
-          <h2>What's Included</h2>
-          <p style={{ color: 'var(--text-muted)', fontSize: '18px' }}>Comprehensive services for a worry-free business trip</p>
+          <h2>What's Included in Our Canton Fair Travel Packages</h2>
+          <p style={{ color: 'var(--text-muted)', fontSize: '18px' }}>Comprehensive services including Guangzhou hotels, Canton Fair visa support, and airport transfer.</p>
         </div>
         
         <div className="services-grid">

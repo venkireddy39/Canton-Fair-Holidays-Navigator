@@ -12,8 +12,8 @@ const Hero = ({ onBookNow }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="hero-subtitle" aria-hidden="true">Entrepreneur Travel Package</span>
-          <h1>Canton Fair 140 <br /><span className="gradient-text">2026 Edition</span></h1>
+          <span className="hero-subtitle" aria-hidden="true">Premium Entrepreneur Travel Packages</span>
+          <h1>Canton Fair 2026 Travel Packages from India<br /><span className="gradient-text">Hotels, Visa & Transfers</span></h1>
           <p>
             <motion.span
               className="text-highlight"
@@ -22,21 +22,21 @@ const Hero = ({ onBookNow }) => {
               viewport={{ once: true }}
               transition={{ duration: 1.2, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
             >
-              Join the world's largest trade fair.
-            </motion.span> Experience seamless business travel with our all-inclusive premium package designed exclusively for <motion.span
+              Your trusted partner for the Canton Fair 2026.
+            </motion.span> We provide comprehensive <motion.span
               className="text-highlight"
               initial={{ backgroundPosition: '100% 0', borderColor: 'transparent' }}
               whileInView={{ backgroundPosition: '0% 0', borderColor: 'rgba(212, 122, 0, 0.35)' }}
               viewport={{ once: true }}
               transition={{ duration: 1.2, delay: 1.0, ease: [0.22, 1, 0.36, 1] }}
             >
-              entrepreneurs and business professionals.
-            </motion.span>
+              Business Travel Assistance
+            </motion.span> including premium Hotels, Visa Support, and seamless Airport Transfers.
           </p>
 
           <div className="hero-buttons">
             <a href="#packages" className="cta-button" style={{ padding: '16px 32px', fontSize: '18px' }}>
-              View Package Details
+              Plan My Canton Fair Trip
             </a>
             <button
               onClick={(e) => {
@@ -46,7 +46,7 @@ const Hero = ({ onBookNow }) => {
               className="outline-button"
               style={{ background: 'transparent', cursor: 'pointer', fontSize: '18px' }}
             >
-              Secure Spot Now
+              Get Free Travel Assistance
             </button>
           </div>
 

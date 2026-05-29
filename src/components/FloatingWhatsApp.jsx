@@ -11,16 +11,19 @@ const FloatingWhatsApp = () => {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="floating-whatsapp"
-      initial={{ scale: 0, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
-      transition={{ type: 'spring', stiffness: 260, damping: 20 }}
-      aria-label="Contact us on WhatsApp"
+      className="floating-whatsapp-container"
+      initial={{ y: 50, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      whileHover={{ y: -3, scale: 1.03 }}
+      whileTap={{ scale: 0.97 }}
+      transition={{ type: 'spring', stiffness: 260, damping: 22 }}
+      aria-label="Talk to a Canton Fair Expert on WhatsApp"
     >
-      <MessageCircle size={32} />
-      <span className="whatsapp-tooltip">Chat with us!</span>
+      <div className="whatsapp-icon-wrapper">
+        <MessageCircle size={22} fill="currentColor" />
+        <span className="pulsing-badge" />
+      </div>
+      <span className="whatsapp-text">Talk to a Canton Fair Expert</span>
     </motion.a>
   );
 };

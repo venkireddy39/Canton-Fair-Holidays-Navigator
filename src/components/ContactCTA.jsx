@@ -190,7 +190,7 @@ const ContactCTA = () => {
                   className="whatsapp-btn"
                 >
                   <MessageCircle size={24} />
-                  Chat on WhatsApp
+                  Talk to a Canton Fair Expert
                 </a>
 
                 <div className="mobile-call-buttons">

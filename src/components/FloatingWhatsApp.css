@@ -1,53 +1,81 @@
-.floating-whatsapp {
+.floating-whatsapp-container {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(45deg, #25D366, #128C7E);
-  color: white;
-  border-radius: 50%;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: white !important;
+  padding: 12px 24px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.35);
+  z-index: 9999;
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.whatsapp-icon-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
-  z-index: 9999;
-  text-decoration: none;
+  position: relative;
 }
 
-.whatsapp-tooltip {
+.pulsing-badge {
   position: absolute;
-  right: 80px;
-  background: var(--header-bg, rgba(2, 12, 27, 0.9));
-  backdrop-filter: blur(8px);
-  color: var(--text-light, white);
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 500;
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(37, 211, 102, 0.3);
+  top: -3px;
+  right: -3px;
+  width: 9px;
+  height: 9px;
+  background-color: #ff3b30;
+  border: 1.5px solid white;
+  border-radius: 50%;
+  animation: pulse-badge 2s infinite;
 }
 
-.floating-whatsapp:hover .whatsapp-tooltip {
-  opacity: 1;
-  visibility: visible;
-  right: 75px;
+@keyframes pulse-badge {
+  0% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(255, 59, 48, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 5px rgba(255, 59, 48, 0);
+  }
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(255, 59, 48, 0);
+  }
+}
+
+.whatsapp-text {
+  white-space: nowrap;
 }
 
 @media (max-width: 768px) {
-  .floating-whatsapp {
+  .floating-whatsapp-container {
     bottom: 20px;
     right: 20px;
-    width: 50px;
-    height: 50px;
+    padding: 10px 18px;
+    font-size: 13.5px;
+    gap: 8px;
   }
-  
-  .floating-whatsapp svg {
-    width: 24px;
-    height: 24px;
+}
+
+@media (max-width: 480px) {
+  .floating-whatsapp-container {
+    padding: 10px 15px;
+  }
+  .whatsapp-text {
+    font-size: 0px;
+  }
+  .whatsapp-text::before {
+    content: "Talk to Expert";
+    font-size: 13.5px;
   }
 }

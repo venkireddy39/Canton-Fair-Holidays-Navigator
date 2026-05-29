@@ -4,24 +4,24 @@ import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
 
 const faqs = [
   {
-    question: "What is included in the INR 60,000/- package?",
-    answer: "Our premium package includes expert Business Visa processing assistance, comfortable premium twin-sharing business hotel stay, return flight booking assistance, Canton Fair official buyer badge registration, shared daily coach transfers between your hotel and the Pazhou Exhibition Complex, and 24/7 support throughout your travel."
+    question: "Which Canton Fair phase should I attend?",
+    answer: "Phase 1 focuses on Electronics & Machinery, Phase 2 on Consumer Goods & Home Decor, and Phase 3 on Textiles, Garments & Shoes. Choose the phase that matches your sourcing needs."
   },
   {
-    question: "How long does China Visa processing take?",
-    answer: "China Business Visa processing takes a minimum of 15+ working days. Because slots and processing queues are extremely limited close to the event, we highly recommend booking early so we can secure your entry documents in time."
+    question: "Is an invitation required?",
+    answer: "Yes, an official invitation letter from the Canton Fair is mandatory for securing a China Business (M) Visa. We assist our clients in obtaining this invitation."
   },
   {
-    question: "What documents do I need to prepare for the Visa?",
-    answer: "You will need: (1) A valid passport with at least 6 months validity, (2) Passport-sized business photographs, (3) Personal or company bank statements from the past 6 months, (4) GST registration or company certificate, and (5) An official invitation letter from the Canton Fair (which our team assists you in securing)."
+    question: "How many days are needed?",
+    answer: "We typically recommend our 5 Nights / 6 Days package for a single phase. This provides enough time to explore the fair, hold meetings, and visit local markets."
   },
   {
-    question: "Is the Canton Fair Buyer Badge included?",
-    answer: "Yes, official pre-registration is included. We assist you with online pre-registration and coordinate badge collection directly, helping you skip the long buyer badge queues at the Pazhou complex on day one."
+    question: "Do you provide hotel and visa support?",
+    answer: "Absolutely. Our comprehensive packages include premium business hotel accommodation, complete China Business Visa processing assistance, and registration support."
   },
   {
-    question: "Can I request a single room or customize the travel dates?",
-    answer: "Yes! Single occupancy room upgrades are available for a nominal surcharge. We also support fully customized itineraries or extended stays if you want to explore other industrial zones in China."
+    question: "Can airport transfer be arranged?",
+    answer: "Yes, we provide shared SIC transfers between your hotel and the Canton Fair complex, and airport pickups can be arranged based on your flight schedule."
   }
 ];
 

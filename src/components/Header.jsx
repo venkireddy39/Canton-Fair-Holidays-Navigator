@@ -39,15 +39,15 @@ const Header = ({ onBookNow }) => {
 
         {/* Desktop Nav */}
         <nav className="nav-links desktop-nav">
-          <a href="#home" className="home-link">Home</a>
-          <a href="#about-fair">Canton Fair</a>
-          <a href="#timeline">Phases</a>
-          <a href="#products">Products</a>
-          <a href="#markets">Guangzhou Markets</a>
-          <a href="#packages">Packages</a>
-          <a href="#services">Our services</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact">Contact</a>
+          <a href="/#home" className="home-link">Home</a>
+          <a href="/#about-fair">Canton Fair</a>
+          <a href="/#timeline">Phases</a>
+          <a href="/#products">Products</a>
+          <a href="/#markets">Guangzhou Markets</a>
+          <a href="/#packages">Packages</a>
+          <a href="/#services">Our services</a>
+          <a href="/#faq">FAQ</a>
+          <a href="/#contact">Contact</a>
         </nav>
 
         <div className="header-actions" style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
@@ -72,15 +72,15 @@ const Header = ({ onBookNow }) => {
       {/* Mobile Menu Overlay */}
       <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
         <nav className="mobile-nav-links">
-          <a href="#home" onClick={closeMenu}>Home</a>
-          <a href="#about-fair" onClick={closeMenu}>Canton Fair</a>
-          <a href="#timeline" onClick={closeMenu}>Phases</a>
-          <a href="#products" onClick={closeMenu}>Products</a>
-          <a href="#markets" onClick={closeMenu}>Guangzhou Markets</a>
-          <a href="#visa" onClick={closeMenu}>Visa</a>
-          <a href="#packages" onClick={closeMenu}>Packages</a>
-          <a href="#faq" onClick={closeMenu}>FAQ</a>
-          <a href="#contact" onClick={closeMenu}>Contact</a>
+          <a href="/#home" onClick={closeMenu}>Home</a>
+          <a href="/#about-fair" onClick={closeMenu}>Canton Fair</a>
+          <a href="/#timeline" onClick={closeMenu}>Phases</a>
+          <a href="/#products" onClick={closeMenu}>Products</a>
+          <a href="/#markets" onClick={closeMenu}>Guangzhou Markets</a>
+          <a href="/guangzhou-business-visa-guide" onClick={closeMenu}>Visa</a>
+          <a href="/#packages" onClick={closeMenu}>Packages</a>
+          <a href="/#faq" onClick={closeMenu}>FAQ</a>
+          <a href="/#contact" onClick={closeMenu}>Contact</a>
           <button
             onClick={(e) => {
               closeMenu();
