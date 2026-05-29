@@ -105,7 +105,7 @@ export default function Layout() {
               Have questions regarding delegation package bookings? Chat with an expert instantly.
             </p>
             <p style={{ margin: '0 0 5px 0' }}>
-              <strong>Email:</strong> bookings@holidaysnavigator.com
+              <strong>Email:</strong> info.holidaysnavigator@gmail.com
             </p>
             <p style={{ margin: 0 }}>
               <strong>Phone:</strong> +91 95334 44455
