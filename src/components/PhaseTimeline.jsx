@@ -145,7 +145,7 @@ const PhaseTimeline = ({ onBookNow }) => {
                       ? '/canton-fair-phase-2-products'
                       : '/canton-fair-phase-3-products'
                   } className="phase-action-btn" style={{ background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)' }}>
-                    Read More
+                    Explore Phase Products
                   </Link>
                 </div>
               </div>
