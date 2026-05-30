@@ -1,6 +1,6 @@
 .floating-whatsapp-container {
   position: fixed;
-  bottom: 30px;
+  bottom: 80px;
   right: 30px;
   background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
   color: white !important;
@@ -59,7 +59,7 @@
 
 @media (max-width: 768px) {
   .floating-whatsapp-container {
-    bottom: 20px;
+    bottom: 70px;
     right: 20px;
     padding: 10px 18px;
     font-size: 13.5px;
