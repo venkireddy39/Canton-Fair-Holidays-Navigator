@@ -94,7 +94,7 @@ section {
 
 /* Hero Section */
 .hero {
-  min-height: 100vh;
+  min-height: calc(100vh - 80px);
   display: flex;
   align-items: center;
   position: relative;
@@ -112,6 +112,7 @@ section {
   position: relative;
   z-index: 10;
   max-width: 800px;
+  padding-top: 24px; /* nudge content slightly down so CTAs stay above the fold */
 }
 
 .hero-subtitle {
@@ -164,6 +165,17 @@ section {
 .hero-buttons {
   display: flex;
   gap: 20px;
+}
+
+/* Make primary CTA more prominent in hero */
+.hero .cta-button {
+  padding: 16px 36px;
+  font-size: 18px;
+  box-shadow: 0 12px 30px rgba(0,120,160,0.18);
+}
+
+.hero .outline-button {
+  padding: 14px 30px;
 }
 
 .outline-button {

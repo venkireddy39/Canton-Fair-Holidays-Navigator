@@ -13,41 +13,24 @@ const Hero = ({ onBookNow }) => {
           transition={{ duration: 0.8 }}
         >
           <span className="hero-subtitle" aria-hidden="true">Premium Entrepreneur Travel Packages</span>
-          <h1>Canton Fair 2026 Travel Packages from India<br /><span className="gradient-text">Hotels, Visa & Transfers</span></h1>
-          <p>
-            <motion.span
-              className="text-highlight"
-              initial={{ backgroundPosition: '100% 0', borderColor: 'transparent' }}
-              whileInView={{ backgroundPosition: '0% 0', borderColor: 'rgba(212, 122, 0, 0.35)' }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.2, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            >
-              Your trusted partner for the Canton Fair 2026.
-            </motion.span> We provide comprehensive <motion.span
-              className="text-highlight"
-              initial={{ backgroundPosition: '100% 0', borderColor: 'transparent' }}
-              whileInView={{ backgroundPosition: '0% 0', borderColor: 'rgba(212, 122, 0, 0.35)' }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.2, delay: 1.0, ease: [0.22, 1, 0.36, 1] }}
-            >
-              Business Travel Assistance
-            </motion.span> including premium Hotels, Visa Support, and seamless Airport Transfers.
+          <h1>Canton Fair 2026 Travel Packages from India — Hotels, Visa & Transfers</h1>
+          <p style={{ fontSize: '1.15rem', lineHeight: '1.7', maxWidth: '700px', marginBottom: '30px' }}>
+            Hotels, visa support, airport transfers, interpreter assistance and business travel guidance for Canton Fair visitors.
           </p>
 
           <div className="hero-buttons">
-            <a href="#packages" className="cta-button" style={{ padding: '16px 32px', fontSize: '18px' }}>
+            <a href="#contact" className="cta-button" style={{ padding: '16px 32px', fontSize: '18px' }}>
               Plan My Canton Fair Trip
             </a>
-            <button
-              onClick={(e) => {
-                e.preventDefault();
-                onBookNow();
-              }}
+            <a
+              href="https://wa.me/919533444455?text=Hi%2C%20I%20want%20to%20know%20about%20Canton%20Fair%202026%20travel%20packages"
+              target="_blank"
+              rel="noopener noreferrer"
               className="outline-button"
-              style={{ background: 'transparent', cursor: 'pointer', fontSize: '18px' }}
+              style={{ background: 'transparent', cursor: 'pointer', fontSize: '18px', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px' }}
             >
-              Get Free Travel Assistance
-            </button>
+              Talk to Expert
+            </a>
           </div>
 
           <motion.div

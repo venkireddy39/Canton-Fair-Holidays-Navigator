@@ -158,6 +158,10 @@ const ContactCTA = () => {
   return (
     <section id="contact" className="contact-section">
       <div className="container">
+        <div className="section-header" style={{ marginBottom: '60px', textAlign: 'center' }}>
+          <h2>Get Your Personalized Canton Fair Package</h2>
+          <p style={{ color: 'var(--text-muted)', fontSize: '18px' }}>Fill out our quick inquiry form or chat with our team</p>
+        </div>
         <div className="contact-two-col">
 
           <motion.div

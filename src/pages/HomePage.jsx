@@ -42,12 +42,12 @@ function HomePage() {
       
       <Hero onBookNow={onBookNow} />
       <WhyChooseUs />
-      <TrustSection />
       <Services />
+      <TrustSection />
       <FAQ />
       <ContactCTA />
       
-      {/* Other components moved down to not overload the main flow */}
+      {/* Supplementary authority content below conversion fold */}
       <AboutFair />
       <PhaseTimeline onBookNow={onBookNow} />
       <Products />
