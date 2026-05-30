@@ -127,7 +127,7 @@ export default function Layout() {
           <p style={{ margin: 0 }}>
             &copy; {new Date().getFullYear()} Holidays Navigator. All Rights Reserved. Coordinated in collaboration with certified trade chambers.
           </p>
-          <div style={{ display: 'flex', gap: '20px' }}>
+          <div style={{ display: 'flex', gap: '20px', marginRight: '230px' }}>
             <a href="https://www.instagram.com/holidaysnavigator?igsh=MWtuczJqenJtdGN2ZA==" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>Instagram</a>
             <a href="https://www.linkedin.com/company/holidaysnavigator/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>LinkedIn</a>
           </div>
