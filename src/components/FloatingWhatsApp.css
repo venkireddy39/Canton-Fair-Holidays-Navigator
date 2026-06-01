@@ -1,6 +1,6 @@
 .floating-whatsapp-container {
   position: fixed;
-  bottom: 80px;
+  bottom: 30px;
   right: 30px;
   background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
   color: white !important;
@@ -43,10 +43,12 @@
     transform: scale(0.9);
     box-shadow: 0 0 0 0 rgba(255, 59, 48, 0.7);
   }
+
   70% {
     transform: scale(1);
     box-shadow: 0 0 0 5px rgba(255, 59, 48, 0);
   }
+
   100% {
     transform: scale(0.9);
     box-shadow: 0 0 0 0 rgba(255, 59, 48, 0);
@@ -59,7 +61,7 @@
 
 @media (max-width: 768px) {
   .floating-whatsapp-container {
-    bottom: 70px;
+    bottom: 20px;
     right: 20px;
     padding: 10px 18px;
     font-size: 13.5px;
@@ -71,9 +73,11 @@
   .floating-whatsapp-container {
     padding: 10px 15px;
   }
+
   .whatsapp-text {
     font-size: 0px;
   }
+
   .whatsapp-text::before {
     content: "Talk to Expert";
     font-size: 13.5px;

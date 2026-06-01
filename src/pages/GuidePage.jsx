@@ -30,24 +30,29 @@ function GuidePage() {
           <p style={{ color: '#e0e0e0', fontSize: '1.2rem' }}>Everything you need to know – phases, venues, hotels, visa, transport, and registration.</p>
         </div>
       </section>
-        <section className="overview-section" style={{ padding: '40px 20px' }}>
-          <h2>Overview</h2>
-          <p>The Canton Fair is the world’s largest trade fair, attracting millions of visitors. Our guide helps you navigate each phase, find accommodation, handle visa requirements, and book airport transfers.</p>
+        <section className="overview-section" style={{ padding: '60px 0' }}>
+          <div className="container">
+            <h2 style={{ fontSize: '2.5rem', marginBottom: '20px', textAlign: 'center' }}>Overview</h2>
+            <p style={{ fontSize: '1.1rem', textAlign: 'center', maxWidth: '800px', margin: '0 auto', color: 'var(--text-muted)' }}>The Canton Fair is the world’s largest trade fair, attracting millions of visitors. Our guide helps you navigate each phase, find accommodation, handle visa requirements, and book airport transfers.</p>
+          </div>
         </section>
-        <section className="main-content" style={{ padding: '40px 20px' }}>
-          <h2>Key Highlights</h2>
-          <ul>
+        <section className="main-content page-section-light" style={{ padding: '60px 0' }}>
+          <div className="container">
+            <h2 style={{ fontSize: '2.5rem', marginBottom: '30px', textAlign: 'center' }}>Key Highlights</h2>
+            <ul style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.1rem', color: 'var(--text-muted)', lineHeight: '1.8' }}>
             <li>Phase 1 – Electronics & Machinery (Oct 15‑19)</li>
             <li>Phase 2 – Consumer Goods & Home Décor (Oct 23‑27)</li>
             <li>Phase 3 – Textiles, Garments & Shoes (Oct 31‑Nov 4)</li>
             <li>Best hotels near the venue</li>
             <li>Visa application guide for international visitors</li>
             <li>Airport transfer options and registration steps</li>
-          </ul>
+            </ul>
+          </div>
         </section>
-        <section className="benefits-section" style={{ padding: '40px 20px', background: 'var(--bg-light)' }}>
-          <h2>Why Use Our Guide?</h2>
-          <div className="cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr)', gap: '20px' }}>
+        <section className="benefits-section" style={{ padding: '60px 0', background: 'var(--bg-light)' }}>
+          <div className="container">
+            <h2 style={{ fontSize: '2.5rem', marginBottom: '40px', textAlign: 'center' }}>Why Use Our Guide?</h2>
+            <div className="cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '30px' }}>
             <div className="card" style={{ padding: '20px', border: '1px solid var(--border-color)', borderRadius: '12px' }}>
               <h3>Comprehensive</h3>
               <p>All phases, logistics, and tips in one place.</p>
@@ -61,28 +66,34 @@ function GuidePage() {
               <p>Direct links to hotels, visas, and transport.</p>
             </div>
           </div>
+          </div>
         </section>
-        <section className="internal-links" style={{ padding: '40px 20px' }}>
-          <h2>Explore More</h2>
-          <ul>
-            <li><Link to="/canton-fair-phase-1-products">Phase 1 Products</Link></li>
+        <section className="internal-links page-section-light" style={{ padding: '60px 0' }}>
+          <div className="container">
+            <h2 style={{ fontSize: '2.5rem', marginBottom: '30px', textAlign: 'center' }}>Explore More</h2>
+            <ul style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.1rem', lineHeight: '1.8', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              <li><Link to="/canton-fair-phase-1-products" style={{ color: 'var(--accent-green)', fontWeight: '600' }}>Phase 1 Products</Link></li>
             <li><Link to="/canton-fair-phase-2-products">Phase 2 Products</Link></li>
             <li><Link to="/canton-fair-phase-3-products">Phase 3 Products</Link></li>
             <li><Link to="/best-hotels-near-canton-fair">Best Hotels Near Canton Fair</Link></li>
             <li><Link to="/guangzhou-business-visa-guide">Guangzhou Business Visa Guide</Link></li>
             <li><Link to="/canton-fair-airport-transfer">Airport Transfer Options</Link></li>
-            <li><Link to="/how-to-register-for-canton-fair">How to Register</Link></li>
-          </ul>
+              <li><Link to="/how-to-register-for-canton-fair" style={{ color: 'var(--accent-green)', fontWeight: '600' }}>How to Register</Link></li>
+            </ul>
+          </div>
         </section>
-        <section className="faq-section" style={{ padding: '40px 20px' }}>
-          <h2>Frequently Asked Questions</h2>
-          <ul>
-            {faqItems.map((item, idx) => (
-              <li key={idx} style={{ marginBottom: '15px' }}>
-                <strong>{item.question}</strong><br />{item.answer}
+        <section className="faq-section" style={{ padding: '80px 0' }}>
+          <div className="container">
+            <h2 style={{ fontSize: '2.5rem', marginBottom: '40px', textAlign: 'center' }}>Frequently Asked Questions</h2>
+            <ul style={{ maxWidth: '800px', margin: '0 auto', listStyle: 'none', padding: 0 }}>
+              {faqItems.map((item, idx) => (
+              <li key={idx} style={{ marginBottom: '25px', padding: '20px', background: 'var(--card-bg)', borderRadius: '12px', border: '1px solid var(--border-color)' }}>
+                <strong style={{ fontSize: '1.2rem', display: 'block', marginBottom: '10px', color: 'var(--text-light)' }}>{item.question}</strong>
+                <span style={{ color: 'var(--text-muted)', fontSize: '1.05rem', lineHeight: '1.6', display: 'block' }}>{item.answer}</span>
               </li>
             ))}
-          </ul>
+            </ul>
+          </div>
         </section>
         <ContactCTA />
       </main>
