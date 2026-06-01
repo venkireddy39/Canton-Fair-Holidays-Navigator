@@ -42,13 +42,16 @@ export default function Layout() {
 
   return (
     <div className="app">
+      {/* Skip Navigation Link — Accessibility */}
+      <a href="#main-content" className="skip-nav-link">Skip to main content</a>
+
       <Header onBookNow={handleOpenModal} />
       
-      <main>
+      <main id="main-content" role="main">
         <Outlet context={{ onBookNow: handleOpenModal }} />
       </main>
 
-      <footer style={{ 
+      <footer role="contentinfo" aria-label="Site Footer" style={{ 
         background: 'var(--bg-dark)', 
         borderTop: '1px solid var(--border-color)', 
         padding: '60px 20px 30px',

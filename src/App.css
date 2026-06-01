@@ -1,4 +1,24 @@
 /* App.css */
+
+/* Skip Navigation — visible only on keyboard focus */
+.skip-nav-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 99999;
+  padding: 12px 24px;
+  background: var(--accent-green, #0ea5e9);
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 0 0 8px 8px;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+.skip-nav-link:focus {
+  top: 0;
+}
+
 .app {
   width: 100%;
   min-height: 100vh;
