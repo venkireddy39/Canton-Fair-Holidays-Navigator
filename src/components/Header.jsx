@@ -40,12 +40,11 @@ const Header = ({ onBookNow }) => {
         {/* Desktop Nav */}
         <nav className="nav-links desktop-nav">
           <a href="/#home" className="home-link">Home</a>
-          <a href="/#about-fair">Canton Fair</a>
-          <a href="/#timeline">Phases</a>
-          <a href="/#products">Products</a>
-          <a href="/#markets">Guangzhou Markets</a>
+          <a href="/canton-fair-2026-guide">Canton Fair</a>
+          <a href="/canton-fair-phase-1-products">Products</a>
           <a href="/#packages">Packages</a>
-          <a href="/#services">Our services</a>
+          <a href="/#services">Services</a>
+          <a href="/blog">Blog</a>
           <a href="/#faq">FAQ</a>
           <a href="/#contact">Contact</a>
         </nav>
@@ -53,7 +52,7 @@ const Header = ({ onBookNow }) => {
         <div className="header-actions" style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
           <button onClick={onBookNow} className="cta-button desktop-cta" style={{ border: 'none', cursor: 'pointer' }}>
             <PhoneCall size={18} />
-            <span>Book Now</span>
+            <span>Get Free Quote</span>
           </button>
         </div>
 
@@ -73,12 +72,11 @@ const Header = ({ onBookNow }) => {
       <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
         <nav className="mobile-nav-links">
           <a href="/#home" onClick={closeMenu}>Home</a>
-          <a href="/#about-fair" onClick={closeMenu}>Canton Fair</a>
-          <a href="/#timeline" onClick={closeMenu}>Phases</a>
-          <a href="/#products" onClick={closeMenu}>Products</a>
-          <a href="/#markets" onClick={closeMenu}>Guangzhou Markets</a>
+          <a href="/canton-fair-2026-guide" onClick={closeMenu}>Canton Fair</a>
+          <a href="/canton-fair-phase-1-products" onClick={closeMenu}>Products</a>
           <a href="/guangzhou-business-visa-guide" onClick={closeMenu}>Visa</a>
           <a href="/#packages" onClick={closeMenu}>Packages</a>
+          <a href="/blog" onClick={closeMenu}>Blog</a>
           <a href="/#faq" onClick={closeMenu}>FAQ</a>
           <a href="/#contact" onClick={closeMenu}>Contact</a>
           <button
@@ -87,10 +85,10 @@ const Header = ({ onBookNow }) => {
               onBookNow(e);
             }}
             className="mobile-cta-button"
-            style={{ border: 'none', cursor: 'pointer' }}
+            style={{ border: 'none', cursor: 'pointer', marginTop: '10px' }}
           >
             <PhoneCall size={18} />
-            Book Now
+            Get Quote
           </button>
         </nav>
       </div>

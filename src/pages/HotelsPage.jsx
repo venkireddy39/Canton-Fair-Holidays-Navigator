@@ -55,7 +55,7 @@ export default function HotelsPage() {
               style={{ background: 'var(--card-bg)', borderRadius: '20px', overflow: 'hidden', border: '1px solid var(--border-color)', boxShadow: '0 15px 35px rgba(0,0,0,0.05)', display: 'flex', flexDirection: 'column' }}
             >
               <div style={{ height: '240px', overflow: 'hidden', position: 'relative' }}>
-                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800" alt="Marriott" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }} onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'} />
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800" alt="Marriott" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }} onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'} />
                 <div style={{ position: 'absolute', top: '15px', right: '15px', background: 'rgba(255,255,255,0.9)', padding: '5px 12px', borderRadius: '20px', display: 'flex', alignItems: 'center', gap: '5px', fontWeight: 'bold', color: '#f59e0b' }}>
                   <Star size={16} fill="#f59e0b" /> 4.8
                 </div>
@@ -83,7 +83,7 @@ export default function HotelsPage() {
               style={{ background: 'var(--card-bg)', borderRadius: '20px', overflow: 'hidden', border: '1px solid var(--border-color)', boxShadow: '0 15px 35px rgba(0,0,0,0.05)', display: 'flex', flexDirection: 'column' }}
             >
               <div style={{ height: '240px', overflow: 'hidden', position: 'relative' }}>
-                <img src="https://images.unsplash.com/photo-1542314831-c6a4d14faaf2?auto=format&fit=crop&q=80&w=800" alt="Langham Place" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }} onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'} />
+                <img src="https://images.unsplash.com/photo-1542314831-c6a4d14faaf2?auto=format&fit=crop&q=80&w=800" alt="Langham Place" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }} onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'} />
                 <div style={{ position: 'absolute', top: '15px', right: '15px', background: 'rgba(255,255,255,0.9)', padding: '5px 12px', borderRadius: '20px', display: 'flex', alignItems: 'center', gap: '5px', fontWeight: 'bold', color: '#f59e0b' }}>
                   <Star size={16} fill="#f59e0b" /> 4.9
                 </div>
@@ -111,7 +111,7 @@ export default function HotelsPage() {
               style={{ background: 'var(--card-bg)', borderRadius: '20px', overflow: 'hidden', border: '1px solid var(--border-color)', boxShadow: '0 15px 35px rgba(0,0,0,0.05)', display: 'flex', flexDirection: 'column' }}
             >
               <div style={{ height: '240px', overflow: 'hidden', position: 'relative' }}>
-                <img src="https://images.unsplash.com/photo-1551882547-ff40c0d589rx?q=80&w=800&auto=format&fit=crop" alt="Shangri-La" onError={(e) => {e.target.onerror = null; e.target.src='https://images.unsplash.com/photo-1551882547-ff40c0d589d9?q=80&w=800&auto=format&fit=crop'}} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }} onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'} />
+                <img src="https://images.unsplash.com/photo-1551882547-ff40c0d589rx?q=80&w=800&auto=format&fit=crop" alt="Shangri-La" loading="lazy" onError={(e) => {e.target.onerror = null; e.target.src='https://images.unsplash.com/photo-1551882547-ff40c0d589d9?q=80&w=800&auto=format&fit=crop'}} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }} onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'} />
                 <div style={{ position: 'absolute', top: '15px', right: '15px', background: 'rgba(255,255,255,0.9)', padding: '5px 12px', borderRadius: '20px', display: 'flex', alignItems: 'center', gap: '5px', fontWeight: 'bold', color: '#f59e0b' }}>
                   <Star size={16} fill="#f59e0b" /> 4.7
                 </div>

@@ -14,6 +14,7 @@ import AboutUs from '../components/AboutUs';
 import FAQ from '../components/FAQ';
 import LocationMap from '../components/LocationMap';
 import SeoHelmet from '../components/SeoHelmet';
+import { Link } from 'react-router-dom';
 
 function HomePage() {
   const context = useOutletContext();
@@ -41,19 +42,34 @@ function HomePage() {
       />
       
       <Hero onBookNow={onBookNow} />
+      <PackageOverview onBookNow={onBookNow} />
       <WhyChooseUs />
-      <Services />
       <TrustSection />
-      <FAQ />
+      <Services />
+      
+      {/* Deep content summarized with Read More Links */}
+      <section style={{ padding: '80px 0', background: 'var(--bg-light)' }}>
+        <div className="container">
+          <div className="section-header" style={{ textAlign: 'center', marginBottom: '50px' }}>
+            <h2 style={{ fontSize: '2.5rem' }}>Canton Fair 2026 Resources</h2>
+            <p style={{ color: 'var(--text-muted)', fontSize: '1.2rem', maxWidth: '700px', margin: '0 auto' }}>
+              Explore comprehensive guides on exhibition phases, sourcing markets, and visa applications.
+            </p>
+          </div>
+          <div className="related-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px', maxWidth: '1000px' }}>
+            <Link to="/canton-fair-2026-guide" className="related-card" style={{ padding: '24px' }}>Canton Fair 2026 Complete Guide</Link>
+            <Link to="/canton-fair-phase-1-products" className="related-card" style={{ padding: '24px' }}>Phase 1: Electronics & Machinery</Link>
+            <Link to="/canton-fair-phase-2-products" className="related-card" style={{ padding: '24px' }}>Phase 2: Consumer Goods</Link>
+            <Link to="/canton-fair-phase-3-products" className="related-card" style={{ padding: '24px' }}>Phase 3: Textiles & Garments</Link>
+            <Link to="/guangzhou-business-visa-guide" className="related-card" style={{ padding: '24px' }}>China Business Visa Process</Link>
+            <Link to="/best-hotels-near-canton-fair" className="related-card" style={{ padding: '24px' }}>Best Hotels Near Pazhou</Link>
+          </div>
+        </div>
+      </section>
+
       <ContactCTA />
       
-      {/* Supplementary authority content below conversion fold */}
-      <AboutFair />
-      <PhaseTimeline onBookNow={onBookNow} />
-      <Products />
-      <GuangzhouMarkets />
-      <PackageOverview onBookNow={onBookNow} />
-      <AboutUs />
+      <FAQ />
       <LocationMap />
     </>
   );

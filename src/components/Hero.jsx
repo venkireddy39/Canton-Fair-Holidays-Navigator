@@ -13,7 +13,7 @@ const Hero = ({ onBookNow }) => {
           transition={{ duration: 0.8 }}
         >
           <span className="hero-subtitle" aria-hidden="true">Premium Entrepreneur Travel Packages</span>
-          <h1>Canton Fair 2026 Travel Packages from India — Hotels, Visa & Transfers</h1>
+          <h1>Canton Fair 2026 Travel Packages from India Hotels, Visa & Transfers</h1>
           <p style={{ fontSize: '1.15rem', lineHeight: '1.7', maxWidth: '700px', marginBottom: '30px' }}>
             Hotels, visa support, airport transfers, interpreter assistance and business travel guidance for Canton Fair visitors.
           </p>
