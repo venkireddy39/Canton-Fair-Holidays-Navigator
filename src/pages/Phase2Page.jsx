@@ -29,9 +29,9 @@ export default function Phase2Page() {
 
       <section className="page-hero">
         <div className="page-hero-content">
-        <h1>Canton Fair Phase 2 Products | Consumer Goods & Home Decor Sourcing</h1>
-        <p>{phase.desc}</p>
-      </div>
+          <h1>Canton Fair Phase 2 Products | Consumer Goods & Home Decor Sourcing</h1>
+          <p>{phase.desc}</p>
+        </div>
       </section>
 
       <section className="page-section">
@@ -117,9 +117,12 @@ export default function Phase2Page() {
         <div className="container text-center">
           <h3 className="text-2xl font-bold text-light mb-6">Explore Other Sections</h3>
           <div className="related-grid">
-            <Link to="/canton-fair-2026-guide" className="related-card">Fair Guide</Link>
-            <Link to="/canton-fair-phase-1-products" className="related-card">Phase 1 Products</Link>
+
             <Link to="/canton-fair-phase-3-products" className="related-card">Phase 3 Products</Link>
+            <Link to="/canton-fair-phase-1-products" className="related-card">Phase 1 Products</Link>
+            <Link to="/canton-fair-packages" className="related-card">Travel Packages</Link>
+            <Link to="/canton-fair-2026-guide" className="related-card">Fair Guide</Link>
+
             <Link to="/best-hotels-near-canton-fair" className="related-card">Hotels</Link>
             <Link to="/guangzhou-business-visa-guide" className="related-card">Visa Guide</Link>
             <Link to="/canton-fair-airport-transfer" className="related-card">Airport Transfer</Link>

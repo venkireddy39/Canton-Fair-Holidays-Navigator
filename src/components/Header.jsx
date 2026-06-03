@@ -42,7 +42,7 @@ const Header = ({ onBookNow }) => {
           <a href="/#home" className="home-link">Home</a>
           <a href="/canton-fair-2026-guide">Canton Fair</a>
           <a href="/canton-fair-phase-1-products">Products</a>
-          <a href="/#packages">Packages</a>
+          <a href="/canton-fair-packages">Packages</a>
           <a href="/#services">Services</a>
           <a href="/blog">Blog</a>
           <a href="/#faq">FAQ</a>
@@ -75,7 +75,7 @@ const Header = ({ onBookNow }) => {
           <a href="/canton-fair-2026-guide" onClick={closeMenu}>Canton Fair</a>
           <a href="/canton-fair-phase-1-products" onClick={closeMenu}>Products</a>
           <a href="/guangzhou-business-visa-guide" onClick={closeMenu}>Visa</a>
-          <a href="/#packages" onClick={closeMenu}>Packages</a>
+          <a href="/canton-fair-packages" onClick={closeMenu}>Packages</a>
           <a href="/blog" onClick={closeMenu}>Blog</a>
           <a href="/#faq" onClick={closeMenu}>FAQ</a>
           <a href="/#contact" onClick={closeMenu}>Contact</a>

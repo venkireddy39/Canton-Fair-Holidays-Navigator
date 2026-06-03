@@ -114,11 +114,15 @@ section {
 
 /* Hero Section */
 .hero {
-  min-height: calc(100vh - 80px);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   position: relative;
-  background: url('/cantonimg.png') center/cover;
+  background-image: url('/cantonimg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #020c1b;
 }
 
 .hero::before {
@@ -337,67 +341,6 @@ section {
   color: var(--text-muted);
 }
 
-/* Timeline Section */
-.timeline {
-  position: relative;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 50%; width: 2px; height: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateX(-50%);
-}
-
-.timeline-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 40px;
-  position: relative;
-}
-
-.timeline-item:nth-child(even) {
-  flex-direction: row-reverse;
-}
-
-.timeline-content {
-  width: 45%;
-  padding: 24px;
-}
-
-.timeline-dot {
-  width: 20px;
-  height: 20px;
-  background: var(--accent-gold);
-  border-radius: 50%;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  box-shadow: 0 0 10px var(--accent-gold);
-}
-
-.timeline-date {
-  color: var(--accent-green);
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.status-badge {
-  display: inline-block;
-  padding: 4px 12px;
-  border-radius: 12px;
-  font-size: 12px;
-  font-weight: 600;
-  margin-top: 12px;
-}
-
-.status-closed { background: rgba(255, 0, 0, 0.2); color: #ff4d4d; }
-.status-open { background: rgba(0, 255, 0, 0.2); color: #00ff00; }
-
 /* Why Choose Us */
 .features-grid {
   display: grid;
@@ -474,8 +417,6 @@ section {
   .section-header h2 { font-size: 34px; }
   .features-grid { gap: 20px; }
   .price-value { font-size: 40px; }
-  .timeline-content { width: 45%; padding: 15px; }
-  .about-fair-grid { grid-template-columns: 1fr; gap: 40px; }
 }
 
 @media (max-width: 768px) {
@@ -487,16 +428,6 @@ section {
   
   .overview-grid { grid-template-columns: 1fr; gap: 30px; }
   
-  /* Timeline stacking */
-  .timeline::before { left: 30px; }
-  .timeline-item, .timeline-item:nth-child(even) { 
-    flex-direction: column; 
-    align-items: flex-start; 
-    padding-left: 60px;
-  }
-  .timeline-content { width: 100%; padding: 20px; }
-  .timeline-dot { left: 30px; transform: translateX(-50%); }
-
   .features-grid { grid-template-columns: 1fr; }
   .services-grid { grid-template-columns: 1fr; }
   
@@ -661,6 +592,7 @@ section {
   gap: 20px;
   max-width: 900px;
   margin: 0 auto;
+  padding-top: 16px; /* Extra clearance so hover animation (translateY -8px) never overlaps heading */
 }
 
 .related-card {

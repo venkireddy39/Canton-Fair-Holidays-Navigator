@@ -143,6 +143,7 @@ export default function VisaPage() {
         <div className="container text-center">
           <h3 className="text-2xl font-bold text-light mb-6">Related Resources</h3>
           <div className="related-grid">
+            <Link to="/canton-fair-packages" className="related-card">Travel Packages</Link>
             <Link to="/canton-fair-2026-guide" className="related-card">Fair Guide</Link>
             <Link to="/best-hotels-near-canton-fair" className="related-card">Hotels</Link>
             <Link to="/canton-fair-airport-transfer" className="related-card">Airport Transfer</Link>

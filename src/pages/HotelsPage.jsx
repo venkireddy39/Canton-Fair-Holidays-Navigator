@@ -1,11 +1,12 @@
 import React from 'react';
 import SeoHelmet from '../components/SeoHelmet';
 import ContactCTA from '../components/ContactCTA';
-import { Link } from 'react-router-dom';
+import { Link, useOutletContext } from 'react-router-dom';
 import { Star, MapPin, Wifi, Coffee, Car, ShieldCheck } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function HotelsPage() {
+  const { onBookNow } = useOutletContext();
   return (
     <>
       <SeoHelmet
@@ -31,11 +32,11 @@ export default function HotelsPage() {
 
       <section className="page-hero">
         <div className="page-hero-content">
-        <h1>Best Hotels Near Canton Fair 2026 | Premium Accommodations</h1>
-        <p>
-          Choose comfort, convenience and business-ready facilities.
-        </p>
-      </div>
+          <h1>Best Hotels Near Canton Fair 2026 | Premium Accommodations</h1>
+          <p>
+            Choose comfort, convenience and business-ready facilities.
+          </p>
+        </div>
       </section>
 
       <section className="page-section">
@@ -48,14 +49,14 @@ export default function HotelsPage() {
       <section className="page-section" style={{ paddingTop: '20px' }}>
         <div className="container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '40px' }}>
-            
+
             {/* Hotel Card 1 */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
               style={{ background: 'var(--card-bg)', borderRadius: '20px', overflow: 'hidden', border: '1px solid var(--border-color)', boxShadow: '0 15px 35px rgba(0,0,0,0.05)', display: 'flex', flexDirection: 'column' }}
             >
               <div style={{ height: '240px', overflow: 'hidden', position: 'relative' }}>
-                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800" alt="Marriott" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }} onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'} />
+                <img src="https://cache.marriott.com//content/dam/marriott-renditions/CANTI/canti-exterior-0030-hor-wide.jpg?output-quality=90&interpolation=progressive-bilinear&downsize=512px:*" alt="Marriott" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }} onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'} />
                 <div style={{ position: 'absolute', top: '15px', right: '15px', background: 'rgba(255,255,255,0.9)', padding: '5px 12px', borderRadius: '20px', display: 'flex', alignItems: 'center', gap: '5px', fontWeight: 'bold', color: '#f59e0b' }}>
                   <Star size={16} fill="#f59e0b" /> 4.8
                 </div>
@@ -73,17 +74,17 @@ export default function HotelsPage() {
                   <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '0.9rem' }}><Car size={16} /> Shuttle</span>
                   <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '0.9rem' }}><Coffee size={16} /> Breakfast</span>
                 </div>
-                <a href="#book" className="premium-btn" style={{ width: '100%', textAlign: 'center', marginTop: 'auto' }}>Check Rates</a>
+                <a href="#book" className="premium-btn" style={{ width: '100%', textAlign: 'center', marginTop: 'auto' }} onClick={(e) => onBookNow(e, 'to know the more information related to Best Hotels Near Canton Fair | Premium Accommodations', 'Book Hotel now')}>For more infomation click here </a>
               </div>
             </motion.div>
 
             {/* Hotel Card 2 */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}
               style={{ background: 'var(--card-bg)', borderRadius: '20px', overflow: 'hidden', border: '1px solid var(--border-color)', boxShadow: '0 15px 35px rgba(0,0,0,0.05)', display: 'flex', flexDirection: 'column' }}
             >
               <div style={{ height: '240px', overflow: 'hidden', position: 'relative' }}>
-                <img src="https://images.unsplash.com/photo-1542314831-c6a4d14faaf2?auto=format&fit=crop&q=80&w=800" alt="Langham Place" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }} onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'} />
+                <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/536113994.jpg?k=f1a5000c22be1aeda9350e17704189725abe34b31dd88b7b7ba36ea8691b1630&o=" alt="Langham Place" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }} onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'} />
                 <div style={{ position: 'absolute', top: '15px', right: '15px', background: 'rgba(255,255,255,0.9)', padding: '5px 12px', borderRadius: '20px', display: 'flex', alignItems: 'center', gap: '5px', fontWeight: 'bold', color: '#f59e0b' }}>
                   <Star size={16} fill="#f59e0b" /> 4.9
                 </div>
@@ -101,17 +102,17 @@ export default function HotelsPage() {
                   <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '0.9rem' }}><Wifi size={16} /> High Speed</span>
                   <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '0.9rem' }}><Coffee size={16} /> Dining</span>
                 </div>
-                <a href="#book" className="premium-btn" style={{ width: '100%', textAlign: 'center', marginTop: 'auto' }}>Check Rates</a>
+                <a href="#book" className="premium-btn" style={{ width: '100%', textAlign: 'center', marginTop: 'auto' }} onClick={(e) => onBookNow(e, 'to know the more information related to Best Hotels Near Canton Fair | Premium Accommodations', 'Book Hotel now')}>For more infomation click here </a>
               </div>
             </motion.div>
 
             {/* Hotel Card 3 */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }}
               style={{ background: 'var(--card-bg)', borderRadius: '20px', overflow: 'hidden', border: '1px solid var(--border-color)', boxShadow: '0 15px 35px rgba(0,0,0,0.05)', display: 'flex', flexDirection: 'column' }}
             >
               <div style={{ height: '240px', overflow: 'hidden', position: 'relative' }}>
-                <img src="https://images.unsplash.com/photo-1551882547-ff40c0d589rx?q=80&w=800&auto=format&fit=crop" alt="Shangri-La" loading="lazy" onError={(e) => {e.target.onerror = null; e.target.src='https://images.unsplash.com/photo-1551882547-ff40c0d589d9?q=80&w=800&auto=format&fit=crop'}} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }} onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'} />
+                <img src="https://cf.bstatic.com/xdata/images/hotel/square600/864736650.webp?k=db3dab5ce60c425e068237e404180c15c68bf2560ce0725893e4efcc45079f1d&o=" alt="Shangri-La" loading="lazy" onError={(e) => { e.target.onerror = null; e.target.src = 'https://images.unsplash.com/photo-1551882547-ff40c0d589d9?q=80&w=800&auto=format&fit=crop' }} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }} onMouseOver={e => e.currentTarget.style.transform = 'scale(1.05)'} onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'} />
                 <div style={{ position: 'absolute', top: '15px', right: '15px', background: 'rgba(255,255,255,0.9)', padding: '5px 12px', borderRadius: '20px', display: 'flex', alignItems: 'center', gap: '5px', fontWeight: 'bold', color: '#f59e0b' }}>
                   <Star size={16} fill="#f59e0b" /> 4.7
                 </div>
@@ -129,7 +130,7 @@ export default function HotelsPage() {
                   <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '0.9rem' }}><Coffee size={16} /> Lounge</span>
                   <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '0.9rem' }}><Wifi size={16} /> Free WiFi</span>
                 </div>
-                <a href="#book" className="premium-btn" style={{ width: '100%', textAlign: 'center', marginTop: 'auto' }}>Check Rates</a>
+                <a href="#book" className="premium-btn" style={{ width: '100%', textAlign: 'center', marginTop: 'auto' }} onClick={(e) => onBookNow(e, 'to know the more information related to Best Hotels Near Canton Fair | Premium Accommodations', 'Book Hotel now')}>For more infomation click here</a>
               </div>
             </motion.div>
 
@@ -141,6 +142,7 @@ export default function HotelsPage() {
         <div className="container text-center">
           <h3 className="text-2xl font-bold text-light mb-6">Related Pages</h3>
           <div className="related-grid">
+            <Link to="/canton-fair-packages" className="related-card">Travel Packages</Link>
             <Link to="/canton-fair-2026-guide" className="related-card">Fair Guide</Link>
             <Link to="/guangzhou-business-visa-guide" className="related-card">Visa Guide</Link>
             <Link to="/canton-fair-airport-transfer" className="related-card">Airport Transfer</Link>

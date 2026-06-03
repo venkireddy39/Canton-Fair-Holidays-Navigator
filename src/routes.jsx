@@ -12,6 +12,7 @@ import RegisterGuidePage from './pages/RegisterGuidePage';
 import CountryPageTemplate from './pages/CountryPageTemplate';
 import BlogList from './pages/BlogList';
 import BlogPost from './pages/BlogPost';
+import PackagesPage from './pages/PackagesPage';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
       { path: 'guangzhou-business-visa-guide', element: <VisaPage /> },
       { path: 'canton-fair-airport-transfer', element: <AirportTransferPage /> },
       { path: 'how-to-register-for-canton-fair', element: <RegisterGuidePage /> },
+      { path: 'canton-fair-packages', element: <PackagesPage /> },
       { path: 'canton-fair-from-india', element: <CountryPageTemplate country="India" slug="canton-fair-from-india" seoTitle="Canton Fair 2026 Travel Packages from India | Visa & Flights" seoDescription="Plan your Canton Fair 2026 trip from India. Complete travel packages, China Business Visa assistance, and hotel bookings." /> },
       { path: 'canton-fair-from-uae', element: <CountryPageTemplate country="UAE" slug="canton-fair-from-uae" seoTitle="Canton Fair 2026 Travel Packages from UAE | Dubai & Abu Dhabi" seoDescription="Travel from the UAE to the Canton Fair 2026. Premium packages including flights, visa support, and luxury hotels near Pazhou." /> },
       { path: 'canton-fair-from-africa', element: <CountryPageTemplate country="Africa" slug="canton-fair-from-africa" seoTitle="Canton Fair 2026 Travel Packages from Africa | Sourcing & Visas" seoDescription="Your complete guide to attending the Canton Fair from Africa. Secure your China visa, book flights, and organize your sourcing trip." /> },

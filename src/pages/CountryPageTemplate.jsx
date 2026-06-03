@@ -121,6 +121,7 @@ export default function CountryPageTemplate({ country, seoTitle, seoDescription,
         <div className="container text-center">
           <h3 className="text-2xl font-bold text-light mb-6">Explore More</h3>
           <div className="related-grid">
+            <Link to="/canton-fair-packages" className="related-card">Travel Packages</Link>
             <Link to="/canton-fair-2026-guide" className="related-card">Fair Guide</Link>
             <Link to="/guangzhou-business-visa-guide" className="related-card">Visa Requirements</Link>
             <Link to="/best-hotels-near-canton-fair" className="related-card">Premium Hotels</Link>

@@ -1,16 +1,11 @@
 import React from 'react';
 import { useOutletContext } from 'react-router-dom';
 import Hero from '../components/Hero';
-import AboutFair from '../components/AboutFair';
-import PhaseTimeline from '../components/PhaseTimeline';
 import ContactCTA from '../components/ContactCTA';
-import Products from '../components/Products';
-import GuangzhouMarkets from '../components/GuangzhouMarkets';
 import PackageOverview from '../components/PackageOverview';
 import Services from '../components/Services';
 import WhyChooseUs from '../components/WhyChooseUs';
 import TrustSection from '../components/TrustSection';
-import AboutUs from '../components/AboutUs';
 import FAQ from '../components/FAQ';
 import LocationMap from '../components/LocationMap';
 import SeoHelmet from '../components/SeoHelmet';
@@ -58,6 +53,7 @@ function HomePage() {
           </div>
           <div className="related-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px', maxWidth: '1000px' }}>
             <Link to="/canton-fair-2026-guide" className="related-card" style={{ padding: '24px' }}>Canton Fair 2026 Complete Guide</Link>
+            <Link to="/canton-fair-packages" className="related-card" style={{ padding: '24px' }}>Canton Fair 2026 Travel Packages</Link>
             <Link to="/canton-fair-phase-1-products" className="related-card" style={{ padding: '24px' }}>Phase 1: Electronics & Machinery</Link>
             <Link to="/canton-fair-phase-2-products" className="related-card" style={{ padding: '24px' }}>Phase 2: Consumer Goods</Link>
             <Link to="/canton-fair-phase-3-products" className="related-card" style={{ padding: '24px' }}>Phase 3: Textiles & Garments</Link>

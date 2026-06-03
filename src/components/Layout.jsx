@@ -9,6 +9,8 @@ import PopupForm from './PopupForm';
 export default function Layout() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isPopupFormOpen, setIsPopupFormOpen] = useState(false);
+  const [modalText, setModalText] = useState('');
+  const [modalTitle, setModalTitle] = useState('');
 
   useEffect(() => {
     const alreadySubmitted = localStorage.getItem('hasSubmittedPopup') === 'true';
@@ -33,12 +35,26 @@ export default function Layout() {
     }
   };
 
-  const handleOpenModal = (e) => {
+  const handleOpenModal = (e, text, title) => {
     if (e && e.preventDefault) e.preventDefault();
+    if (typeof text === 'string') {
+      setModalText(text);
+    } else {
+      setModalText('');
+    }
+    if (typeof title === 'string') {
+      setModalTitle(title);
+    } else {
+      setModalTitle('');
+    }
     setIsModalOpen(true);
   };
 
-  const handleCloseModal = () => setIsModalOpen(false);
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setModalText('');
+    setModalTitle('');
+  };
 
   return (
     <div className="app">
@@ -140,7 +156,7 @@ export default function Layout() {
       <React.Suspense fallback={null}>
         <Chatbot />
         <FloatingWhatsApp />
-        {isModalOpen && <BookingModal onClose={handleCloseModal} />}
+        {isModalOpen && <BookingModal onClose={handleCloseModal} customText={modalText} customTitle={modalTitle} />}
       </React.Suspense>
 
       {isPopupFormOpen && <PopupForm onClose={handleClosePopup} />}

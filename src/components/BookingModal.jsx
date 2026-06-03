@@ -4,7 +4,7 @@ import { X, Phone, MessageCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import './BookingModal.css';
 
-const BookingModal = ({ onClose }) => {
+const BookingModal = ({ onClose, customText, customTitle }) => {
   const modalRef = useRef(null);
 
   // Prevent scrolling, implement focus trapping & focus restoration, and Escape key listener
@@ -93,9 +93,18 @@ const BookingModal = ({ onClose }) => {
               transition={{ delay: 0.1 }}
             >
               <h2 id="modal-title">
-                <span className="title-gold">Secure Your Spot</span> <span className="title-cyan">Now</span>
+                {customTitle ? (
+                  <>
+                    <span className="title-gold">{customTitle.split(' ').slice(0, -1).join(' ')}</span>{' '}
+                    <span className="title-cyan">{customTitle.split(' ').slice(-1)[0]}</span>
+                  </>
+                ) : (
+                  <>
+                    <span className="title-gold">Secure Your Spot</span> <span className="title-cyan">Now</span>
+                  </>
+                )}
               </h2>
-              <p>Experience seamless business travel with our all-inclusive premium package designed for Canton Fair 2026.</p>
+              <p>{customText || "Experience seamless business travel with our all-inclusive premium package designed for Canton Fair 2026."}</p>
             </motion.div>
 
             <motion.div 
@@ -115,7 +124,7 @@ const BookingModal = ({ onClose }) => {
               </motion.a>
 
               <motion.a
-                href="https://wa.me/919533444455?text=Hi%20Holidays%20Navigator,%20I%20want%20to%20plan%20my%20Canton%20Fair%20tour.%20Let%20me%20know%20the%20details."
+                href={`https://wa.me/919533444455?text=${encodeURIComponent(customText ? `Hi Holidays Navigator, I want ${customText}.` : "Hi Holidays Navigator, I want to plan my Canton Fair tour. Let me know the details.")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="modal-btn whatsapp-btn"
