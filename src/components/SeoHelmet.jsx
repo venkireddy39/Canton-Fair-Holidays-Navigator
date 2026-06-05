@@ -15,7 +15,6 @@ export default function SeoHelmet({
   datePublished = '2025-01-01T08:00:00+08:00',
   dateModified = new Date().toISOString()
 }) {
-
   const orgSchema = {
     "@type": "Organization",
     "name": "Holidays Navigator",
@@ -49,24 +48,20 @@ export default function SeoHelmet({
     "image": ogImage,
     "telephone": "+91-9533444455",
     "priceRange": "₹50,000 - ₹2,50,000",
-    "description":
-      "Premium travel agency offering entrepreneur travel packages for Canton Fair including visa support, hotel booking, airport transfers and business travel guidance.",
+    "description": "Premium travel agency offering entrepreneur travel packages for Canton Fair including visa support, hotel booking, airport transfers and business travel guidance.",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress":
-        "4th Floor, Trendz Uptown, Kakatiya Hills, Guttala Begumpet, Kavuri Hills, Madhapur",
+      "streetAddress": "4th Floor, Trendz Uptown, Kakatiya Hills, Guttala Begumpet, Kavuri Hills, Madhapur",
       "addressLocality": "Hyderabad",
       "addressRegion": "Telangana",
       "postalCode": "500033",
       "addressCountry": "IN"
     },
-
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5",
       "reviewCount": "50"
     },
-
     "review": [
       {
         "@type": "Review",
@@ -78,8 +73,7 @@ export default function SeoHelmet({
           "@type": "Rating",
           "ratingValue": "5"
         },
-        "reviewBody":
-          "Business visa and hotel arrangements were seamless. Highly professional support for Canton Fair travel."
+        "reviewBody": "Business visa and hotel arrangements were seamless. Highly professional support for Canton Fair travel."
       },
       {
         "@type": "Review",
@@ -91,10 +85,28 @@ export default function SeoHelmet({
           "@type": "Rating",
           "ratingValue": "5"
         },
-        "reviewBody":
-          "Premium accommodation and excellent sourcing assistance. Strongly recommended."
+        "reviewBody": "Premium accommodation and excellent sourcing assistance. Strongly recommended."
       }
     ]
+  };
+
+  const touristTripSchema = {
+    "@type": "TouristTrip",
+    "name": "Canton Fair 140 2026 Travel Package",
+    "description": "Canton Fair 140 2026 business travel package including hotel booking, visa support, airport transfers, registration assistance and Guangzhou travel guidance.",
+    "touristType": "Business Travelers",
+    "provider": {
+      "@type": "TravelAgency",
+      "name": "Holidays Navigator",
+      "url": BASE_URL
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "60000",
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock",
+      "url": BASE_URL
+    }
   };
 
   const breadcrumbJson = breadcrumb.length
@@ -157,6 +169,7 @@ export default function SeoHelmet({
     "@graph": [
       orgSchema,
       travelAgencySchema,
+      touristTripSchema,
       breadcrumbJson,
       faqJson,
       articleJson
@@ -168,24 +181,18 @@ export default function SeoHelmet({
       <title>{title}</title>
       <meta name="description" content={description} />
 
-      {canonical && (
-        <link rel="canonical" href={canonical} />
-      )}
+      {canonical && <link rel="canonical" href={canonical} />}
 
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      {ogImage && (
-        <meta property="og:image" content={ogImage} />
-      )}
-      <meta property="og:url" content={canonical} />
+      {ogImage && <meta property="og:image" content={ogImage} />}
+      <meta property="og:url" content={canonical || BASE_URL} />
       <meta property="og:type" content={article ? "article" : "website"} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      {ogImage && (
-        <meta name="twitter:image" content={ogImage} />
-      )}
+      {ogImage && <meta name="twitter:image" content={ogImage} />}
 
       <script type="application/ld+json">
         {JSON.stringify(jsonLdGraph)}
