@@ -30,6 +30,14 @@ export default function SeoHelmet({
       "@type": "ContactPoint",
       "telephone": "+91-9533444455",
       "contactType": "customer service"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "4th Floor, Trendz Uptown, Kakatiya Hills, Guttala Begumpet, Kavuri Hills, Madhapur",
+      "addressLocality": "Hyderabad",
+      "addressRegion": "Telangana",
+      "postalCode": "500033",
+      "addressCountry": "IN"
     }
   };
 

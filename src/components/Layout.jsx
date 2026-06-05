@@ -100,7 +100,7 @@ export default function Layout() {
 
             </div>
             <p style={{ fontSize: '0.85rem', margin: 0 }}>
-              <strong>Address:</strong> Kakatiya Hills, Madhapur Hyderabad, Telangana 500033
+              <strong>Address:</strong> 4th Floor, Trendz Uptown, Kakatiya Hills, Madhapur, Hyderabad, Telangana 500033
             </p>
           </div>
 
