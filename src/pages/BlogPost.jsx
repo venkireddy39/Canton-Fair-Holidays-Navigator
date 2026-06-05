@@ -32,7 +32,7 @@ export default function BlogPost() {
         dateModified={post.dateModified || post.datePublished}
       />
 
-      <article style={{ padding: '140px 20px 60px', background: 'var(--bg-dark)', minHeight: '80vh' }}>
+      <article className="blog-article" style={{ background: 'var(--bg-dark)', minHeight: '80vh' }}>
         <div className="container" style={{ maxWidth: '800px', margin: '0 auto' }}>
           
           <Link 
@@ -69,11 +69,11 @@ export default function BlogPost() {
           </div>
 
           <h1 style={{ 
-            fontSize: 'clamp(2rem, 5vw, 3rem)', 
+            fontSize: 'clamp(28px, 6vw, 42px)', 
             fontWeight: '800', 
             color: 'var(--text-light)', 
             marginBottom: '30px', 
-            lineHeight: '1.25',
+            lineHeight: '1.2',
             fontFamily: 'var(--font-serif)'
           }}>
             {post.title}
@@ -81,13 +81,10 @@ export default function BlogPost() {
 
           <div 
             className="blog-content"
-            style={{ 
-              color: 'var(--text-muted)', 
-              fontSize: 'clamp(0.79rem, 2.8vw, 1.125rem)', 
-              lineHeight: '1.85',
-              fontFamily: 'var(--font-sans)'
-            }}
-            dangerouslySetInnerHTML={{ __html: post.content }}
+            style={{
+            color: 'var(--text-muted)',
+            fontFamily: 'var(--font-sans)'
+          }}dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
           {/* Internal Linking Clusters injected after post */}

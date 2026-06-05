@@ -73,25 +73,25 @@ export default function Layout() {
         padding: '60px 20px 30px',
         color: 'var(--text-muted)',
         fontFamily: 'var(--font-sans)',
-        fontSize: 'clamp(0.66rem, 2.4vw, 0.95rem)'
+        fontSize: '0.85rem'
       }}>
         <div className="container" style={{
           maxWidth: '1200px',
           margin: '0 auto',
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
           gap: '40px',
           paddingBottom: '40px',
           borderBottom: '1px solid rgba(255, 255, 255, 0.05)'
         }}>
           {/* Brand Info */}
           <div>
-            <h3 style={{ color: 'var(--text-light)', fontSize: 'clamp(0.84rem, 3.0vw, 1.2rem)', fontWeight: '700', marginBottom: '20px' }}>Holidays Navigator</h3>
-            <div style={{ marginTop: '20px', lineHeight: '1.8' }}>
-              <p style={{ margin: '0 0 5px 0' }}>
+            <h3 style={{ color: 'var(--text-light)', fontSize: '1.2rem', fontWeight: '700', marginBottom: '20px' }}>Holidays Navigator</h3>
+            <div style={{ marginTop: '20px', lineHeight: '1.8', fontSize: '0.8rem' }}>
+              <p style={{ margin: '0 0 5px 0', fontSize: '1.0rem' }}>
                 <strong> </strong> <a href="mailto: info.holidaysnavigator@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>info.holidaysnavigator@gmail.com</a><br />
               </p>
-              <p style={{ margin: 0 }}>
+              <p style={{ margin: 0, fontSize: '0.8rem' }}>
                 <strong> </strong>{' '}
                 <a href="tel:+919533444455" style={{ color: 'inherit', textDecoration: 'none' }}>+91 95334 44455</a>
                 {' '}&nbsp;{' '}
@@ -99,14 +99,14 @@ export default function Layout() {
               </p>
 
             </div>
-            <p style={{ fontSize: 'clamp(0.59rem, 2.1vw, 0.85rem)', margin: 0 }}>
-              <strong>Address:</strong> 4th Floor, Trendz Uptown, Kakatiya Hills, Madhapur, Hyderabad, Telangana 500033
+            <p style={{ margin: 0, fontSize: '0.8rem' }}>
+              <strong>Address:</strong> Kakatiya Hills, Madhapur Hyderabad, Telangana 500033
             </p>
           </div>
 
           {/* Sourcing Hub Clusters */}
           <div>
-            <h4 style={{ color: 'var(--text-light)', fontSize: 'clamp(0.73rem, 2.6vw, 1.05rem)', fontWeight: '700', marginBottom: '20px' }}>Sourcing Clusters</h4>
+            <h4 style={{ color: 'var(--text-light)', fontSize: '1.05rem', fontWeight: '700', marginBottom: '20px' }}>Sourcing Clusters</h4>
             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
               <li><a href="/canton-fair-2026-guide" style={{ color: 'inherit', textDecoration: 'none' }}>Canton Fair 2026 Guide</a></li>
               <li><a href="/best-hotels-near-canton-fair" style={{ color: 'inherit', textDecoration: 'none' }}>Hotels Near Pazhou Complex</a></li>
@@ -114,10 +114,9 @@ export default function Layout() {
               <li><a href="/how-to-register-for-canton-fair" style={{ color: 'inherit', textDecoration: 'none' }}>Buyer Badge Registration</a></li>
             </ul>
           </div>
-
           {/* Expert Travel Resources */}
           <div>
-            <h4 style={{ color: 'var(--text-light)', fontSize: 'clamp(0.73rem, 2.6vw, 1.05rem)', fontWeight: '700', marginBottom: '20px' }}>Sourcing Insights</h4>
+            <h4 style={{ color: 'var(--text-light)', fontSize: '1.05rem', fontWeight: '700', marginBottom: '20px' }}>Sourcing Insights</h4>
             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
               <li><a href="/blog" style={{ color: 'inherit', textDecoration: 'none' }}>Canton Fair Blog Hub</a></li>
               <li><a href="/blog/top-products-trending-at-canton-fair-2026" style={{ color: 'inherit', textDecoration: 'none' }}>2026 Sourcing Trends</a></li>
@@ -128,7 +127,7 @@ export default function Layout() {
 
           {/* Support Links */}
           <div>
-            <h4 style={{ color: 'var(--text-light)', fontSize: 'clamp(0.73rem, 2.6vw, 1.05rem)', fontWeight: '700', marginBottom: '20px' }}>Support</h4>
+            <h4 style={{ color: 'var(--text-light)', fontSize: '1.05rem', fontWeight: '700', marginBottom: '20px' }}>Support</h4>
             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
               <li><a href="/about-us" style={{ color: 'inherit', textDecoration: 'none' }}>About Us</a></li>
               <li><a href="/#contact" style={{ color: 'inherit', textDecoration: 'none' }}>Contact</a></li>
@@ -145,15 +144,13 @@ export default function Layout() {
           paddingTop: '30px',
           display: 'flex',
           flexWrap: 'wrap',
-          justifyContent: 'space-between',
+          justifyContent: 'center',
           alignItems: 'center',
           gap: '20px',
-          fontSize: 'clamp(0.59rem, 2.1vw, 0.85rem)'
+          fontSize: '0.85rem'
         }}>
-          <p style={{ margin: 0 }}>
-            &copy; {new Date().getFullYear()} Holidays Navigator. All Rights Reserved. Coordinated in collaboration with certified trade chambers.
-          </p>
-          <div style={{ display: 'flex', gap: '20px', marginRight: '230px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '20px', flexWrap: 'wrap' }}>
+            <span>&copy; {new Date().getFullYear()} Holidays Navigator. All Rights Reserved.</span>
             <a href="https://www.instagram.com/holidaysnavigator?igsh=MWtuczJqenJtdGN2ZA==" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>Instagram</a>
             <a href="https://www.linkedin.com/company/holidaysnavigator/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>LinkedIn</a>
             <a href="https://www.youtube.com/@holidaysnavigator" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>YouTube</a>
