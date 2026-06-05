@@ -13,6 +13,9 @@ import CountryPageTemplate from './pages/CountryPageTemplate';
 import BlogList from './pages/BlogList';
 import BlogPost from './pages/BlogPost';
 import PackagesPage from './pages/PackagesPage';
+import AboutUsPage from './pages/AboutUsPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import TermsPage from './pages/TermsPage';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +37,9 @@ const router = createBrowserRouter([
       { path: 'canton-fair-from-africa', element: <CountryPageTemplate country="Africa" slug="canton-fair-from-africa" seoTitle="Canton Fair 2026 Travel Packages from Africa | Sourcing & Visas" seoDescription="Your complete guide to attending the Canton Fair from Africa. Secure your China visa, book flights, and organize your sourcing trip." /> },
       { path: 'blog', element: <BlogList /> },
       { path: 'blog/:slug', element: <BlogPost /> },
+      { path: 'about-us', element: <AboutUsPage /> },
+      { path: 'privacy-policy', element: <PrivacyPolicyPage /> },
+      { path: 'terms-and-conditions', element: <TermsPage /> },
     ]
   }
 ]);

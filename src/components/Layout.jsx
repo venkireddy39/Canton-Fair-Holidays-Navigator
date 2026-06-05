@@ -62,24 +62,24 @@ export default function Layout() {
       <a href="#main-content" className="skip-nav-link">Skip to main content</a>
 
       <Header onBookNow={handleOpenModal} />
-      
+
       <main id="main-content" role="main">
         <Outlet context={{ onBookNow: handleOpenModal }} />
       </main>
 
-      <footer role="contentinfo" aria-label="Site Footer" style={{ 
-        background: 'var(--bg-dark)', 
-        borderTop: '1px solid var(--border-color)', 
+      <footer role="contentinfo" aria-label="Site Footer" style={{
+        background: 'var(--bg-dark)',
+        borderTop: '1px solid var(--border-color)',
         padding: '60px 20px 30px',
         color: 'var(--text-muted)',
         fontFamily: 'var(--font-sans)',
         fontSize: '0.95rem'
       }}>
-        <div className="container" style={{ 
-          maxWidth: '1200px', 
-          margin: '0 auto', 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', 
+        <div className="container" style={{
+          maxWidth: '1200px',
+          margin: '0 auto',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
           gap: '40px',
           paddingBottom: '40px',
           borderBottom: '1px solid rgba(255, 255, 255, 0.05)'
@@ -87,11 +87,20 @@ export default function Layout() {
           {/* Brand Info */}
           <div>
             <h3 style={{ color: 'var(--text-light)', fontSize: '1.2rem', fontWeight: '700', marginBottom: '20px' }}>Holidays Navigator</h3>
-            <p style={{ lineHeight: '1.6', marginBottom: '15px' }}>
-              Your premium, certified corporate travel consultant specializing in trade delegation tours, China business visa compliance, and industrial sourcing packages for the Canton Fair.
-            </p>
+            <div style={{ marginTop: '20px', lineHeight: '1.8' }}>
+              <p style={{ margin: '0 0 5px 0' }}>
+                <strong> </strong> <a href="mailto: info.holidaysnavigator@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>info.holidaysnavigator@gmail.com</a><br />
+              </p>
+              <p style={{ margin: 0 }}>
+                <strong> </strong>{' '}
+                <a href="tel:+919533444455" style={{ color: 'inherit', textDecoration: 'none' }}>+91 95334 44455</a>
+                {' '}&nbsp;{' '}
+                <a href="tel:+919121388338" style={{ color: 'inherit', textDecoration: 'none' }}>+91 91213 88338</a><br />
+              </p>
+
+            </div>
             <p style={{ fontSize: '0.85rem', margin: 0 }}>
-              <strong>Address:</strong> Kakatiya Hills, Madhapur, Hyderabad, Telangana 500033
+              <strong>Address:</strong> Kakatiya Hills, Madhapur Hyderabad, Telangana 500033
             </p>
           </div>
 
@@ -117,29 +126,27 @@ export default function Layout() {
             </ul>
           </div>
 
-          {/* Corporate Contact */}
+          {/* Support Links */}
           <div>
-            <h4 style={{ color: 'var(--text-light)', fontSize: '1.05rem', fontWeight: '700', marginBottom: '20px' }}>Corporate Support</h4>
-            <p style={{ lineHeight: '1.6', marginBottom: '10px' }}>
-              Have questions regarding delegation package bookings? Chat with an expert instantly.
-            </p>
-            <p style={{ margin: '0 0 5px 0' }}>
-              <strong>Email:</strong> info.holidaysnavigator@gmail.com
-            </p>
-            <p style={{ margin: 0 }}>
-              <strong>Phone:</strong> +91 95334 44455
-            </p>
+            <h4 style={{ color: 'var(--text-light)', fontSize: '1.05rem', fontWeight: '700', marginBottom: '20px' }}>Support</h4>
+            <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              <li><a href="/about-us" style={{ color: 'inherit', textDecoration: 'none' }}>About Us</a></li>
+              <li><a href="/#contact" style={{ color: 'inherit', textDecoration: 'none' }}>Contact</a></li>
+              <li><a href="/privacy-policy" style={{ color: 'inherit', textDecoration: 'none' }}>Privacy Policy</a></li>
+              <li><a href="/terms-and-conditions" style={{ color: 'inherit', textDecoration: 'none' }}>Terms &amp; Conditions</a></li>
+            </ul>
+
           </div>
         </div>
 
-        <div className="container" style={{ 
-          maxWidth: '1200px', 
-          margin: '0 auto', 
-          paddingTop: '30px', 
-          display: 'flex', 
-          flexWrap: 'wrap', 
-          justifyContent: 'space-between', 
-          alignItems: 'center', 
+        <div className="container" style={{
+          maxWidth: '1200px',
+          margin: '0 auto',
+          paddingTop: '30px',
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'space-between',
+          alignItems: 'center',
           gap: '20px',
           fontSize: '0.85rem'
         }}>
@@ -149,12 +156,13 @@ export default function Layout() {
           <div style={{ display: 'flex', gap: '20px', marginRight: '230px' }}>
             <a href="https://www.instagram.com/holidaysnavigator?igsh=MWtuczJqenJtdGN2ZA==" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>Instagram</a>
             <a href="https://www.linkedin.com/company/holidaysnavigator/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>LinkedIn</a>
+            <a href="https://www.youtube.com/@holidaysnavigator" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>YouTube</a>
           </div>
         </div>
       </footer>
 
       <React.Suspense fallback={null}>
-        <Chatbot />
+        {/* <Chatbot /> */}
         <FloatingWhatsApp />
         {isModalOpen && <BookingModal onClose={handleCloseModal} customText={modalText} customTitle={modalTitle} />}
       </React.Suspense>

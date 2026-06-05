@@ -476,7 +476,7 @@ section {
   margin: 0 auto;
 }
 .page-hero h1 {
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-weight: 800;
   color: #fff;
   margin-bottom: 24px;
@@ -656,6 +656,6 @@ section {
 
 @media (max-width: 768px) {
   .page-hero { padding: 120px 20px 60px; }
-  .page-hero h1 { font-size: 2.8rem; }
+  .page-hero h1 { font-size: 1.8rem; }
   .premium-grid { grid-template-columns: 1fr; }
 }
