@@ -73,20 +73,20 @@ export default function Layout() {
         padding: '60px 20px 30px',
         color: 'var(--text-muted)',
         fontFamily: 'var(--font-sans)',
-        fontSize: '0.95rem'
+        fontSize: 'clamp(0.66rem, 2.4vw, 0.95rem)'
       }}>
         <div className="container" style={{
           maxWidth: '1200px',
           margin: '0 auto',
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))',
           gap: '40px',
           paddingBottom: '40px',
           borderBottom: '1px solid rgba(255, 255, 255, 0.05)'
         }}>
           {/* Brand Info */}
           <div>
-            <h3 style={{ color: 'var(--text-light)', fontSize: '1.2rem', fontWeight: '700', marginBottom: '20px' }}>Holidays Navigator</h3>
+            <h3 style={{ color: 'var(--text-light)', fontSize: 'clamp(0.84rem, 3.0vw, 1.2rem)', fontWeight: '700', marginBottom: '20px' }}>Holidays Navigator</h3>
             <div style={{ marginTop: '20px', lineHeight: '1.8' }}>
               <p style={{ margin: '0 0 5px 0' }}>
                 <strong> </strong> <a href="mailto: info.holidaysnavigator@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>info.holidaysnavigator@gmail.com</a><br />
@@ -99,14 +99,14 @@ export default function Layout() {
               </p>
 
             </div>
-            <p style={{ fontSize: '0.85rem', margin: 0 }}>
+            <p style={{ fontSize: 'clamp(0.59rem, 2.1vw, 0.85rem)', margin: 0 }}>
               <strong>Address:</strong> 4th Floor, Trendz Uptown, Kakatiya Hills, Madhapur, Hyderabad, Telangana 500033
             </p>
           </div>
 
           {/* Sourcing Hub Clusters */}
           <div>
-            <h4 style={{ color: 'var(--text-light)', fontSize: '1.05rem', fontWeight: '700', marginBottom: '20px' }}>Sourcing Clusters</h4>
+            <h4 style={{ color: 'var(--text-light)', fontSize: 'clamp(0.73rem, 2.6vw, 1.05rem)', fontWeight: '700', marginBottom: '20px' }}>Sourcing Clusters</h4>
             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
               <li><a href="/canton-fair-2026-guide" style={{ color: 'inherit', textDecoration: 'none' }}>Canton Fair 2026 Guide</a></li>
               <li><a href="/best-hotels-near-canton-fair" style={{ color: 'inherit', textDecoration: 'none' }}>Hotels Near Pazhou Complex</a></li>
@@ -117,7 +117,7 @@ export default function Layout() {
 
           {/* Expert Travel Resources */}
           <div>
-            <h4 style={{ color: 'var(--text-light)', fontSize: '1.05rem', fontWeight: '700', marginBottom: '20px' }}>Sourcing Insights</h4>
+            <h4 style={{ color: 'var(--text-light)', fontSize: 'clamp(0.73rem, 2.6vw, 1.05rem)', fontWeight: '700', marginBottom: '20px' }}>Sourcing Insights</h4>
             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
               <li><a href="/blog" style={{ color: 'inherit', textDecoration: 'none' }}>Canton Fair Blog Hub</a></li>
               <li><a href="/blog/top-products-trending-at-canton-fair-2026" style={{ color: 'inherit', textDecoration: 'none' }}>2026 Sourcing Trends</a></li>
@@ -128,7 +128,7 @@ export default function Layout() {
 
           {/* Support Links */}
           <div>
-            <h4 style={{ color: 'var(--text-light)', fontSize: '1.05rem', fontWeight: '700', marginBottom: '20px' }}>Support</h4>
+            <h4 style={{ color: 'var(--text-light)', fontSize: 'clamp(0.73rem, 2.6vw, 1.05rem)', fontWeight: '700', marginBottom: '20px' }}>Support</h4>
             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
               <li><a href="/about-us" style={{ color: 'inherit', textDecoration: 'none' }}>About Us</a></li>
               <li><a href="/#contact" style={{ color: 'inherit', textDecoration: 'none' }}>Contact</a></li>
@@ -148,7 +148,7 @@ export default function Layout() {
           justifyContent: 'space-between',
           alignItems: 'center',
           gap: '20px',
-          fontSize: '0.85rem'
+          fontSize: 'clamp(0.59rem, 2.1vw, 0.85rem)'
         }}>
           <p style={{ margin: 0 }}>
             &copy; {new Date().getFullYear()} Holidays Navigator. All Rights Reserved. Coordinated in collaboration with certified trade chambers.

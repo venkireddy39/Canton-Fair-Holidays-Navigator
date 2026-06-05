@@ -16,7 +16,7 @@ const PackageOverview = ({ onBookNow }) => {
           >
             <h2>Canton Fair Travel Package</h2>
             <h3>Elevate Your Business Journey</h3>
-            <p style={{ color: 'var(--text-muted)', marginBottom: '30px', fontSize: '18px' }}>
+            <p style={{ color: 'var(--text-muted)', marginBottom: '30px', fontSize: 'clamp(13px, 1.8vw, 18px)' }}>
               We've meticulously planned every detail of your Canton Fair experience. From smooth visa processing to premium accommodations, focus on your business while we handle the logistics.
             </p>
 
@@ -42,7 +42,7 @@ const PackageOverview = ({ onBookNow }) => {
             transition={{ duration: 0.6 }}
           >
             <div className="urgency-badge">Limited Slots Available</div>
-            <h3 style={{ fontSize: '24px', color: 'var(--text-light)' }}>All-Inclusive Package</h3>
+            <h3 style={{ fontSize: 'clamp(18px, 2.4vw, 24px)', color: 'var(--text-light)' }}>All-Inclusive Package</h3>
             <div className="price-value">INR 60,000/-</div>
             <p style={{ color: 'var(--text-muted)', marginBottom: '30px' }}>Per Person on Twin Sharing</p>
             <button

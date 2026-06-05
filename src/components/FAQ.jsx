@@ -36,9 +36,9 @@ const FAQ = () => {
     <section id="faq" style={{ position: 'relative' }}>
       <div className="container" style={{ maxWidth: '800px' }}>
         <div className="section-header">
-          <span className="hero-subtitle" style={{ fontSize: '14px', marginBottom: '10px' }}>Got Questions?</span>
+          <span className="hero-subtitle" style={{ fontSize: 'clamp(10px, 1.4vw, 14px)', marginBottom: '10px' }}>Got Questions?</span>
           <h2>Frequently Asked Questions</h2>
-          <p style={{ color: 'var(--text-muted)', fontSize: '18px' }}>
+          <p style={{ color: 'var(--text-muted)', fontSize: 'clamp(13px, 1.8vw, 18px)' }}>
             Everything you need to know about the Canton Fair travel package
           </p>
         </div>
@@ -72,7 +72,7 @@ const FAQ = () => {
                     alignItems: 'center',
                     textAlign: 'left',
                     color: 'var(--text-light)',
-                    fontSize: '18px',
+                    fontSize: 'clamp(13px, 1.8vw, 18px)',
                     fontWeight: '600',
                     gap: '15px'
                   }}
@@ -103,7 +103,7 @@ const FAQ = () => {
                         style={{
                           padding: '0 30px 24px 65px',
                           color: 'var(--text-muted)',
-                          fontSize: '15px',
+                          fontSize: 'clamp(11px, 1.5vw, 15px)',
                           lineHeight: '1.7'
                         }}
                       >

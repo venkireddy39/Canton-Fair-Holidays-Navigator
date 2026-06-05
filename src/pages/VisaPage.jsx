@@ -45,13 +45,13 @@ export default function VisaPage() {
       <section className="page-section" style={{ paddingTop: '20px' }}>
         <div className="container" style={{ maxWidth: '1000px', margin: '0 auto' }}>
           
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '40px', marginBottom: '60px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '40px', marginBottom: '60px' }}>
             {/* Checklist */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
               style={{ background: 'var(--card-bg)', padding: '40px', borderRadius: '20px', border: '1px solid var(--border-color)', boxShadow: '0 15px 35px rgba(0,0,0,0.05)' }}
             >
-              <h2 style={{ fontSize: '1.8rem', fontWeight: '700', color: 'var(--text-light)', marginBottom: '25px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <h2 style={{ fontSize: 'clamp(1.26rem, 4.5vw, 1.8rem)', fontWeight: '700', color: 'var(--text-light)', marginBottom: '25px', display: 'flex', alignItems: 'center', gap: '10px' }}>
                 <FileText className="text-accent-cyan" size={28} /> Mandatory Documents
               </h2>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '15px' }}>
@@ -83,7 +83,7 @@ export default function VisaPage() {
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }}
               style={{ background: 'linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(14, 165, 233, 0.02))', padding: '40px', borderRadius: '20px', border: '1px solid rgba(14, 165, 233, 0.2)' }}
             >
-              <h2 style={{ fontSize: '1.8rem', fontWeight: '700', color: 'var(--text-light)', marginBottom: '20px' }}>Important Note</h2>
+              <h2 style={{ fontSize: 'clamp(1.26rem, 4.5vw, 1.8rem)', fontWeight: '700', color: 'var(--text-light)', marginBottom: '20px' }}>Important Note</h2>
               <p style={{ color: 'var(--text-muted)', lineHeight: '1.8', marginBottom: '20px' }}>
                 If you are attending the fair for sourcing and networking, you require an <strong>"M" (Business) Visa</strong>. A standard tourist visa is strictly not recommended for commercial activities.
               </p>
@@ -93,7 +93,7 @@ export default function VisaPage() {
             </motion.div>
           </div>
 
-          <h2 style={{ fontSize: '2.5rem', fontWeight: '800', color: 'var(--text-light)', textAlign: 'center', marginBottom: '40px' }}>3-Step Application Process</h2>
+          <h2 style={{ fontSize: 'clamp(1.75rem, 6.3vw, 2.5rem)', fontWeight: '800', color: 'var(--text-light)', textAlign: 'center', marginBottom: '40px' }}>3-Step Application Process</h2>
           
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             <motion.div 
@@ -104,7 +104,7 @@ export default function VisaPage() {
                 <MailCheck size={30} className="text-accent-cyan" />
               </div>
               <div>
-                <h3 style={{ fontSize: '1.4rem', fontWeight: '700', color: 'var(--text-light)', marginBottom: '5px' }}>1. Obtain the Invitation Letter</h3>
+                <h3 style={{ fontSize: 'clamp(0.98rem, 3.5vw, 1.4rem)', fontWeight: '700', color: 'var(--text-light)', marginBottom: '5px' }}>1. Obtain the Invitation Letter</h3>
                 <p style={{ color: 'var(--text-muted)' }}>Register on the official Canton Fair website utilizing your buyer badge credentials. A PDF invitation will be issued typically within 24 hours.</p>
               </div>
             </motion.div>
@@ -117,7 +117,7 @@ export default function VisaPage() {
                 <Book size={30} className="text-accent-cyan" />
               </div>
               <div>
-                <h3 style={{ fontSize: '1.4rem', fontWeight: '700', color: 'var(--text-light)', marginBottom: '5px' }}>2. Complete the Online Form</h3>
+                <h3 style={{ fontSize: 'clamp(0.98rem, 3.5vw, 1.4rem)', fontWeight: '700', color: 'var(--text-light)', marginBottom: '5px' }}>2. Complete the Online Form</h3>
                 <p style={{ color: 'var(--text-muted)' }}>Fill out the comprehensive online V-2019 form via the official COVA website, print the completed document, and sign the declaration page.</p>
               </div>
             </motion.div>
@@ -130,7 +130,7 @@ export default function VisaPage() {
                 <Building2 size={30} className="text-accent-cyan" />
               </div>
               <div>
-                <h3 style={{ fontSize: '1.4rem', fontWeight: '700', color: 'var(--text-light)', marginBottom: '5px' }}>3. Submit Application</h3>
+                <h3 style={{ fontSize: 'clamp(0.98rem, 3.5vw, 1.4rem)', fontWeight: '700', color: 'var(--text-light)', marginBottom: '5px' }}>3. Submit Application</h3>
                 <p style={{ color: 'var(--text-muted)' }}>Schedule an appointment and submit your application with physical documents at the nearest Chinese Embassy, Consulate, or Visa Application Center (CVASC).</p>
               </div>
             </motion.div>

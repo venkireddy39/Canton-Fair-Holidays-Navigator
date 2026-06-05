@@ -14,12 +14,12 @@ const Hero = ({ onBookNow }) => {
         >
           <span className="hero-subtitle" aria-hidden="true">Premium Entrepreneur Travel Packages</span>
           <h1>Canton Fair 2026 Travel Packages from India - Hotels, Visa & Transfers</h1>
-          <p style={{ fontSize: '1.15rem', lineHeight: '1.7', maxWidth: '700px', marginBottom: '30px' }}>
+          <p style={{ fontSize: 'clamp(0.80rem, 2.9vw, 1.15rem)', lineHeight: '1.7', maxWidth: '700px', marginBottom: '30px' }}>
             Hotels, visa support, airport transfers, interpreter assistance and business travel guidance for Canton Fair visitors.
           </p>
 
           <div className="hero-buttons">
-            <a href="#contact" className="cta-button" style={{ padding: '16px 32px', fontSize: '18px' }}>
+            <a href="#contact" className="cta-button" style={{ padding: '16px 32px', fontSize: 'clamp(13px, 1.8vw, 18px)' }}>
               Plan My Canton Fair Trip
             </a>
             <a
@@ -27,7 +27,7 @@ const Hero = ({ onBookNow }) => {
               target="_blank"
               rel="noopener noreferrer"
               className="outline-button"
-              style={{ background: 'transparent', cursor: 'pointer', fontSize: '18px', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px' }}
+              style={{ background: 'transparent', cursor: 'pointer', fontSize: 'clamp(13px, 1.8vw, 18px)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px' }}
             >
               Talk to Expert
             </a>

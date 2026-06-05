@@ -42,15 +42,15 @@ export default function CountryPageTemplate({ country, seoTitle, seoDescription,
         <div className="container" style={{ maxWidth: '1000px', margin: '0 auto' }}>
           
           <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-            <h2 style={{ fontSize: '2.5rem', fontWeight: '800', color: 'var(--text-light)', marginBottom: '20px' }}>
+            <h2 style={{ fontSize: 'clamp(1.75rem, 6.3vw, 2.5rem)', fontWeight: '800', color: 'var(--text-light)', marginBottom: '20px' }}>
               Your Gateway to the Canton Fair from {country}
             </h2>
-            <p style={{ color: 'var(--text-muted)', fontSize: '1.2rem', lineHeight: '1.8', maxWidth: '800px', margin: '0 auto' }}>
+            <p style={{ color: 'var(--text-muted)', fontSize: 'clamp(0.84rem, 3.0vw, 1.2rem)', lineHeight: '1.8', maxWidth: '800px', margin: '0 auto' }}>
               Attending the world's largest trade fair has never been easier. We handle the complex logistics so you can focus on sourcing products, networking, and growing your business.
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px', marginBottom: '60px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '30px', marginBottom: '60px' }}>
             
             <motion.div 
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
@@ -59,7 +59,7 @@ export default function CountryPageTemplate({ country, seoTitle, seoDescription,
               <div style={{ width: '50px', height: '50px', background: 'rgba(0, 180, 216, 0.1)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
                 <Plane size={24} className="text-accent-cyan" />
               </div>
-              <h3 style={{ fontSize: '1.4rem', color: 'var(--text-light)', marginBottom: '15px' }}>Flight & Transport</h3>
+              <h3 style={{ fontSize: 'clamp(0.98rem, 3.5vw, 1.4rem)', color: 'var(--text-light)', marginBottom: '15px' }}>Flight & Transport</h3>
               <p style={{ color: 'var(--text-muted)' }}>Expert guidance on the best flight routes from {country} to Guangzhou (CAN) or Hong Kong (HKG), plus seamless airport pickups.</p>
             </motion.div>
 
@@ -70,7 +70,7 @@ export default function CountryPageTemplate({ country, seoTitle, seoDescription,
               <div style={{ width: '50px', height: '50px', background: 'rgba(0, 180, 216, 0.1)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
                 <ShieldCheck size={24} className="text-accent-cyan" />
               </div>
-              <h3 style={{ fontSize: '1.4rem', color: 'var(--text-light)', marginBottom: '15px' }}>Visa Processing</h3>
+              <h3 style={{ fontSize: 'clamp(0.98rem, 3.5vw, 1.4rem)', color: 'var(--text-light)', marginBottom: '15px' }}>Visa Processing</h3>
               <p style={{ color: 'var(--text-muted)' }}>We assist with the official Canton Fair invitation letter and guide you through the China Business (M) Visa application process.</p>
             </motion.div>
 
@@ -81,7 +81,7 @@ export default function CountryPageTemplate({ country, seoTitle, seoDescription,
               <div style={{ width: '50px', height: '50px', background: 'rgba(0, 180, 216, 0.1)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
                 <Building2 size={24} className="text-accent-cyan" />
               </div>
-              <h3 style={{ fontSize: '1.4rem', color: 'var(--text-light)', marginBottom: '15px' }}>Premium Hotels</h3>
+              <h3 style={{ fontSize: 'clamp(0.98rem, 3.5vw, 1.4rem)', color: 'var(--text-light)', marginBottom: '15px' }}>Premium Hotels</h3>
               <p style={{ color: 'var(--text-muted)' }}>Stay in handpicked business hotels near the Pazhou exhibition complex, complete with free Wi-Fi, halal/vegetarian breakfast options, and daily shuttles.</p>
             </motion.div>
 
@@ -92,13 +92,13 @@ export default function CountryPageTemplate({ country, seoTitle, seoDescription,
               <div style={{ width: '50px', height: '50px', background: 'rgba(0, 180, 216, 0.1)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
                 <Ticket size={24} className="text-accent-cyan" />
               </div>
-              <h3 style={{ fontSize: '1.4rem', color: 'var(--text-light)', marginBottom: '15px' }}>Fair Registration</h3>
+              <h3 style={{ fontSize: 'clamp(0.98rem, 3.5vw, 1.4rem)', color: 'var(--text-light)', marginBottom: '15px' }}>Fair Registration</h3>
               <p style={{ color: 'var(--text-muted)' }}>Skip the long queues. We help you pre-register online so your official Buyer Badge is ready for immediate entry.</p>
             </motion.div>
           </div>
 
           <div style={{ background: 'linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(14, 165, 233, 0.02))', padding: '40px', borderRadius: '20px', border: '1px solid rgba(14, 165, 233, 0.2)' }}>
-            <h2 style={{ fontSize: '1.8rem', fontWeight: '700', color: 'var(--text-light)', marginBottom: '20px' }}>Why Travel with Us?</h2>
+            <h2 style={{ fontSize: 'clamp(1.26rem, 4.5vw, 1.8rem)', fontWeight: '700', color: 'var(--text-light)', marginBottom: '20px' }}>Why Travel with Us?</h2>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '15px' }}>
               <li style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'var(--text-muted)' }}>
                 <CheckCircle2 size={20} className="text-accent-green" /> <span>End-to-end travel coordination from {country}.</span>

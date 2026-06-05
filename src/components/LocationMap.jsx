@@ -183,7 +183,7 @@ const LocationMap = () => {
           transition={{ duration: 0.6 }}
         >
           <h2>Visit Our Office</h2>
-          <p style={{ color: 'var(--text-muted)', fontSize: '18px' }}>Drop by to discuss your Canton Fair travel plans</p>
+          <p style={{ color: 'var(--text-muted)', fontSize: 'clamp(13px, 1.8vw, 18px)' }}>Drop by to discuss your Canton Fair travel plans</p>
         </motion.div>
 
         <div className="location-grid">

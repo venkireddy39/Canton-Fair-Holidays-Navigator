@@ -31,7 +31,7 @@ export default function BlogList() {
           <h1 style={{ color: '#fff', fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontWeight: '800', fontFamily: 'var(--font-serif)', marginBottom: '20px' }}>
             Canton Fair Information Hub
           </h1>
-          <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto', lineHeight: '1.6' }}>
+          <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: 'clamp(0.84rem, 3.0vw, 1.2rem)', maxWidth: '800px', margin: '0 auto', lineHeight: '1.6' }}>
             Expert advice, import/export guides, product sourcing updates, and business travel logistics for global importers.
           </p>
         </div>
@@ -67,7 +67,7 @@ export default function BlogList() {
                   whiteSpace: 'nowrap',
                   transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
                   fontWeight: '600',
-                  fontSize: '0.95rem',
+                  fontSize: 'clamp(0.66rem, 2.4vw, 0.95rem)',
                   boxShadow: activeCategory === category ? '0 4px 15px rgba(0, 119, 182, 0.25)' : 'none'
                 }}
               >
@@ -77,7 +77,7 @@ export default function BlogList() {
           </div>
 
           {/* Sourcing Blog Grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '35px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 350px), 1fr))', gap: '35px' }}>
             {filteredPosts.map((post, index) => (
               <motion.article
                 key={post.id}
@@ -95,7 +95,7 @@ export default function BlogList() {
                   background: 'var(--card-bg)'
                 }}
               >
-                <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '15px', marginBottom: '15px', fontSize: '0.85rem', color: 'var(--text-muted)' }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '15px', marginBottom: '15px', fontSize: 'clamp(0.59rem, 2.1vw, 0.85rem)', color: 'var(--text-muted)' }}>
                   <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', color: 'var(--accent-gold)', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
                     <Tag size={14} /> {post.category}
                   </span>
@@ -107,13 +107,13 @@ export default function BlogList() {
                   </span>
                 </div>
                 
-                <h2 style={{ fontSize: '1.45rem', fontWeight: '700', color: 'var(--text-light)', marginBottom: '15px', lineHeight: '1.35', fontFamily: 'var(--font-serif)' }}>
+                <h2 style={{ fontSize: 'clamp(1.01rem, 3.6vw, 1.45rem)', fontWeight: '700', color: 'var(--text-light)', marginBottom: '15px', lineHeight: '1.35', fontFamily: 'var(--font-serif)' }}>
                   <Link to={`/blog/${post.slug}`} style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.2s ease' }} className="blog-title-link">
                     {post.title}
                   </Link>
                 </h2>
                 
-                <p style={{ color: 'var(--text-muted)', lineHeight: '1.65', flexGrow: 1, marginBottom: '25px', fontSize: '1rem' }}>
+                <p style={{ color: 'var(--text-muted)', lineHeight: '1.65', flexGrow: 1, marginBottom: '25px', fontSize: 'clamp(0.70rem, 2.5vw, 1rem)' }}>
                   {post.excerpt}
                 </p>
                 
@@ -127,7 +127,7 @@ export default function BlogList() {
                     alignItems: 'center', 
                     gap: '5px', 
                     marginTop: 'auto',
-                    fontSize: '1rem',
+                    fontSize: 'clamp(0.70rem, 2.5vw, 1rem)',
                     transition: 'transform 0.2s ease'
                   }}
                   className="read-more-btn"

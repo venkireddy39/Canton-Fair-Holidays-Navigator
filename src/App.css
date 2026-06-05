@@ -150,7 +150,7 @@ section {
 }
 
 .hero h1 {
-  font-size: 56px; /* Decreased size for better fit */
+  font-size: clamp(28px, 6vw, 56px); /* Decreased size for better fit */
   line-height: 1.2;
   margin-bottom: 24px;
   font-weight: 800;
@@ -158,7 +158,7 @@ section {
 }
 
 .hero p {
-  font-size: 21px; /* Increased from 20px */
+  font-size: clamp(16px, 2.5vw, 21px); /* Increased from 20px */
   color: #A8B2D0; /* Ensure light-muted text is highly readable against dark hero image */
   margin-bottom: 40px;
   max-width: 650px; /* Increased from 600px */
@@ -194,7 +194,7 @@ section {
 /* Make primary CTA more prominent in hero */
 .hero .cta-button {
   padding: 16px 36px;
-  font-size: 18px;
+  font-size: clamp(16px, 2vw, 18px);
   box-shadow: 0 12px 30px rgba(0,120,160,0.18);
 }
 
@@ -252,7 +252,7 @@ section {
 }
 
 .price-value {
-  font-size: 48px;
+  font-size: clamp(32px, 5vw, 48px);
   font-family: var(--font-serif);
   color: var(--accent-gold);
   margin: 20px 0;
@@ -270,7 +270,7 @@ section {
 }
 
 .overview-details h3 {
-  font-size: 36px;
+  font-size: clamp(24px, 4vw, 36px);
   margin-bottom: 20px;
 }
 
@@ -301,13 +301,13 @@ section {
 }
 
 .section-header h2 {
-  font-size: 40px;
+  font-size: clamp(28px, 5vw, 40px);
   margin-bottom: 16px;
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
   gap: 30px;
 }
 
@@ -333,7 +333,7 @@ section {
 }
 
 .service-card h3 {
-  font-size: 24px;
+  font-size: clamp(20px, 3vw, 24px);
   margin-bottom: 12px;
 }
 
@@ -412,18 +412,18 @@ section {
 /* Responsive */
 @media (max-width: 1024px) {
   section { padding: 60px 0; }
-  .hero h1 { font-size: 48px; }
-  .overview-details h3 { font-size: 30px; }
-  .section-header h2 { font-size: 34px; }
+  /* .hero h1 clamp handles this */
+  /* h3 clamp */
+  /* h2 clamp */
   .features-grid { gap: 20px; }
-  .price-value { font-size: 40px; }
+  /* price clamp */
 }
 
 @media (max-width: 768px) {
   section { padding: 50px 0; }
   .nav-links { display: none; }
-  .hero h1 { font-size: 38px; word-wrap: break-word; }
-  .hero p { font-size: 19px; }
+  .hero h1 { word-wrap: break-word; }
+  /* hero p clamp */
   .hero-highlights { flex-direction: column; gap: 15px !important; }
   
   .overview-grid { grid-template-columns: 1fr; gap: 30px; }
@@ -438,7 +438,7 @@ section {
 @media (max-width: 480px) {
   section { padding: 40px 0; }
   .hero { min-height: auto; padding-top: 120px; padding-bottom: 60px; }
-  .hero h1 { font-size: 32px; }
+  /* hero h1 clamp */
   .hero-buttons { flex-direction: column; width: 100%; }
   .hero-buttons .cta-button, .hero-buttons .outline-button { 
     width: 100%; 
@@ -446,12 +446,12 @@ section {
     text-align: center; 
   }
   
-  .price-value { font-size: 34px; }
+  /* price clamp */
   .price-card { padding: 30px 20px; }
-  .section-header h2 { font-size: 28px; }
-  .overview-details h3 { font-size: 26px; }
+  /* header h2 clamp */
+  /* overview h3 clamp */
   
-  .whatsapp-btn { width: 100%; justify-content: center; font-size: 16px; }
+  .whatsapp-btn { width: 100%; justify-content: center; }
 }
 
 /* Premium Page Headers */
@@ -476,7 +476,7 @@ section {
   margin: 0 auto;
 }
 .page-hero h1 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 2.5rem);
   font-weight: 800;
   color: #fff;
   margin-bottom: 24px;
@@ -486,7 +486,7 @@ section {
   -webkit-text-fill-color: transparent;
 }
 .page-hero p {
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
   color: #A8B2D0;
   line-height: 1.8;
 }
@@ -500,7 +500,7 @@ section {
   background: rgba(255, 255, 255, 0.02);
 }
 .page-section h2 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 2.5rem);
   margin-bottom: 20px;
   text-align: center;
 }
@@ -511,7 +511,7 @@ section {
 }
 .premium-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
@@ -588,7 +588,7 @@ section {
 
 .related-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
   gap: 20px;
   max-width: 900px;
   margin: 0 auto;

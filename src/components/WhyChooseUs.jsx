@@ -8,7 +8,7 @@ const WhyChooseUs = () => {
       <div className="container">
         <div className="section-header">
           <h2>Why Choose Holidays Navigator for Canton Fair Business Travel</h2>
-          <p style={{ color: 'var(--text-muted)', fontSize: '18px' }}>Your trusted partner for Canton Fair assistance and international business travel</p>
+          <p style={{ color: 'var(--text-muted)', fontSize: 'clamp(13px, 1.8vw, 18px)' }}>Your trusted partner for Canton Fair assistance and international business travel</p>
         </div>
         
         <div className="features-grid">

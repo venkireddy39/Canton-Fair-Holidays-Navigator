@@ -45,12 +45,12 @@ export default function Phase2Page() {
         <div className="container" style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <div style={{ marginBottom: '50px' }}>
             <h3 className="text-2xl font-bold text-dark mb-4" style={{ color: 'var(--text-light)', borderBottom: '2px solid var(--accent-cyan)', paddingBottom: '10px', display: 'inline-block' }}>Comprehensive Exhibition Categories</h3>
-            <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', marginBottom: '20px', lineHeight: '1.8' }}>
+            <p style={{ color: 'var(--text-muted)', fontSize: 'clamp(0.77rem, 2.8vw, 1.1rem)', marginBottom: '20px', lineHeight: '1.8' }}>
               Phase 2 of the Canton Fair is the ultimate destination for consumer goods, gifting, and interior design. It focuses on products that enhance daily life, offering buyers an incredible variety of home decor, premium gifts, and lifestyle accessories.
             </p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px', marginTop: '30px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '20px', marginTop: '30px' }}>
               <div style={{ background: 'var(--bg-dark)', padding: '25px', borderRadius: '12px', borderLeft: '4px solid var(--accent-cyan)' }}>
-                <h4 style={{ fontWeight: '700', marginBottom: '15px', color: 'var(--text-light)', fontSize: '1.2rem' }}>Consumer Goods</h4>
+                <h4 style={{ fontWeight: '700', marginBottom: '15px', color: 'var(--text-light)', fontSize: 'clamp(0.84rem, 3.0vw, 1.2rem)' }}>Consumer Goods</h4>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, color: 'var(--text-muted)', lineHeight: '2' }}>
                   <li>✓ Kitchenware & Tableware</li>
                   <li>✓ General Ceramics</li>
@@ -60,7 +60,7 @@ export default function Phase2Page() {
                 </ul>
               </div>
               <div style={{ background: 'var(--bg-dark)', padding: '25px', borderRadius: '12px', borderLeft: '4px solid var(--accent-green)' }}>
-                <h4 style={{ fontWeight: '700', marginBottom: '15px', color: 'var(--text-light)', fontSize: '1.2rem' }}>Gifts & Toys</h4>
+                <h4 style={{ fontWeight: '700', marginBottom: '15px', color: 'var(--text-light)', fontSize: 'clamp(0.84rem, 3.0vw, 1.2rem)' }}>Gifts & Toys</h4>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, color: 'var(--text-muted)', lineHeight: '2' }}>
                   <li>✓ Watches, Spectacles & Clocks</li>
                   <li>✓ Toys & Amusements</li>
@@ -70,7 +70,7 @@ export default function Phase2Page() {
                 </ul>
               </div>
               <div style={{ background: 'var(--bg-dark)', padding: '25px', borderRadius: '12px', borderLeft: '4px solid var(--accent-gold)' }}>
-                <h4 style={{ fontWeight: '700', marginBottom: '15px', color: 'var(--text-light)', fontSize: '1.2rem' }}>Home Decorations</h4>
+                <h4 style={{ fontWeight: '700', marginBottom: '15px', color: 'var(--text-light)', fontSize: 'clamp(0.84rem, 3.0vw, 1.2rem)' }}>Home Decorations</h4>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, color: 'var(--text-muted)', lineHeight: '2' }}>
                   <li>✓ Art Ceramics & Glass Artware</li>
                   <li>✓ Furniture (Indoor & Outdoor)</li>

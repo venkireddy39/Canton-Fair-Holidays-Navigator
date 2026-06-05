@@ -48,7 +48,7 @@ export default function HotelsPage() {
 
       <section className="page-section" style={{ paddingTop: '20px' }}>
         <div className="container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '40px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))', gap: '40px' }}>
 
             {/* Hotel Card 1 */}
             <motion.div
@@ -65,14 +65,14 @@ export default function HotelsPage() {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '5px', color: '#f59e0b', marginBottom: '10px' }}>
                   {[...Array(5)].map((_, i) => <Star key={i} size={16} fill="#f59e0b" />)}
                 </div>
-                <h3 style={{ fontSize: '1.6rem', fontWeight: '700', color: 'var(--text-light)', marginBottom: '10px' }}>Guangzhou Marriott Hotel Canton</h3>
+                <h3 style={{ fontSize: 'clamp(1.12rem, 4.0vw, 1.6rem)', fontWeight: '700', color: 'var(--text-light)', marginBottom: '10px' }}>Guangzhou Marriott Hotel Canton</h3>
                 <p style={{ color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '5px', marginBottom: '20px' }}>
                   <MapPin size={16} className="text-accent-cyan" /> 5 min drive from complex
                 </p>
                 <div style={{ display: 'flex', gap: '15px', marginBottom: '30px', color: 'var(--text-muted)' }}>
-                  <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '0.9rem' }}><Wifi size={16} /> Free WiFi</span>
-                  <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '0.9rem' }}><Car size={16} /> Shuttle</span>
-                  <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '0.9rem' }}><Coffee size={16} /> Breakfast</span>
+                  <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: 'clamp(0.63rem, 2.3vw, 0.9rem)' }}><Wifi size={16} /> Free WiFi</span>
+                  <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: 'clamp(0.63rem, 2.3vw, 0.9rem)' }}><Car size={16} /> Shuttle</span>
+                  <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: 'clamp(0.63rem, 2.3vw, 0.9rem)' }}><Coffee size={16} /> Breakfast</span>
                 </div>
                 <a href="#book" className="premium-btn" style={{ width: '100%', textAlign: 'center', marginTop: 'auto' }} onClick={(e) => onBookNow(e, 'to know the more information related to Best Hotels Near Canton Fair | Premium Accommodations', 'Book Hotel now')}>For more infomation click here </a>
               </div>
@@ -93,14 +93,14 @@ export default function HotelsPage() {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '5px', color: '#f59e0b', marginBottom: '10px' }}>
                   {[...Array(5)].map((_, i) => <Star key={i} size={16} fill="#f59e0b" />)}
                 </div>
-                <h3 style={{ fontSize: '1.6rem', fontWeight: '700', color: 'var(--text-light)', marginBottom: '10px' }}>Langham Place, Guangzhou</h3>
+                <h3 style={{ fontSize: 'clamp(1.12rem, 4.0vw, 1.6rem)', fontWeight: '700', color: 'var(--text-light)', marginBottom: '10px' }}>Langham Place, Guangzhou</h3>
                 <p style={{ color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '5px', marginBottom: '20px' }}>
                   <MapPin size={16} className="text-accent-cyan" /> 2 min walk to complex
                 </p>
                 <div style={{ display: 'flex', gap: '15px', marginBottom: '30px', color: 'var(--text-muted)' }}>
-                  <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '0.9rem' }}><ShieldCheck size={16} /> Luxury</span>
-                  <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '0.9rem' }}><Wifi size={16} /> High Speed</span>
-                  <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '0.9rem' }}><Coffee size={16} /> Dining</span>
+                  <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: 'clamp(0.63rem, 2.3vw, 0.9rem)' }}><ShieldCheck size={16} /> Luxury</span>
+                  <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: 'clamp(0.63rem, 2.3vw, 0.9rem)' }}><Wifi size={16} /> High Speed</span>
+                  <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: 'clamp(0.63rem, 2.3vw, 0.9rem)' }}><Coffee size={16} /> Dining</span>
                 </div>
                 <a href="#book" className="premium-btn" style={{ width: '100%', textAlign: 'center', marginTop: 'auto' }} onClick={(e) => onBookNow(e, 'to know the more information related to Best Hotels Near Canton Fair | Premium Accommodations', 'Book Hotel now')}>For more infomation click here </a>
               </div>
@@ -121,14 +121,14 @@ export default function HotelsPage() {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '5px', color: '#f59e0b', marginBottom: '10px' }}>
                   {[...Array(5)].map((_, i) => <Star key={i} size={16} fill="#f59e0b" />)}
                 </div>
-                <h3 style={{ fontSize: '1.6rem', fontWeight: '700', color: 'var(--text-light)', marginBottom: '10px' }}>Shangri-La Hotel, Guangzhou</h3>
+                <h3 style={{ fontSize: 'clamp(1.12rem, 4.0vw, 1.6rem)', fontWeight: '700', color: 'var(--text-light)', marginBottom: '10px' }}>Shangri-La Hotel, Guangzhou</h3>
                 <p style={{ color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '5px', marginBottom: '20px' }}>
                   <MapPin size={16} className="text-accent-cyan" /> Adjacent to complex
                 </p>
                 <div style={{ display: 'flex', gap: '15px', marginBottom: '30px', color: 'var(--text-muted)' }}>
-                  <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '0.9rem' }}><Star size={16} /> River View</span>
-                  <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '0.9rem' }}><Coffee size={16} /> Lounge</span>
-                  <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '0.9rem' }}><Wifi size={16} /> Free WiFi</span>
+                  <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: 'clamp(0.63rem, 2.3vw, 0.9rem)' }}><Star size={16} /> River View</span>
+                  <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: 'clamp(0.63rem, 2.3vw, 0.9rem)' }}><Coffee size={16} /> Lounge</span>
+                  <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: 'clamp(0.63rem, 2.3vw, 0.9rem)' }}><Wifi size={16} /> Free WiFi</span>
                 </div>
                 <a href="#book" className="premium-btn" style={{ width: '100%', textAlign: 'center', marginTop: 'auto' }} onClick={(e) => onBookNow(e, 'to know the more information related to Best Hotels Near Canton Fair | Premium Accommodations', 'Book Hotel now')}>For more infomation click here</a>
               </div>

@@ -160,7 +160,7 @@ const ContactCTA = () => {
       <div className="container">
         <div className="section-header" style={{ marginBottom: '60px', textAlign: 'center' }}>
           <h2>Get Your Personalized Canton Fair Package</h2>
-          <p style={{ color: 'var(--text-muted)', fontSize: '18px' }}>Fill out our quick inquiry form or chat with our team</p>
+          <p style={{ color: 'var(--text-muted)', fontSize: 'clamp(13px, 1.8vw, 18px)' }}>Fill out our quick inquiry form or chat with our team</p>
         </div>
         <div className="contact-two-col">
 
@@ -174,12 +174,12 @@ const ContactCTA = () => {
             <div className="contact-hero-image"></div>
             
             <div className="contact-info-body">
-              <h2 style={{ fontSize: '36px', marginBottom: '20px' }}>
+              <h2 style={{ fontSize: 'clamp(27px, 3.6vw, 36px)', marginBottom: '20px' }}>
                 Contact and Booking
               </h2>
 
               <p style={{
-                fontSize: '18px',
+                fontSize: 'clamp(13px, 1.8vw, 18px)',
                 color: 'var(--text-light)',
                 marginBottom: '30px'
               }}>

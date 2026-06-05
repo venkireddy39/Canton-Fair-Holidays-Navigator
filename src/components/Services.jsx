@@ -17,7 +17,7 @@ const Services = () => {
       <div className="container">
         <div className="section-header">
           <h2>What's Included in Our Canton Fair Travel Packages</h2>
-          <p style={{ color: 'var(--text-muted)', fontSize: '18px' }}>Comprehensive services including Guangzhou hotels, Canton Fair visa support, and airport transfer.</p>
+          <p style={{ color: 'var(--text-muted)', fontSize: 'clamp(13px, 1.8vw, 18px)' }}>Comprehensive services including Guangzhou hotels, Canton Fair visa support, and airport transfer.</p>
         </div>
         
         <div className="services-grid">

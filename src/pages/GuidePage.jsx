@@ -26,20 +26,20 @@ function GuidePage() {
       <main className="page-container">
         <section className="page-hero">
         <div className="page-hero-content">
-          <h1 style={{ color: '#fff', fontSize: '2.8rem', marginBottom: '20px' }}>Complete Canton Fair 2026 Guide | Schedules, Venues & Logistics</h1>
-          <p style={{ color: '#e0e0e0', fontSize: '1.2rem' }}>Everything you need to know – phases, venues, hotels, visa, transport, and registration.</p>
+          <h1 style={{ color: '#fff', fontSize: 'clamp(1.96rem, 7.0vw, 2.8rem)', marginBottom: '20px' }}>Complete Canton Fair 2026 Guide | Schedules, Venues & Logistics</h1>
+          <p style={{ color: '#e0e0e0', fontSize: 'clamp(0.84rem, 3.0vw, 1.2rem)' }}>Everything you need to know – phases, venues, hotels, visa, transport, and registration.</p>
         </div>
       </section>
         <section className="overview-section" style={{ padding: '60px 0' }}>
           <div className="container">
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '20px', textAlign: 'center' }}>Overview</h2>
-            <p style={{ fontSize: '1.1rem', textAlign: 'center', maxWidth: '800px', margin: '0 auto', color: 'var(--text-muted)' }}>The Canton Fair is the world’s largest trade fair, attracting millions of visitors. Our guide helps you navigate each phase, find accommodation, handle visa requirements, and book airport transfers.</p>
+            <h2 style={{ fontSize: 'clamp(1.75rem, 6.3vw, 2.5rem)', marginBottom: '20px', textAlign: 'center' }}>Overview</h2>
+            <p style={{ fontSize: 'clamp(0.77rem, 2.8vw, 1.1rem)', textAlign: 'center', maxWidth: '800px', margin: '0 auto', color: 'var(--text-muted)' }}>The Canton Fair is the world’s largest trade fair, attracting millions of visitors. Our guide helps you navigate each phase, find accommodation, handle visa requirements, and book airport transfers.</p>
           </div>
         </section>
         <section className="main-content page-section-light" style={{ padding: '60px 0' }}>
           <div className="container">
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '30px', textAlign: 'center' }}>Key Highlights</h2>
-            <ul style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.1rem', color: 'var(--text-muted)', lineHeight: '1.8' }}>
+            <h2 style={{ fontSize: 'clamp(1.75rem, 6.3vw, 2.5rem)', marginBottom: '30px', textAlign: 'center' }}>Key Highlights</h2>
+            <ul style={{ maxWidth: '800px', margin: '0 auto', fontSize: 'clamp(0.77rem, 2.8vw, 1.1rem)', color: 'var(--text-muted)', lineHeight: '1.8' }}>
             <li>Phase 1 – Electronics & Machinery (Oct 15‑19)</li>
             <li>Phase 2 – Consumer Goods & Home Décor (Oct 23‑27)</li>
             <li>Phase 3 – Textiles, Garments & Shoes (Oct 31‑Nov 4)</li>
@@ -51,8 +51,8 @@ function GuidePage() {
         </section>
         <section className="benefits-section" style={{ padding: '60px 0', background: 'var(--bg-light)' }}>
           <div className="container">
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '40px', textAlign: 'center' }}>Why Use Our Guide?</h2>
-            <div className="cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '30px' }}>
+            <h2 style={{ fontSize: 'clamp(1.75rem, 6.3vw, 2.5rem)', marginBottom: '40px', textAlign: 'center' }}>Why Use Our Guide?</h2>
+            <div className="cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: '30px' }}>
             <div className="card" style={{ padding: '20px', border: '1px solid var(--border-color)', borderRadius: '12px' }}>
               <h3>Comprehensive</h3>
               <p>All phases, logistics, and tips in one place.</p>
@@ -70,8 +70,8 @@ function GuidePage() {
         </section>
         <section className="internal-links page-section-light" style={{ padding: '60px 0' }}>
           <div className="container">
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '30px', textAlign: 'center' }}>Explore More</h2>
-            <ul style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.1rem', lineHeight: '1.8', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <h2 style={{ fontSize: 'clamp(1.75rem, 6.3vw, 2.5rem)', marginBottom: '30px', textAlign: 'center' }}>Explore More</h2>
+            <ul style={{ maxWidth: '800px', margin: '0 auto', fontSize: 'clamp(0.77rem, 2.8vw, 1.1rem)', lineHeight: '1.8', display: 'flex', flexDirection: 'column', gap: '10px' }}>
               <li><Link to="/canton-fair-phase-1-products" style={{ color: 'var(--accent-green)', fontWeight: '600' }}>Phase 1 Products</Link></li>
             <li><Link to="/canton-fair-phase-2-products">Phase 2 Products</Link></li>
             <li><Link to="/canton-fair-phase-3-products">Phase 3 Products</Link></li>
@@ -84,12 +84,12 @@ function GuidePage() {
         </section>
         <section className="faq-section" style={{ padding: '80px 0' }}>
           <div className="container">
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '40px', textAlign: 'center' }}>Frequently Asked Questions</h2>
+            <h2 style={{ fontSize: 'clamp(1.75rem, 6.3vw, 2.5rem)', marginBottom: '40px', textAlign: 'center' }}>Frequently Asked Questions</h2>
             <ul style={{ maxWidth: '800px', margin: '0 auto', listStyle: 'none', padding: 0 }}>
               {faqItems.map((item, idx) => (
               <li key={idx} style={{ marginBottom: '25px', padding: '20px', background: 'var(--card-bg)', borderRadius: '12px', border: '1px solid var(--border-color)' }}>
-                <strong style={{ fontSize: '1.2rem', display: 'block', marginBottom: '10px', color: 'var(--text-light)' }}>{item.question}</strong>
-                <span style={{ color: 'var(--text-muted)', fontSize: '1.05rem', lineHeight: '1.6', display: 'block' }}>{item.answer}</span>
+                <strong style={{ fontSize: 'clamp(0.84rem, 3.0vw, 1.2rem)', display: 'block', marginBottom: '10px', color: 'var(--text-light)' }}>{item.question}</strong>
+                <span style={{ color: 'var(--text-muted)', fontSize: 'clamp(0.73rem, 2.6vw, 1.05rem)', lineHeight: '1.6', display: 'block' }}>{item.answer}</span>
               </li>
             ))}
             </ul>

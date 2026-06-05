@@ -199,7 +199,7 @@ export default function TermsPage() {
                 padding: '24px',
                 boxShadow: '0 10px 30px rgba(0, 0, 0, 0.03)'
               }}>
-                <h2 style={{ fontSize: '1.25rem', fontWeight: '800', marginBottom: '20px', color: 'var(--text-light)', borderBottom: '1px solid var(--border-color)', paddingBottom: '12px', textAlign: 'left' }}>
+                <h2 style={{ fontSize: 'clamp(0.88rem, 3.1vw, 1.25rem)', fontWeight: '800', marginBottom: '20px', color: 'var(--text-light)', borderBottom: '1px solid var(--border-color)', paddingBottom: '12px', textAlign: 'left' }}>
                   Sections
                 </h2>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
@@ -224,7 +224,7 @@ export default function TermsPage() {
             <div>
               {/* Preamble */}
               <div style={{ marginBottom: '35px' }}>
-                <p style={{ fontSize: '1.15rem', color: 'var(--text-muted)', lineHeight: '1.8', fontStyle: 'italic' }}>
+                <p style={{ fontSize: 'clamp(0.80rem, 2.9vw, 1.15rem)', color: 'var(--text-muted)', lineHeight: '1.8', fontStyle: 'italic' }}>
                   These Terms &amp; Conditions govern all Canton Fair packages offered by <strong>Amazing Holidays Navigator Private Limited ("Company")</strong>. By making a booking and/or payment, the client acknowledges and agrees to the terms stated herein.
                 </p>
               </div>
@@ -240,9 +240,9 @@ export default function TermsPage() {
               >
                 <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '25px', borderBottom: '1px solid var(--border-color)', paddingBottom: '15px' }}>
                   <ShieldCheck className="text-accent-green" size={28} />
-                  <h2 style={{ fontSize: '1.6rem', fontWeight: '700', color: 'var(--text-light)', margin: 0 }}>Package Inclusions &amp; Exclusions</h2>
+                  <h2 style={{ fontSize: 'clamp(1.12rem, 4.0vw, 1.6rem)', fontWeight: '700', color: 'var(--text-light)', margin: 0 }}>Package Inclusions &amp; Exclusions</h2>
                 </div>
-                <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', marginBottom: '20px' }}>
+                <p style={{ color: 'var(--text-muted)', fontSize: 'clamp(0.73rem, 2.6vw, 1.05rem)', marginBottom: '20px' }}>
                   The Canton Fair package may include the following services as specified in the booking confirmation:
                 </p>
                 <ul className="terms-bullet-list" style={{ marginBottom: '25px' }}>
@@ -271,7 +271,7 @@ export default function TermsPage() {
                   <h4 style={{ color: 'var(--text-light)', fontWeight: '700', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '8px' }}>
                     <Info size={18} className="text-accent-gold" /> Explicit Exclusions
                   </h4>
-                  <p style={{ color: 'var(--text-muted)', margin: 0, fontSize: '0.98rem' }}>
+                  <p style={{ color: 'var(--text-muted)', margin: 0, fontSize: 'clamp(0.69rem, 2.5vw, 0.98rem)' }}>
                     International airfare, travel insurance, forex, personal expenses, meals not specified, and any other services not expressly included are excluded from the package price.
                   </p>
                 </div>
@@ -288,7 +288,7 @@ export default function TermsPage() {
               >
                 <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '25px', borderBottom: '1px solid var(--border-color)', paddingBottom: '15px' }}>
                   <CreditCard className="text-accent-cyan" size={28} />
-                  <h2 style={{ fontSize: '1.6rem', fontWeight: '700', color: 'var(--text-light)', margin: 0 }}>Booking &amp; Payment Guidelines</h2>
+                  <h2 style={{ fontSize: 'clamp(1.12rem, 4.0vw, 1.6rem)', fontWeight: '700', color: 'var(--text-light)', margin: 0 }}>Booking &amp; Payment Guidelines</h2>
                 </div>
                 <ul className="terms-bullet-list">
                   <li className="terms-bullet-item">
@@ -321,10 +321,10 @@ export default function TermsPage() {
               >
                 <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '25px', borderBottom: '1px solid var(--border-color)', paddingBottom: '15px' }}>
                   <FileText className="text-accent-green" size={28} />
-                  <h2 style={{ fontSize: '1.6rem', fontWeight: '700', color: 'var(--text-light)', margin: 0 }}>Visa Support &amp; Registration Disclaimer</h2>
+                  <h2 style={{ fontSize: 'clamp(1.12rem, 4.0vw, 1.6rem)', fontWeight: '700', color: 'var(--text-light)', margin: 0 }}>Visa Support &amp; Registration Disclaimer</h2>
                 </div>
                 
-                <h3 style={{ fontSize: '1.25rem', fontWeight: '700', color: 'var(--text-light)', marginBottom: '15px' }}>Visa Assistance</h3>
+                <h3 style={{ fontSize: 'clamp(0.88rem, 3.1vw, 1.25rem)', fontWeight: '700', color: 'var(--text-light)', marginBottom: '15px' }}>Visa Assistance</h3>
                 <ul className="terms-bullet-list" style={{ marginBottom: '25px' }}>
                   <li className="terms-bullet-item">
                     <CheckCircle2 size={18} className="terms-bullet-icon" />
@@ -352,7 +352,7 @@ export default function TermsPage() {
                   </li>
                 </ul>
 
-                <h3 style={{ fontSize: '1.25rem', fontWeight: '700', color: 'var(--text-light)', marginBottom: '15px', borderTop: '1px solid var(--border-color)', paddingTop: '20px' }}>Canton Fair Registration</h3>
+                <h3 style={{ fontSize: 'clamp(0.88rem, 3.1vw, 1.25rem)', fontWeight: '700', color: 'var(--text-light)', marginBottom: '15px', borderTop: '1px solid var(--border-color)', paddingTop: '20px' }}>Canton Fair Registration</h3>
                 <ul className="terms-bullet-list">
                   <li className="terms-bullet-item">
                     <CheckCircle2 size={18} className="terms-bullet-icon" />
@@ -380,10 +380,10 @@ export default function TermsPage() {
               >
                 <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '25px', borderBottom: '1px solid var(--border-color)', paddingBottom: '15px' }}>
                   <Hotel className="text-accent-cyan" size={28} />
-                  <h2 style={{ fontSize: '1.6rem', fontWeight: '700', color: 'var(--text-light)', margin: 0 }}>Accommodation &amp; Transport Policy</h2>
+                  <h2 style={{ fontSize: 'clamp(1.12rem, 4.0vw, 1.6rem)', fontWeight: '700', color: 'var(--text-light)', margin: 0 }}>Accommodation &amp; Transport Policy</h2>
                 </div>
 
-                <h3 style={{ fontSize: '1.25rem', fontWeight: '700', color: 'var(--text-light)', marginBottom: '15px' }}>Hotel Accommodation</h3>
+                <h3 style={{ fontSize: 'clamp(0.88rem, 3.1vw, 1.25rem)', fontWeight: '700', color: 'var(--text-light)', marginBottom: '15px' }}>Hotel Accommodation</h3>
                 <ul className="terms-bullet-list" style={{ marginBottom: '25px' }}>
                   <li className="terms-bullet-item">
                     <CheckCircle2 size={18} className="terms-bullet-icon" />
@@ -407,7 +407,7 @@ export default function TermsPage() {
                   </li>
                 </ul>
 
-                <h3 style={{ fontSize: '1.25rem', fontWeight: '700', color: 'var(--text-light)', marginBottom: '15px', borderTop: '1px solid var(--border-color)', paddingTop: '20px' }}>Shuttle Transfers</h3>
+                <h3 style={{ fontSize: 'clamp(0.88rem, 3.1vw, 1.25rem)', fontWeight: '700', color: 'var(--text-light)', marginBottom: '15px', borderTop: '1px solid var(--border-color)', paddingTop: '20px' }}>Shuttle Transfers</h3>
                 <ul className="terms-bullet-list">
                   <li className="terms-bullet-item">
                     <CheckCircle2 size={18} className="terms-bullet-icon" />
@@ -435,14 +435,14 @@ export default function TermsPage() {
               >
                 <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '25px', borderBottom: '1px solid var(--border-color)', paddingBottom: '15px' }}>
                   <AlertOctagon className="text-accent-gold" size={28} />
-                  <h2 style={{ fontSize: '1.6rem', fontWeight: '700', color: 'var(--text-light)', margin: 0 }}>Cancellation &amp; Refund Structure</h2>
+                  <h2 style={{ fontSize: 'clamp(1.12rem, 4.0vw, 1.6rem)', fontWeight: '700', color: 'var(--text-light)', margin: 0 }}>Cancellation &amp; Refund Structure</h2>
                 </div>
                 
-                <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', marginBottom: '20px' }}>
+                <p style={{ color: 'var(--text-muted)', fontSize: 'clamp(0.73rem, 2.6vw, 1.05rem)', marginBottom: '20px' }}>
                   All cancellation requests must be submitted <strong>in writing by email</strong>. The date on which the Company receives the written cancellation request shall determine the applicable cancellation charges.
                 </p>
 
-                <h3 style={{ fontSize: '1.25rem', fontWeight: '700', color: 'var(--text-light)', marginBottom: '15px' }}>Standard Cancellation Charges</h3>
+                <h3 style={{ fontSize: 'clamp(0.88rem, 3.1vw, 1.25rem)', fontWeight: '700', color: 'var(--text-light)', marginBottom: '15px' }}>Standard Cancellation Charges</h3>
                 <table className="terms-table">
                   <thead>
                     <tr>
@@ -470,8 +470,8 @@ export default function TermsPage() {
                   </tbody>
                 </table>
 
-                <h3 style={{ fontSize: '1.25rem', fontWeight: '700', color: 'var(--text-light)', marginBottom: '15px', marginTop: '25px' }}>Additional Supplier Charges</h3>
-                <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', margin: 0 }}>
+                <h3 style={{ fontSize: 'clamp(0.88rem, 3.1vw, 1.25rem)', fontWeight: '700', color: 'var(--text-light)', marginBottom: '15px', marginTop: '25px' }}>Additional Supplier Charges</h3>
+                <p style={{ color: 'var(--text-muted)', fontSize: 'clamp(0.73rem, 2.6vw, 1.05rem)', margin: 0 }}>
                   In addition to the above cancellation charges, any non-refundable charges imposed by hotels, suppliers, visa authorities, service providers, or third parties shall be deducted from the refund amount.
                 </p>
               </motion.div>
@@ -487,11 +487,11 @@ export default function TermsPage() {
               >
                 <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '25px', borderBottom: '1px solid var(--border-color)', paddingBottom: '15px' }}>
                   <XCircle className="text-accent-gold" style={{ color: '#ef4444' }} size={28} />
-                  <h2 style={{ fontSize: '1.6rem', fontWeight: '700', color: 'var(--text-light)', margin: 0 }}>Visa Rejection &amp; Special No-Refund Cases</h2>
+                  <h2 style={{ fontSize: 'clamp(1.12rem, 4.0vw, 1.6rem)', fontWeight: '700', color: 'var(--text-light)', margin: 0 }}>Visa Rejection &amp; Special No-Refund Cases</h2>
                 </div>
 
-                <h3 style={{ fontSize: '1.25rem', fontWeight: '700', color: 'var(--text-light)', marginBottom: '15px' }}>Visa Rejection Contingency</h3>
-                <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', marginBottom: '15px' }}>
+                <h3 style={{ fontSize: 'clamp(0.88rem, 3.1vw, 1.25rem)', fontWeight: '700', color: 'var(--text-light)', marginBottom: '15px' }}>Visa Rejection Contingency</h3>
+                <p style={{ color: 'var(--text-muted)', fontSize: 'clamp(0.73rem, 2.6vw, 1.05rem)', marginBottom: '15px' }}>
                   If a visa application is rejected, any refund shall be strictly subject to:
                 </p>
                 <ul className="terms-bullet-list" style={{ marginBottom: '20px' }}>
@@ -516,11 +516,11 @@ export default function TermsPage() {
                   *Visa rejection shall not automatically entitle the client to a full refund.
                 </p>
 
-                <h3 style={{ fontSize: '1.25rem', fontWeight: '700', color: 'var(--text-light)', marginBottom: '15px', borderTop: '1px solid var(--border-color)', paddingTop: '20px' }}>Cases Not Eligible for Refunds</h3>
-                <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', marginBottom: '15px' }}>
+                <h3 style={{ fontSize: 'clamp(0.88rem, 3.1vw, 1.25rem)', fontWeight: '700', color: 'var(--text-light)', marginBottom: '15px', borderTop: '1px solid var(--border-color)', paddingTop: '20px' }}>Cases Not Eligible for Refunds</h3>
+                <p style={{ color: 'var(--text-muted)', fontSize: 'clamp(0.73rem, 2.6vw, 1.05rem)', marginBottom: '15px' }}>
                   No refund shall be available under any circumstances for:
                 </p>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '15px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))', gap: '15px' }}>
                   <ul className="terms-bullet-list">
                     <li className="terms-bullet-item">
                       <XCircle size={16} style={{ color: '#ef4444', marginTop: '4px', flexShrink: 0 }} />
@@ -575,10 +575,10 @@ export default function TermsPage() {
               >
                 <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '25px', borderBottom: '1px solid var(--border-color)', paddingBottom: '15px' }}>
                   <Plane className="text-accent-cyan" size={28} />
-                  <h2 style={{ fontSize: '1.6rem', fontWeight: '700', color: 'var(--text-light)', margin: 0 }}>Flights &amp; Insurance Guidelines</h2>
+                  <h2 style={{ fontSize: 'clamp(1.12rem, 4.0vw, 1.6rem)', fontWeight: '700', color: 'var(--text-light)', margin: 0 }}>Flights &amp; Insurance Guidelines</h2>
                 </div>
 
-                <h3 style={{ fontSize: '1.25rem', fontWeight: '700', color: 'var(--text-light)', marginBottom: '15px' }}>Flight Tickets</h3>
+                <h3 style={{ fontSize: 'clamp(0.88rem, 3.1vw, 1.25rem)', fontWeight: '700', color: 'var(--text-light)', marginBottom: '15px' }}>Flight Tickets</h3>
                 <ul className="terms-bullet-list" style={{ marginBottom: '25px' }}>
                   <li className="terms-bullet-item">
                     <CheckCircle2 size={18} className="terms-bullet-icon" />
@@ -590,7 +590,7 @@ export default function TermsPage() {
                   </li>
                 </ul>
 
-                <h3 style={{ fontSize: '1.25rem', fontWeight: '700', color: 'var(--text-light)', marginBottom: '15px', borderTop: '1px solid var(--border-color)', paddingTop: '20px' }}>Travel Insurance</h3>
+                <h3 style={{ fontSize: 'clamp(0.88rem, 3.1vw, 1.25rem)', fontWeight: '700', color: 'var(--text-light)', marginBottom: '15px', borderTop: '1px solid var(--border-color)', paddingTop: '20px' }}>Travel Insurance</h3>
                 <ul className="terms-bullet-list">
                   <li className="terms-bullet-item">
                     <CheckCircle2 size={18} className="terms-bullet-icon" />
@@ -614,14 +614,14 @@ export default function TermsPage() {
               >
                 <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '25px', borderBottom: '1px solid var(--border-color)', paddingBottom: '15px' }}>
                   <Scale className="text-accent-green" size={28} />
-                  <h2 style={{ fontSize: '1.6rem', fontWeight: '700', color: 'var(--text-light)', margin: 0 }}>Force Majeure, Liability &amp; Jurisdiction</h2>
+                  <h2 style={{ fontSize: 'clamp(1.12rem, 4.0vw, 1.6rem)', fontWeight: '700', color: 'var(--text-light)', margin: 0 }}>Force Majeure, Liability &amp; Jurisdiction</h2>
                 </div>
 
-                <h3 style={{ fontSize: '1.25rem', fontWeight: '700', color: 'var(--text-light)', marginBottom: '15px' }}>Force Majeure Clause</h3>
-                <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', marginBottom: '15px' }}>
+                <h3 style={{ fontSize: 'clamp(0.88rem, 3.1vw, 1.25rem)', fontWeight: '700', color: 'var(--text-light)', marginBottom: '15px' }}>Force Majeure Clause</h3>
+                <p style={{ color: 'var(--text-muted)', fontSize: 'clamp(0.73rem, 2.6vw, 1.05rem)', marginBottom: '15px' }}>
                   The Company shall not be liable for any loss, delay, cancellation, additional expense, or failure to perform due to circumstances beyond its reasonable control, including but not limited to:
                 </p>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '10px', marginBottom: '20px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))', gap: '10px', marginBottom: '20px' }}>
                   <ul className="terms-bullet-list" style={{ gap: '8px' }}>
                     <li className="terms-bullet-item"><CheckCircle2 size={14} className="terms-bullet-icon" /> <span>Natural disasters / Acts of God</span></li>
                     <li className="terms-bullet-item"><CheckCircle2 size={14} className="terms-bullet-icon" /> <span>Floods, earthquakes, storms, or severe weather</span></li>
@@ -636,11 +636,11 @@ export default function TermsPage() {
                     <li className="terms-bullet-item"><CheckCircle2 size={14} className="terms-bullet-icon" /> <span>Changes imposed by Canton Fair organizers</span></li>
                   </ul>
                 </div>
-                <p style={{ color: 'var(--text-muted)', fontSize: '1rem', fontStyle: 'italic', marginBottom: '25px' }}>
+                <p style={{ color: 'var(--text-muted)', fontSize: 'clamp(0.70rem, 2.5vw, 1rem)', fontStyle: 'italic', marginBottom: '25px' }}>
                   Any refunds in such situations shall be strictly subject to recoveries received from suppliers and service providers.
                 </p>
 
-                <h3 style={{ fontSize: '1.25rem', fontWeight: '700', color: 'var(--text-light)', marginBottom: '15px', borderTop: '1px solid var(--border-color)', paddingTop: '20px' }}>Limitation of Liability</h3>
+                <h3 style={{ fontSize: 'clamp(0.88rem, 3.1vw, 1.25rem)', fontWeight: '700', color: 'var(--text-light)', marginBottom: '15px', borderTop: '1px solid var(--border-color)', paddingTop: '20px' }}>Limitation of Liability</h3>
                 <ul className="terms-bullet-list" style={{ marginBottom: '25px' }}>
                   <li className="terms-bullet-item">
                     <CheckCircle2 size={18} className="terms-bullet-icon" />
@@ -656,7 +656,7 @@ export default function TermsPage() {
                   </li>
                 </ul>
 
-                <h3 style={{ fontSize: '1.25rem', fontWeight: '700', color: 'var(--text-light)', marginBottom: '15px', borderTop: '1px solid var(--border-color)', paddingTop: '20px' }}>Client Responsibilities</h3>
+                <h3 style={{ fontSize: 'clamp(0.88rem, 3.1vw, 1.25rem)', fontWeight: '700', color: 'var(--text-light)', marginBottom: '15px', borderTop: '1px solid var(--border-color)', paddingTop: '20px' }}>Client Responsibilities</h3>
                 <ul className="terms-bullet-list" style={{ marginBottom: '25px' }}>
                   <li className="terms-bullet-item">
                     <CheckCircle2 size={18} className="terms-bullet-icon" />
@@ -684,7 +684,7 @@ export default function TermsPage() {
                   </li>
                 </ul>
 
-                <h3 style={{ fontSize: '1.25rem', fontWeight: '700', color: 'var(--text-light)', marginBottom: '15px', borderTop: '1px solid var(--border-color)', paddingTop: '20px' }}>Governing Law &amp; Jurisdiction</h3>
+                <h3 style={{ fontSize: 'clamp(0.88rem, 3.1vw, 1.25rem)', fontWeight: '700', color: 'var(--text-light)', marginBottom: '15px', borderTop: '1px solid var(--border-color)', paddingTop: '20px' }}>Governing Law &amp; Jurisdiction</h3>
                 <ul className="terms-bullet-list">
                   <li className="terms-bullet-item">
                     <CheckCircle2 size={18} className="terms-bullet-icon" />

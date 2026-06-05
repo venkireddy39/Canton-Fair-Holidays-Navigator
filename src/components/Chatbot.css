@@ -263,7 +263,7 @@
   }
 
   .chat-window {
-    width: calc(100vw - 32px);
+    width: calc(100% - 32px);
     height: 360px;
   }
 }

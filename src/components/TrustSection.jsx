@@ -94,14 +94,14 @@ const TrustSection = () => {
             <h2 className="gradient-text" style={{ fontSize: 'clamp(2rem, 4vw, 2.6rem)', marginBottom: '15px' }}>
               Proven Sourcing Success in Numbers
             </h2>
-            <p style={{ color: 'var(--text-muted)', fontSize: '18px', maxWidth: '700px', margin: '0 auto' }}>
+            <p style={{ color: 'var(--text-muted)', fontSize: 'clamp(13px, 1.8vw, 18px)', maxWidth: '700px', margin: '0 auto' }}>
               We build trust through performance. Here is how we empower trade importers globally.
             </p>
           </div>
 
           <div style={{ 
             display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', 
             gap: '30px' 
           }}>
             {stats.map((stat) => (
@@ -124,7 +124,7 @@ const TrustSection = () => {
                   {stat.icon}
                 </div>
                 <div style={{ 
-                  fontSize: '2.8rem', 
+                  fontSize: 'clamp(1.96rem, 7.0vw, 2.8rem)', 
                   fontWeight: '800', 
                   color: 'var(--accent-green)',
                   fontFamily: 'var(--font-sans)',
@@ -134,14 +134,14 @@ const TrustSection = () => {
                   {stat.number}
                 </div>
                 <h4 style={{ 
-                  fontSize: '1.1rem', 
+                  fontSize: 'clamp(0.77rem, 2.8vw, 1.1rem)', 
                   color: 'var(--text-light)', 
                   fontWeight: '700',
                   marginBottom: '10px' 
                 }}>
                   {stat.label}
                 </h4>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: '1.5' }}>
+                <p style={{ color: 'var(--text-muted)', fontSize: 'clamp(0.66rem, 2.4vw, 0.95rem)', lineHeight: '1.5' }}>
                   {stat.desc}
                 </p>
               </motion.div>
@@ -155,14 +155,14 @@ const TrustSection = () => {
             <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.6rem)', marginBottom: '15px' }}>
               Guangzhou Business & Sourcing Atmosphere
             </h2>
-            <p style={{ color: 'var(--text-muted)', fontSize: '18px', maxWidth: '700px', margin: '0 auto' }}>
+            <p style={{ color: 'var(--text-muted)', fontSize: 'clamp(13px, 1.8vw, 18px)', maxWidth: '700px', margin: '0 auto' }}>
               Authentic destination snapshots from premium hotels, business negotiations, and trade delegation support.
             </p>
           </div>
 
           <div style={{ 
             display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))', 
             gap: '20px' 
           }}>
             {galleryImages.map((img, idx) => (
@@ -206,7 +206,7 @@ const TrustSection = () => {
                   display: 'flex',
                   alignItems: 'flex-end'
                 }}>
-                  <span style={{ fontSize: '1rem', fontWeight: '700', fontFamily: 'var(--font-sans)' }}>
+                  <span style={{ fontSize: 'clamp(0.70rem, 2.5vw, 1rem)', fontWeight: '700', fontFamily: 'var(--font-sans)' }}>
                     {img.title}
                   </span>
                 </div>
@@ -221,14 +221,14 @@ const TrustSection = () => {
             <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.6rem)', marginBottom: '15px' }}>
               What Successful Sourcing Importers Say
             </h2>
-            <p style={{ color: 'var(--text-muted)', fontSize: '18px', maxWidth: '700px', margin: '0 auto' }}>
+            <p style={{ color: 'var(--text-muted)', fontSize: 'clamp(13px, 1.8vw, 18px)', maxWidth: '700px', margin: '0 auto' }}>
               Real feedback from entrepreneurs who leveraged our visa advisory, premium hotel shuttle, and trade logistics.
             </p>
           </div>
 
           <div style={{ 
             display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', 
             gap: '30px' 
           }}>
             {testimonials.map((test) => (
@@ -258,7 +258,7 @@ const TrustSection = () => {
                   </div>
                   <p style={{ 
                     color: 'var(--text-muted)', 
-                    fontSize: '1.05rem', 
+                    fontSize: 'clamp(0.73rem, 2.6vw, 1.05rem)', 
                     lineHeight: '1.65', 
                     fontStyle: 'italic',
                     marginBottom: '25px'
@@ -284,15 +284,15 @@ const TrustSection = () => {
                     justifyContent: 'center',
                     color: 'white',
                     fontWeight: '800',
-                    fontSize: '1.1rem'
+                    fontSize: 'clamp(0.77rem, 2.8vw, 1.1rem)'
                   }}>
                     {test.name[0]}
                   </div>
                   <div>
-                    <h4 style={{ fontSize: '1.1rem', color: 'var(--text-light)', fontWeight: '700', margin: 0 }}>
+                    <h4 style={{ fontSize: 'clamp(0.77rem, 2.8vw, 1.1rem)', color: 'var(--text-light)', fontWeight: '700', margin: 0 }}>
                       {test.name}
                     </h4>
-                    <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', margin: 0 }}>
+                    <p style={{ color: 'var(--text-muted)', fontSize: 'clamp(0.59rem, 2.1vw, 0.85rem)', margin: 0 }}>
                       {test.role} • <span style={{ color: 'var(--accent-gold)', fontWeight: '600' }}>{test.location}</span>
                     </p>
                   </div>

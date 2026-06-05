@@ -46,12 +46,12 @@ function HomePage() {
       <section style={{ padding: '80px 0', background: 'var(--bg-light)' }}>
         <div className="container">
           <div className="section-header" style={{ textAlign: 'center', marginBottom: '50px' }}>
-            <h2 style={{ fontSize: '2.5rem' }}>Canton Fair 2026 Resources</h2>
-            <p style={{ color: 'var(--text-muted)', fontSize: '1.2rem', maxWidth: '700px', margin: '0 auto' }}>
+            <h2 style={{ fontSize: 'clamp(1.75rem, 6.3vw, 2.5rem)' }}>Canton Fair 2026 Resources</h2>
+            <p style={{ color: 'var(--text-muted)', fontSize: 'clamp(0.84rem, 3.0vw, 1.2rem)', maxWidth: '700px', margin: '0 auto' }}>
               Explore comprehensive guides on exhibition phases, sourcing markets, and visa applications.
             </p>
           </div>
-          <div className="related-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px', maxWidth: '1000px' }}>
+          <div className="related-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '30px', maxWidth: '1000px' }}>
             <Link to="/canton-fair-2026-guide" className="related-card" style={{ padding: '24px' }}>Canton Fair 2026 Complete Guide</Link>
             <Link to="/canton-fair-packages" className="related-card" style={{ padding: '24px' }}>Canton Fair 2026 Travel Packages</Link>
             <Link to="/canton-fair-phase-1-products" className="related-card" style={{ padding: '24px' }}>Phase 1: Electronics & Machinery</Link>
