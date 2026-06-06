@@ -1,8 +1,6 @@
-import React from 'react';
 import SeoHelmet from '../components/SeoHelmet';
 import ContactCTA from '../components/ContactCTA';
 import { phases } from '../data/phases';
-import { Gift } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const phase = phases[1]; // Phase 2
@@ -115,7 +113,7 @@ export default function Phase2Page() {
 
       <section className="page-section page-section-light">
         <div className="container text-center">
-          <h3 className="text-2xl font-bold text-light mb-6">Explore Other Sections</h3>
+          <h3 className="explore-more-title">Explore More</h3>
           <div className="related-grid">
 
             <Link to="/canton-fair-phase-3-products" className="related-card">Phase 3 Products</Link>

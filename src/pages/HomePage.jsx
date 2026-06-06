@@ -1,4 +1,3 @@
-import React from 'react';
 import { useOutletContext } from 'react-router-dom';
 import Hero from '../components/Hero';
 import ContactCTA from '../components/ContactCTA';
@@ -36,29 +35,29 @@ function HomePage() {
         article={false}
       />
       
-      <Hero onBookNow={onBookNow} />
+      <Hero />
       <PackageOverview onBookNow={onBookNow} />
       <WhyChooseUs />
       <TrustSection />
       <Services />
       
       {/* Deep content summarized with Read More Links */}
-      <section style={{ padding: '80px 0', background: 'var(--bg-light)' }}>
-        <div className="container">
-          <div className="section-header" style={{ textAlign: 'center', marginBottom: '50px' }}>
-            <h2 style={{ fontSize: 'clamp(1.75rem, 6.3vw, 2.5rem)' }}>Canton Fair 2026 Resources</h2>
-            <p style={{ color: 'var(--text-muted)', fontSize: 'clamp(0.84rem, 3.0vw, 1.2rem)', maxWidth: '700px', margin: '0 auto' }}>
+      <section style={{ padding: '0', background: 'var(--bg-light)', margin: '0' }}>
+        <div className="container" style={{ padding: '0', margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', padding: '30px 20px 10px' }}>
+            <h2 style={{ fontSize: 'clamp(1.75rem, 6.3vw, 2.5rem)', margin: '0 0 10px' }}>Canton Fair 2026 Resources</h2>
+            <p style={{ color: 'var(--text-muted)', fontSize: 'clamp(0.84rem, 3.0vw, 1.2rem)', maxWidth: '700px', margin: '0 auto 20px' }}>
               Explore comprehensive guides on exhibition phases, sourcing markets, and visa applications.
             </p>
           </div>
-          <div className="related-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '30px', maxWidth: '1000px' }}>
-            <Link to="/canton-fair-2026-guide" className="related-card" style={{ padding: '24px' }}>Canton Fair 2026 Complete Guide</Link>
-            <Link to="/canton-fair-packages" className="related-card" style={{ padding: '24px' }}>Canton Fair 2026 Travel Packages</Link>
-            <Link to="/canton-fair-phase-1-products" className="related-card" style={{ padding: '24px' }}>Phase 1: Electronics & Machinery</Link>
-            <Link to="/canton-fair-phase-2-products" className="related-card" style={{ padding: '24px' }}>Phase 2: Consumer Goods</Link>
-            <Link to="/canton-fair-phase-3-products" className="related-card" style={{ padding: '24px' }}>Phase 3: Textiles & Garments</Link>
-            <Link to="/guangzhou-business-visa-guide" className="related-card" style={{ padding: '24px' }}>China Business Visa Process</Link>
-            <Link to="/best-hotels-near-canton-fair" className="related-card" style={{ padding: '24px' }}>Best Hotels Near Pazhou</Link>
+          <div className="related-grid" style={{ paddingBottom: '30px' }}>
+            <Link to="/canton-fair-2026-guide" className="related-card">Canton Fair 2026 Complete Guide</Link>
+            <Link to="/canton-fair-packages" className="related-card">Canton Fair 2026 Travel Packages</Link>
+            <Link to="/canton-fair-phase-1-products" className="related-card">Phase 1: Electronics &amp; Machinery</Link>
+            <Link to="/canton-fair-phase-2-products" className="related-card">Phase 2: Consumer Goods</Link>
+            <Link to="/canton-fair-phase-3-products" className="related-card">Phase 3: Textiles &amp; Garments</Link>
+            <Link to="/guangzhou-business-visa-guide" className="related-card">China Business Visa Process</Link>
+            <Link to="/best-hotels-near-canton-fair" className="related-card">Best Hotels Near Pazhou</Link>
           </div>
         </div>
       </section>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import ReactDOM from "react-dom";
 import {
   X,
@@ -26,6 +26,23 @@ const BUSINESS_CATEGORIES = [
   "Agriculture & Farming",
   "Other",
 ];
+
+const ErrorIcon = () => (
+  <svg
+    width="14"
+    height="14"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <line x1="12" y1="8" x2="12" y2="12" />
+    <line x1="12" y1="16" x2="12.01" y2="16" />
+  </svg>
+);
 
 const PopupForm = ({ onClose }) => {
   const modalRef = useRef(null);
@@ -211,22 +228,7 @@ const PopupForm = ({ onClose }) => {
     }
   };
 
-  const ErrorIcon = () => (
-    <svg
-      width="14"
-      height="14"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <circle cx="12" cy="12" r="10" />
-      <line x1="12" y1="8" x2="12" y2="12" />
-      <line x1="12" y1="16" x2="12.01" y2="16" />
-    </svg>
-  );
+
 
   return ReactDOM.createPortal(
     <div className="modal-overlay popup-center-overlay" ref={modalRef}>

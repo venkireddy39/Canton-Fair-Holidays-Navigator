@@ -1,9 +1,6 @@
-import React from 'react';
 import SeoHelmet from '../components/SeoHelmet';
 import ContactCTA from '../components/ContactCTA';
 import { Link } from 'react-router-dom';
-import { Car, Clock, Users, ShieldCheck, Wifi, Coffee } from 'lucide-react';
-import { motion } from 'framer-motion';
 
 export default function AirportTransferPage() {
   return (
@@ -52,7 +49,7 @@ export default function AirportTransferPage() {
 
       <section className="page-section page-section-light">
         <div className="container text-center">
-          <h3 className="text-2xl font-bold text-light mb-6">Related Pages</h3>
+          <h3 className="explore-more-title">Explore More</h3>
           <div className="related-grid">
             <Link to="/canton-fair-packages" className="related-card">Travel Packages</Link>
             <Link to="/canton-fair-2026-guide" className="related-card">Fair Guide</Link>

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from './Header';
-import Chatbot from './Chatbot';
+// import Chatbot from './Chatbot';
 import FloatingWhatsApp from './FloatingWhatsApp';
 import BookingModal from './BookingModal';
 import PopupForm from './PopupForm';
@@ -91,6 +91,7 @@ export default function Layout() {
               <p style={{ margin: '0 0 5px 0', fontSize: '1.0rem' }}>
                 <strong> </strong> <a href="mailto: info.holidaysnavigator@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>info.holidaysnavigator@gmail.com</a><br />
               </p>
+
               <p style={{ margin: 0, fontSize: '0.8rem' }}>
                 <strong> </strong>{' '}
                 <a href="tel:+919533444455" style={{ color: 'inherit', textDecoration: 'none' }}>+91 95334 44455</a>
@@ -108,10 +109,10 @@ export default function Layout() {
           <div>
             <h4 style={{ color: 'var(--text-light)', fontSize: '1.05rem', fontWeight: '700', marginBottom: '20px' }}>Sourcing Clusters</h4>
             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
-              <li><a href="/canton-fair-2026-guide" style={{ color: 'inherit', textDecoration: 'none' }}>Canton Fair 2026 Guide</a></li>
-              <li><a href="/best-hotels-near-canton-fair" style={{ color: 'inherit', textDecoration: 'none' }}>Hotels Near Pazhou Complex</a></li>
-              <li><a href="/guangzhou-business-visa-guide" style={{ color: 'inherit', textDecoration: 'none' }}>China Business Visa Process</a></li>
-              <li><a href="/how-to-register-for-canton-fair" style={{ color: 'inherit', textDecoration: 'none' }}>Buyer Badge Registration</a></li>
+              <li><a href="/canton-fair-2026-guide" className="footer-link" style={{ color: 'inherit', textDecoration: 'none' }}>Canton Fair 2026 Guide</a></li>
+              <li><a href="/best-hotels-near-canton-fair" className="footer-link" style={{ color: 'inherit', textDecoration: 'none' }}>Hotels Near Pazhou Complex</a></li>
+              <li><a href="/guangzhou-business-visa-guide" className="footer-link" style={{ color: 'inherit', textDecoration: 'none' }}>China Business Visa Process</a></li>
+              <li><a href="/how-to-register-for-canton-fair" className="footer-link" style={{ color: 'inherit', textDecoration: 'none' }}>Buyer Badge Registration</a></li>
             </ul>
           </div>
           {/* Expert Travel Resources */}
@@ -129,10 +130,10 @@ export default function Layout() {
           <div>
             <h4 style={{ color: 'var(--text-light)', fontSize: '1.05rem', fontWeight: '700', marginBottom: '20px' }}>Support</h4>
             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
-              <li><a href="/about-us" style={{ color: 'inherit', textDecoration: 'none' }}>About Us</a></li>
-              <li><a href="/#contact" style={{ color: 'inherit', textDecoration: 'none' }}>Contact</a></li>
-              <li><a href="/privacy-policy" style={{ color: 'inherit', textDecoration: 'none' }}>Privacy Policy</a></li>
-              <li><a href="/terms-and-conditions" style={{ color: 'inherit', textDecoration: 'none' }}>Terms &amp; Conditions</a></li>
+              <li><a href="/about-us" className="footer-link" style={{ color: 'inherit', textDecoration: 'none' }}>About Us</a></li>
+              <li><a href="/#contact" className="footer-link" style={{ color: 'inherit', textDecoration: 'none' }}>Contact</a></li>
+              <li><a href="/privacy-policy" className="footer-link" style={{ color: 'inherit', textDecoration: 'none' }}>Privacy Policy</a></li>
+              <li><a href="/terms-and-conditions" className="footer-link" style={{ color: 'inherit', textDecoration: 'none' }}>Terms &amp; Conditions</a></li>
             </ul>
 
           </div>
@@ -158,11 +159,11 @@ export default function Layout() {
         </div>
       </footer>
 
-      <React.Suspense fallback={null}>
+      <Suspense fallback={null}>
         {/* <Chatbot /> */}
         <FloatingWhatsApp />
         {isModalOpen && <BookingModal onClose={handleCloseModal} customText={modalText} customTitle={modalTitle} />}
-      </React.Suspense>
+      </Suspense>
 
       {isPopupFormOpen && <PopupForm onClose={handleClosePopup} />}
     </div>

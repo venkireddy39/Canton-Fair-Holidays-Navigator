@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   Phone,
   MessageCircle,
-  AlertCircle,
   User,
   Send,
   Mail,
@@ -46,7 +45,6 @@ const ContactCTA = () => {
     business_category: ''
   });
 
-  const [errorMsg, setErrorMsg] = useState('');
   const [showSuccess, setShowSuccess] = useState(false);
   const [shakeForm, setShakeForm] = useState(false);
 
@@ -149,7 +147,6 @@ const ContactCTA = () => {
 
     } catch (error) {
       console.error(error);
-      setErrorMsg('Submission failed');
     } finally {
       setIsSubmitting(false);
     }

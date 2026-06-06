@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import { PhoneCall, Menu, X } from 'lucide-react';
 import './Header.css'; // Let's import specific Header styles for the menu
 

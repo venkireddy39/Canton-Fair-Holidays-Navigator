@@ -1,4 +1,3 @@
-import React from 'react';
 import SeoHelmet from '../components/SeoHelmet';
 import ContactCTA from '../components/ContactCTA';
 import { ShieldCheck, Award, Users2, Landmark } from 'lucide-react';
@@ -40,7 +39,7 @@ export default function AboutUsPage() {
               our travel blueprints guarantee maximum productivity, full visa compliance, and premium logistics support.
             </p>
 
-            <h3 className="text-2xl font-bold text-light mb-6">Our Core Value Pillars</h3>
+            <h3 className="explore-more-title">Explore More</h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '30px', marginTop: '30px' }}>
               
               <div className="glass-card" style={{ padding: '25px', borderRadius: '16px', background: 'var(--card-bg)' }}>

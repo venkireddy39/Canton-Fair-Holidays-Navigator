@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { FileText, Building2, Car, MessageSquare, Factory, Navigation } from 'lucide-react';
 

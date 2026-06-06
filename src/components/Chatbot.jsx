@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { X, Send, User } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './Chatbot.css';
@@ -37,7 +37,7 @@ const Chatbot = () => {
       // Helper to check if a string contains any of the keywords
       const containsAny = (keywords) => keywords.some(keyword => text.includes(keyword));
 
-      let botResponse = "";
+      let botResponse;
 
       // 1. Unrelated topics first (Rule 7: coding, politics, medical, sports, unrelated)
       const unrelatedKeywords = [

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 import ReactDOM from 'react-dom';
 import { X, Phone, MessageCircle } from 'lucide-react';
 import { motion } from 'framer-motion';

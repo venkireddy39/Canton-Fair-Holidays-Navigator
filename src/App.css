@@ -659,3 +659,75 @@ section {
   .page-hero h1 { font-size: 1.8rem; }
   .premium-grid { grid-template-columns: 1fr; }
 }
+
+
+/* Explore More UI Override */
+.page-section-light {
+  background-color: #f0f5f9 !important;
+}
+.page-section-light:has(.explore-more-title) {
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+}
+.page-section-light::before {
+  display: none !important;
+}
+.page-section-light .container {
+  max-width: 1400px !important;
+  margin: 0 auto;
+  text-align: center !important;
+}
+
+.explore-more-title {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 2.2rem !important;
+  color: #112A46 !important;
+  text-align: center;
+  margin-top: 0 !important;
+  margin-bottom: 25px !important;
+  font-weight: 700;
+}
+
+.related-grid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 15px 20px !important;
+  padding-left: 0;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.related-card {
+  position: relative;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #1a1a1a !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease, transform 0.2s ease !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 8px 16px !important;
+  border-radius: 8px !important;
+  overflow: visible !important;
+  backdrop-filter: none !important;
+  transform: none !important;
+}
+
+.related-card:hover {
+  color: #0077b6 !important;
+  background-color: rgba(0, 119, 182, 0.05) !important;
+  transform: translateY(-2px) !important;
+}
+
+.related-card::before, .related-card::after {
+  display: none !important;
+}
+
+

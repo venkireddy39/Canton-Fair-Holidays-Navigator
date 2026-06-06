@@ -1,6 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Star, ShieldCheck, Users, Globe, Building2, Flame } from 'lucide-react';
+import { Star, ShieldCheck, Users, Globe, Building2 } from 'lucide-react';
 
 const TrustSection = () => {
   const stats = [

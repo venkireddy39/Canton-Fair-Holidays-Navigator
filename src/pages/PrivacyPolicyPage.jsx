@@ -1,4 +1,3 @@
-import React from 'react';
 import SeoHelmet from '../components/SeoHelmet';
 
 export default function PrivacyPolicyPage() {
