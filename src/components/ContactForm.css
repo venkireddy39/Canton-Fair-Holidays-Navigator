@@ -452,31 +452,222 @@ select.contact-input option {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
+  .contact-two-col {
+    gap: 25px;
+    max-width: 100%;
+  }
+
   .contact-form-card {
-    padding: 32px 24px;
+    padding: 30px 20px;
     border-radius: 16px;
   }
 
   .contact-form-header h3 {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .contact-input {
-    padding: 14px 14px 14px 42px;
-    font-size: 14px;
-  }
-
-  .contact-submit-btn {
-    padding: 14px 20px;
+    padding: 13px 13px 13px 40px;
     font-size: 15px;
   }
 
+  .contact-input-icon {
+    left: 14px;
+    top: 16px;
+  }
+
+  .contact-submit-btn {
+    padding: 13px 18px;
+    font-size: 15px;
+    gap: 8px;
+  }
+
   .contact-hero-image {
-    height: 130px;
+    height: 140px;
   }
 
   .contact-info-body {
-    padding: 10px 20px 25px;
+    padding: 10px 24px 25px;
+  }
+
+  .contact-action-buttons {
+    max-width: 280px;
+  }
+
+  .call-btn {
+    padding: 11px 20px;
+    font-size: 15px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-two-col {
+    gap: 20px;
+    padding: 0;
+  }
+
+  .contact-form-card {
+    padding: 24px 18px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  .contact-form-header {
+    margin-bottom: 24px;
+  }
+
+  .contact-form-header h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .contact-form-header p {
+    font-size: 13px;
+  }
+
+  .contact-inline-form {
+    gap: 16px;
+  }
+
+  .contact-input-group {
+    width: 100%;
+  }
+
+  .contact-input {
+    padding: 12px 12px 12px 38px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+
+  .contact-input-icon {
+    left: 12px;
+    top: 15px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .contact-submit-btn {
+    padding: 12px 16px;
+    font-size: 14px;
+    gap: 8px;
+    border-radius: 10px;
+  }
+
+  .contact-form-success {
+    padding: 30px 16px;
+  }
+
+  .contact-success-icon {
+    width: 64px;
+    height: 64px;
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  .contact-form-success h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .contact-form-success p {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .contact-hero-image {
+    height: 120px;
+  }
+
+  .contact-info-body {
+    padding: 8px 18px 20px;
+  }
+
+  .contact-info-body h2 {
+    font-size: clamp(20px, 4vw, 28px);
+    margin-bottom: 12px;
+  }
+
+  .contact-info-body > p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .contact-action-buttons {
+    max-width: 100%;
+    gap: 12px;
+  }
+
+  .contact-action-buttons .whatsapp-btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 11px 16px;
+  }
+
+  .mobile-call-buttons {
+    gap: 10px;
+  }
+
+  .call-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+    gap: 8px;
+    border-width: 1.5px;
+  }
+
+  .contact-field-error {
+    font-size: 12px;
+    margin-top: 4px;
+  }
+
+  .contact-form-error {
+    font-size: 13px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 375px) {
+  .contact-form-card {
+    padding: 20px 16px;
+  }
+
+  .contact-form-header h3 {
+    font-size: 18px;
+  }
+
+  .contact-input {
+    padding: 11px 11px 11px 36px;
+    font-size: 13px;
+  }
+
+  .contact-input-icon {
+    left: 11px;
+    top: 14px;
+    width: 15px;
+    height: 15px;
+  }
+
+  .contact-submit-btn {
+    padding: 11px 14px;
+    font-size: 13px;
+  }
+
+  .contact-info-body h2 {
+    font-size: clamp(18px, 3.5vw, 24px);
+  }
+
+  .contact-action-buttons {
+    gap: 10px;
+  }
+
+  .contact-action-buttons .whatsapp-btn {
+    font-size: 13px;
+    padding: 10px 14px;
+  }
+
+  .call-btn {
+    padding: 9px 14px;
+    font-size: 13px;
   }
 }

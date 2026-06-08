@@ -89,3 +89,174 @@
 .terms-accordion-list li {
   margin-bottom: 8px;
 }
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .terms-page-container {
+    padding: 50px 18px;
+  }
+
+  .terms-page-wrapper {
+    max-width: 100%;
+  }
+
+  .terms-intro-text {
+    margin-bottom: 32px;
+  }
+
+  .terms-intro-text p {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .terms-accordion-header {
+    padding: 16px 20px;
+    font-size: 15px;
+  }
+
+  .terms-accordion-body {
+    padding: 0 20px 16px 20px;
+    font-size: 13px;
+  }
+
+  .terms-accordion-text {
+    margin-bottom: 10px;
+  }
+
+  .terms-accordion-list {
+    padding-left: 18px;
+    margin-bottom: 12px;
+  }
+
+  .terms-accordion-list li {
+    margin-bottom: 6px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 640px) {
+  .terms-page-container {
+    padding: 45px 16px;
+    min-height: 70vh;
+  }
+
+  .terms-intro-text {
+    margin-bottom: 28px;
+  }
+
+  .terms-intro-text p {
+    font-size: 12px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+
+  .terms-accordion-header {
+    padding: 14px 18px;
+    font-size: 14px;
+  }
+
+  .terms-accordion-body {
+    padding: 0 18px 14px 18px;
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+  .terms-accordion-text {
+    margin-bottom: 8px;
+  }
+
+  .terms-accordion-list {
+    padding-left: 16px;
+    margin-bottom: 10px;
+  }
+
+  .terms-accordion-list li {
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .terms-page-container {
+    padding: 40px 14px;
+  }
+
+  .terms-intro-text {
+    margin-bottom: 24px;
+  }
+
+  .terms-intro-text p {
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+
+  .terms-accordion-container {
+    border-radius: 2px;
+  }
+
+  .terms-accordion-header {
+    padding: 12px 16px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .terms-accordion-body {
+    padding: 0 16px 12px 16px;
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .terms-accordion-text {
+    margin-bottom: 6px;
+  }
+
+  .terms-accordion-list {
+    padding-left: 14px;
+    margin-bottom: 8px;
+  }
+
+  .terms-accordion-list li {
+    margin-bottom: 4px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 375px) {
+  .terms-page-container {
+    padding: 35px 12px;
+  }
+
+  .terms-intro-text {
+    margin-bottom: 20px;
+  }
+
+  .terms-intro-text p {
+    font-size: 10px;
+    margin-bottom: 6px;
+  }
+
+  .terms-accordion-header {
+    padding: 11px 14px;
+    font-size: 12px;
+    gap: 8px;
+  }
+
+  .terms-accordion-body {
+    padding: 0 14px 10px 14px;
+    font-size: 10px;
+  }
+
+  .terms-accordion-text {
+    margin-bottom: 5px;
+  }
+
+  .terms-accordion-list {
+    padding-left: 12px;
+    margin-bottom: 6px;
+  }
+
+  .terms-accordion-list li {
+    margin-bottom: 3px;
+    font-size: 10px;
+  }
+}

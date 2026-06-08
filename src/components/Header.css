@@ -149,6 +149,88 @@
   }
 }
 
+@media (max-width: 640px) {
+  .mobile-menu {
+    width: 85%;
+    max-width: 320px;
+    padding: 90px 24px 30px;
+  }
+
+  .mobile-nav-links {
+    gap: 20px;
+  }
+
+  .mobile-nav-links a {
+    font-size: 18px;
+  }
+
+  .mobile-cta-button {
+    padding: 12px 18px;
+    font-size: 15px;
+    margin-top: 16px;
+  }
+
+  .logo-container {
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-menu {
+    width: 90%;
+    max-width: 280px;
+    padding: 80px 20px 25px;
+  }
+
+  .mobile-nav-links {
+    gap: 18px;
+  }
+
+  .mobile-nav-links a {
+    font-size: 16px;
+  }
+
+  .mobile-cta-button {
+    padding: 11px 16px;
+    font-size: 14px;
+    margin-top: 14px;
+    gap: 8px;
+  }
+
+  .logo-container {
+    height: 26px;
+  }
+
+  .mobile-menu-backdrop {
+    background: rgba(15, 23, 42, 0.4);
+  }
+}
+
+@media (max-width: 375px) {
+  .mobile-menu {
+    width: 92%;
+    max-width: 260px;
+    padding: 75px 18px 20px;
+  }
+
+  .mobile-nav-links {
+    gap: 16px;
+  }
+
+  .mobile-nav-links a {
+    font-size: 15px;
+  }
+
+  .mobile-cta-button {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .logo-container {
+    height: 24px;
+  }
+}
+
 /* Premium Desktop Home Link Slide & Fade Transition on Scroll */
 .desktop-nav .home-link {
   opacity: 0;

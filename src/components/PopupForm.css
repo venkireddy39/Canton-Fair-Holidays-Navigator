@@ -419,10 +419,59 @@
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+  .modal-overlay.popup-center-overlay {
+    padding: 16px;
+  }
+
   .modal-container.popup-center-container {
     width: 95%;
-    max-width: 100%;
+    max-width: 420px;
+  }
+
+  .popup-center-container .modal-content {
+    padding: 36px 28px 32px;
+    border-radius: 18px;
+  }
+
+  .popup-center-container .modal-header h2 {
+    font-size: 26px;
+    margin-bottom: 8px;
+  }
+
+  .popup-center-container .modal-header p {
+    font-size: 14px;
+  }
+
+  .popup-center-container .animated-form {
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .popup-center-container .animated-input {
+    padding: 13px 14px 13px 42px;
+    font-size: 14px;
+  }
+
+  .popup-center-container .cta-button {
+    padding: 13px 20px;
+    font-size: 15px;
+  }
+
+  .popup-center-container .modal-close-btn {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .modal-overlay.popup-center-overlay {
+    padding: 14px;
+  }
+
+  .modal-container.popup-center-container {
+    width: 100%;
+    max-width: 380px;
   }
 
   .popup-center-container .modal-content {
@@ -431,20 +480,181 @@
   }
 
   .popup-center-container .modal-header h2 {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .popup-center-container .modal-header p {
-    font-size: 14px;
+    font-size: 13px;
   }
 
-  .popup-center-container .animated-input {
-    padding: 14px 14px 14px 42px;
-    font-size: 14px;
+  .popup-center-container .animated-form {
+    gap: 14px;
+    margin-top: 20px;
+  }
+
+  .popup-center-container .animated-input,
+  .popup-center-container .animated-select {
+    padding: 12px 13px 12px 40px;
+    font-size: 13px;
+    border-radius: 10px;
+  }
+
+  .popup-center-container .input-icon {
+    left: 13px;
+    width: 15px;
+    height: 15px;
   }
 
   .popup-center-container .cta-button {
-    padding: 14px 20px;
-    font-size: 15px;
+    padding: 12px 18px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+
+  .success-tick-circle {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 16px;
+  }
+
+  .success-title {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .success-desc {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-container.popup-center-container {
+    width: 96%;
+    max-width: 100%;
+  }
+
+  .popup-center-container .modal-content {
+    padding: 28px 20px 24px;
+    border-radius: 14px;
+  }
+
+  .popup-center-container .modal-close-btn {
+    top: 12px;
+    right: 12px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .popup-center-container .modal-header h2 {
+    font-size: 22px;
+    margin-bottom: 6px;
+  }
+
+  .popup-center-container .modal-header p {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+
+  .popup-center-container .animated-form {
+    gap: 12px;
+    margin-top: 18px;
+  }
+
+  .popup-center-container .animated-input,
+  .popup-center-container .animated-select {
+    padding: 11px 12px 11px 38px;
+    font-size: 13px;
+  }
+
+  .popup-center-container .input-icon {
+    left: 12px;
+  }
+
+  .popup-center-container .cta-button {
+    padding: 11px 16px;
+    font-size: 13px;
+    gap: 6px;
+  }
+
+  .popup-center-container .success-modal-green {
+    padding: 40px 24px;
+    border-radius: 14px;
+  }
+
+  .success-tick-circle {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 12px;
+  }
+
+  .success-title {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+
+  .success-desc {
+    font-size: 12px;
+    max-width: 100%;
+  }
+
+  .popup-center-container .field-error-msg {
+    font-size: 12px;
+    gap: 4px;
+  }
+}
+
+@media (max-width: 375px) {
+  .modal-overlay.popup-center-overlay {
+    padding: 12px;
+  }
+
+  .modal-container.popup-center-container {
+    width: 98%;
+  }
+
+  .popup-center-container .modal-content {
+    padding: 24px 18px 20px;
+  }
+
+  .popup-center-container .modal-header h2 {
+    font-size: 20px;
+  }
+
+  .popup-center-container .modal-header p {
+    font-size: 11px;
+  }
+
+  .popup-center-container .animated-form {
+    gap: 10px;
+    margin-top: 14px;
+  }
+
+  .popup-center-container .animated-input,
+  .popup-center-container .animated-select {
+    padding: 10px 11px 10px 36px;
+    font-size: 12px;
+  }
+
+  .popup-center-container .cta-button {
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+
+  .popup-center-container .success-modal-green {
+    padding: 32px 20px;
+  }
+
+  .success-tick-circle {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+  }
+
+  .success-title {
+    font-size: 16px;
+  }
+
+  .success-desc {
+    font-size: 11px;
   }
 }

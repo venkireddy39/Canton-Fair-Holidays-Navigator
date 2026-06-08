@@ -69,9 +69,29 @@
   }
 }
 
+@media (max-width: 640px) {
+  .floating-whatsapp-container {
+    bottom: 18px;
+    right: 18px;
+    padding: 9px 16px;
+    font-size: 13px;
+    gap: 7px;
+    border-radius: 45px;
+  }
+
+  .pulsing-badge {
+    width: 8px;
+    height: 8px;
+  }
+}
+
 @media (max-width: 480px) {
   .floating-whatsapp-container {
-    padding: 10px 15px;
+    bottom: 16px;
+    right: 16px;
+    padding: 9px 14px;
+    font-size: 12px;
+    gap: 6px;
   }
 
   .whatsapp-text {
@@ -79,7 +99,36 @@
   }
 
   .whatsapp-text::before {
-    content: "Talk to Expert";
-    font-size: 13.5px;
+    content: "Chat Now";
+    font-size: 12px;
+  }
+
+  .pulsing-badge {
+    top: -2px;
+    right: -2px;
+    width: 7px;
+    height: 7px;
+    border-width: 1px;
+  }
+}
+
+@media (max-width: 375px) {
+  .floating-whatsapp-container {
+    bottom: 14px;
+    right: 14px;
+    padding: 8px 12px;
+    font-size: 11px;
+    gap: 5px;
+  }
+
+  .whatsapp-text::before {
+    content: "Chat";
+    font-size: 11px;
+  }
+
+  .pulsing-badge {
+    width: 6px;
+    height: 6px;
+    border-width: 1px;
   }
 }
