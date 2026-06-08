@@ -125,6 +125,16 @@ export default function Layout() {
               <li><a href="/blog/import-export-guide-china-india" style={{ color: 'inherit', textDecoration: 'none' }}>China-India Freight Guide</a></li>
             </ul>
           </div>
+          {/* Products */}
+          <div>
+            <h4 style={{ color: 'var(--text-light)', fontSize: '1.05rem', fontWeight: '700', marginBottom: '20px' }}>Products</h4>
+            <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              <li><a href="/canton-fair-phase-1-products" className="footer-link" style={{ color: 'inherit', textDecoration: 'none' }}>Phase1 Products</a></li>
+              <li><a href="/canton-fair-phase-2-products" className="footer-link" style={{ color: 'inherit', textDecoration: 'none' }}>Phase2 Products</a></li>
+              <li><a href="/canton-fair-phase-3-products" className="footer-link" style={{ color: 'inherit', textDecoration: 'none' }}>Phase3 Products</a></li>
+              
+            </ul>
+          </div>
 
           {/* Support Links */}
           <div>

@@ -169,7 +169,7 @@ const ContactCTA = () => {
             transition={{ duration: 0.6 }}
           >
             <div className="contact-hero-image"></div>
-            
+
             <div className="contact-info-body">
               <h2 style={{ fontSize: 'clamp(27px, 3.6vw, 36px)', marginBottom: '20px' }}>
                 Contact and Booking
