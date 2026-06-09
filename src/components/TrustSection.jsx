@@ -309,31 +309,31 @@ const TrustSection = () => {
                     {test.id === 1 ? (
                       <img
                         src="/testimonials1.png"
-                        alt={test.name}
+                        alt={`${test.name}, satisfied Canton Fair travel customer from ${test.location}`}
                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                       />
                     ) : test.id === 2 ? (
                       <img
                         src="https://tse3.mm.bing.net/th/id/OIP.6lC6Yk0OD4Kw8otd01kzyQHaFF?pid=Api&P=0&h=180"
-                        alt={test.name}
+                        alt={`${test.name}, CA professional and Canton Fair tour testimonial from ${test.location}`}
                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                       />
                     ) : test.id === 3 ? (
                       <img
                         src="/testimonials2.png"
-                        alt={test.name}
+                        alt={`${test.name}, business owner and Canton Fair traveler from ${test.location}`}
                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                       />
                     ) : test.id === 4 ? (
                       <img
                         src="/testimonials3.png"
-                        alt={test.name}
+                        alt={`${test.name}, entrepreneur who booked Canton Fair travel package from ${test.location}`}
                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                       />
                     ) : test.id === 5 ? (
                       <img
                         src="/testimonials4.png"
-                        alt={test.name}
+                        alt={`${test.name}, satisfied Canton Fair customer from ${test.location}`}
                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                       />
                     ) : test.id === 6 ? (

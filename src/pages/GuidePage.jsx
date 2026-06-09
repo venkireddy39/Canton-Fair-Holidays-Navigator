@@ -12,7 +12,7 @@ function GuidePage() {
   return (
     <>
       <SeoHelmet
-        title="Complete Canton Fair 2026 Guide | Schedules, Venues & Logistics"
+        title="Canton Fair 2026: Dates, Location, phases, Travel, Hotels & Importer Guide"
         description="Your complete guide to the Canton Fair 2026 in Guangzhou. Explore phase schedules, venues, registration steps, recommended hotels, and visa requirements."
         canonical="https://holidaysnavigator.com/canton-fair-2026-guide"
         breadcrumb={[
@@ -25,29 +25,78 @@ function GuidePage() {
       <main className="page-container">
         <section className="page-hero">
           <div className="page-hero-content">
-            <h1 style={{ color: '#fff', fontSize: 'clamp(1.96rem, 7.0vw, 2.8rem)', marginBottom: '20px' }}>Complete Canton Fair 2026 Guide | Schedules, Venues & Logistics</h1>
-            <p style={{ color: '#e0e0e0', fontSize: 'clamp(0.84rem, 3.0vw, 1.2rem)' }}>Everything you need to know – phases, venues, hotels, visa, transport, and registration.</p>
+            <h1 style={{ color: '#fff', fontSize: 'clamp(1.96rem, 7.0vw, 2.8rem)', marginBottom: '20px' }}>140th Canton Fair 2026: Dates, Time, Location, phases, Travel, Hotels and Importer Guide</h1>
+            <p style={{ color: '#e0e0e0', fontSize: 'clamp(0.84rem, 3.0vw, 1.2rem)' }}>Everything you need to know – venues, visa, transport, and registration.</p>
           </div>
         </section>
+        <article className="blog-article" style={{ maxWidth: '900px', margin: '40px auto', padding: '0 20px' }}>
+          <div className="article-meta" style={{ textAlign: 'center', color: 'var(--text-muted)', marginBottom: '20px' }}>
+            <span>By Holidays Navigator</span> • <time dateTime="2026-06-08">June 8, 2026</time>
+          </div>
         <section className="overview-section" style={{ padding: '60px 0' }}>
           <div className="container">
-            <h2 style={{ fontSize: 'clamp(1.75rem, 6.3vw, 2.5rem)', marginBottom: '20px', textAlign: 'center' }}>Overview</h2>
-            <p style={{ fontSize: 'clamp(0.77rem, 2.8vw, 1.1rem)', textAlign: 'center', maxWidth: '800px', margin: '0 auto', color: 'var(--text-muted)' }}>The Canton Fair is the world’s largest trade fair, attracting millions of visitors. Our guide helps you navigate each phase, find accommodation, handle visa requirements, and book airport transfers.</p>
+            <h2 style={{ fontSize: 'clamp(1.75rem, 6.3vw, 2.5rem)', marginBottom: '20px', textAlign: 'center' }}>📅 <strong>What Is Canton Fair 2026?</strong></h2>
+            <p style={{ fontSize: 'clamp(0.77rem, 2.8vw, 1.1rem)', textAlign: 'center', maxWidth: '800px', margin: '0 auto', color: 'var(--text-muted)' }}>The Canton Fair is one of the biggest trade shows in the world, held in Guangzhou, China. It brings together thousands of suppliers, manufacturers, and buyers from different countries. People visit the fair to discover new products, connect with trusted suppliers, and grow their businesses. Held twice every year, the Canton Fair is a leading global trade exhibition. The upcoming 140th Canton Fair marks the 140th edition of this internationally recognized business event.</p>
           </div>
         </section>
         <section className="main-content page-section-light" style={{ padding: '60px 0' }}>
           <div className="container">
-            <h2 style={{ fontSize: 'clamp(1.75rem, 6.3vw, 2.5rem)', marginBottom: '30px', textAlign: 'center' }}>Key Highlights</h2>
-            <ul style={{ maxWidth: '800px', margin: '0 auto', fontSize: 'clamp(0.77rem, 2.8vw, 1.1rem)', color: 'var(--text-muted)', lineHeight: '1.8' }}>
-              <li>Phase 1 – Electronics & Machinery (Oct 15‑19)</li>
-              <li>Phase 2 – Consumer Goods & Home Décor (Oct 23‑27)</li>
-              <li>Phase 3 – Textiles, Garments & Shoes (Oct 31‑Nov 4)</li>
-              <li>Best hotels near the venue</li>
-              <li>Visa application guide for international visitors</li>
-              <li>Airport transfer options and registration steps</li>
-            </ul>
+            <h2 style={{ fontSize: 'clamp(1.75rem, 6.3vw, 2.5rem)', marginBottom: '30px', textAlign: 'center' }}>Event , Dates & Phases </h2>
+            <div style={{ maxWidth: '800px', margin: '0 auto', fontSize: 'clamp(0.77rem, 2.8vw, 1.1rem)', color: 'var(--text-muted)', lineHeight: '1.8' }}>
+               <p> <strong>Event : </strong> Canton Fair 2026 Autumn Session </p>
+              <p><strong>Phases:</strong> The Canton Fair is conducted in three phases.</p>
+
+<p><strong>Phase 1 : </strong> Electronics & Machinery (October 15 – October 19)</p>
+
+<p><strong>Phase 2 : </strong> Consumer Goods & Home Decor (October 23 – October 27)</p>
+
+<p><strong>Phase 3 : </strong> Textiles, Garments & Shoes (October 31 – November 04)</p>
+<p><strong>Time : </strong> 9:30 AM – 6:00 PM (Applicable to all three phases).</p>
+<p><strong>Entry & Exit</strong> : You can enter and exit the fair freely during opening hours with a valid buyer badge.</p>
+
+<p><strong>Location : </strong> China Import and Export Fair Complex (Pazhou Complex), No. 380 Yuejiang Middle Road, Haizhu District, Guangzhou, China.</p>
+ 
+
+ 
+  
+            </div>
           </div>
         </section>
+        <section className="transport-section page-section-light" style={{ padding: '40px 0' }}>
+          <div className="container">
+              <h2 style={{ fontSize: 'clamp(1.75rem, 6.3vw, 2.5rem)', marginBottom: '30px', textAlign: 'center' }}>Travel Information</h2>
+            <div style={{ maxWidth: '900px', margin: '0 auto', color: 'var(--text-muted)', lineHeight: '1.8' }}>
+              
+              <p><strong> ✈️ Arriving from Guangzhou Airport : </strong>After landing at Guangzhou Baiyun International Airport, visitors can travel to the Canton Fair Complex by metro, taxi, or private transfer. The journey usually takes around 45–60 minutes depending on traffic conditions.</p>
+
+               
+              <p><strong> 🚄 Travelling from Hong Kong : </strong>Visitors coming from Hong Kong can reach Guangzhou by high-speed train and continue to the exhibition venue by metro or taxi. Ferry services may also be available for certain routes.</p>
+
+               
+              <p> <strong>🚇 Getting Around Guangzhou  : </strong>Guangzhou has a well-connected public transportation network, including metro lines, buses, and taxis. The metro is the most convenient option for reaching the Canton Fair venue.</p>
+                <br />
+              <p style={{ fontWeight:   2900 }}><strong>Travel Tip: </strong>  During the Canton Fair, transportation services can be very busy. It is recommended to start your journey early and allow extra travel time.</p>
+            </div>
+          </div>
+        </section>
+        <section className="hotels-section page-section" style={{ padding: '40px 0' }}>
+          <div className="container">
+            <h2 style={{ fontSize: 'clamp(1.75rem, 6.3vw, 2.5rem)', marginBottom: '30px', textAlign: 'center' }}><strong>Hotels &amp; Accommodation</strong></h2>
+            <div style={{ maxWidth: '900px', margin: '0 auto', color: 'var(--text-muted)', lineHeight: '1.8' }}>
+              <p>Hotels near <strong>Pazhou Complex</strong> or in <strong>Haizhu / Tianhe / Yuexiu Districts</strong> are most convenient.</p>
+
+              <p><strong>Recommended options:</strong></p>
+              <p>Langham Place Guangzhou</p>
+<p>Shangri-La Hotel Guangzhou</p>
+<p>InterContinental Guangzhou Exhibition Center</p>
+<p>Pazhou Hotel (Budget-Friendly)</p>
+<p>Hotels with Shuttle Service to the Fair</p>
+
+              <p style={{ marginTop: '12px', fontStyle: 'italic' }}>  <strong>Planning Ahead : </strong>   As thousands of international visitors attend the Canton Fair, nearby hotels are often in high demand. Early booking is recommended for a comfortable stay.</p>
+            </div>
+          </div>
+        </section>
+
         <section className="benefits-section" style={{ padding: '60px 0', background: 'var(--bg-light)' }}>
           <div className="container">
             <h2 style={{ fontSize: 'clamp(1.75rem, 6.3vw, 2.5rem)', marginBottom: '40px', textAlign: 'center' }}>Why Use Our Guide?</h2>
@@ -94,6 +143,7 @@ function GuidePage() {
             </ul>
           </div>
         </section>
+        </article>
         <ContactCTA />
       </main>
     </>
