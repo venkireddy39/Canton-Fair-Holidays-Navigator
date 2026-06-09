@@ -146,7 +146,7 @@ function GuidePage() {
                 </p>
               </div>
             </div>
-          </section>
+          </section><br></br>
 
           <section className="importing-guide page-section-light" style={{ padding: '40px 0' }}>
             <div className="container">
@@ -156,23 +156,23 @@ function GuidePage() {
 
               <div style={{ maxWidth: '900px', margin: '0 auto', color: 'var(--text-muted)', lineHeight: '1.8' }}>
 
-                <p><b>1. Prepare Your Travel Plans</b><br />
+                <p><b>1. Prepare Your Travel Plans : </b>
                   Arrange your visa, flights, accommodation, and travel schedule well in advance to avoid last-minute issues.</p>
 
-                <p><b>2. Complete Buyer Registration</b><br />
+                <p><b>2. Complete Buyer Registration : </b>
                   Register before arriving at the fair to save time and simplify the entry process.</p>
 
-                <p><b>3. Shortlist Potential Suppliers</b><br />
+                <p><b>3. Shortlist Potential Suppliers : </b>
                   Review exhibitor information and create a list of suppliers that match your business requirements.</p>
 
-                <p><b>4. Attend the Exhibition</b><br />
+                <p><b>4. Attend the Exhibition : </b>
                   Visit supplier booths, collect catalogs, compare products, and discuss pricing and sample options.</p>
 
-                <p><b>5. Evaluate and Confirm Orders</b><br />
+                <p><b>5. Evaluate and Confirm Orders : </b>
                   After the event, review supplier quotations, request samples if needed, and finalize purchasing agreements.</p>
 
-                <p><b>6. Organize Shipping and Delivery</b><br />
-                  Choose a suitable shipping method and coordinate freight, customs clearance, and final delivery arrangements.</p>
+                <p><b>6. Organize Shipping and Delivery : </b>
+                  Choose a suitable shipping method and coordinate freight, customs clearance, and final delivery arrangements.</p><br></br>
                 <h3>Helpful Tips for First-Time Visitors</h3>
                 <p>✔ Reserve flights and accommodation early, as demand increases significantly during the fair period.</p>
 
@@ -193,31 +193,54 @@ function GuidePage() {
             </div>
           </section>
 
-
-          <section className="benefits-section" style={{ padding: '60px 0', background: 'var(--bg-light)' }}>
+          <section className="page-section-light" style={{ padding: '60px 0' }}>
             <div className="container">
-              <h2 style={{ fontSize: 'clamp(1.75rem, 6.3vw, 2.5rem)', marginBottom: '40px', textAlign: 'center' }}>
-                Why Use Our Guide?
-              </h2>
+              <h3
+                style={{
+                  fontSize: 'clamp(1.75rem, 2 vw, 1.5rem)',
+                  marginBottom: '30px',
+                  textAlign: 'center'
+                }}
+              >
+                Planning Your Canton Fair Trip? We're Here to Help
+              </h3>
 
-              <div className="cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: '30px' }}>
-                <div className="card" style={{ padding: '20px', border: '1px solid var(--border-color)', borderRadius: '12px' }}>
-                  <h3>Comprehensive</h3>
-                  <p>All phases, logistics, and tips in one place.</p>
-                </div>
+              <div
+                style={{
+                  maxWidth: '900px',
+                  margin: '0 auto',
+                  color: 'var(--text-muted)',
+                  lineHeight: '1.8'
+                }}
+              >
+                <p>
+                  If you're planning to attend the Canton Fair but need help with travel arrangements,
+                  accommodation, registration, or local transportation, <u>Holidays</u> <u>Navigator</u> can make
+                  your journey smoother & more convenient.
+                </p>
 
-                <div className="card" style={{ padding: '20px', border: '1px solid var(--border-color)', borderRadius: '12px' }}>
-                  <h3>Up-to-date</h3>
-                  <p>Official information verified for 2026.</p>
-                </div>
+                <p><strong>✔ Travel Planning Support:</strong> Assistance with flights, hotels, and airport transfers.</p>
 
-                <div className="card" style={{ padding: '20px', border: '1px solid var(--border-color)', borderRadius: '12px' }}>
-                  <h3>Easy Booking</h3>
-                  <p>Direct links to hotels, visas, and transport.</p>
-                </div>
+                <p><strong>✔ Canton Fair Guidance:</strong> Helpful information about registration, venue access, and visitor preparation.</p>
+
+                <p><strong>✔ Hotel Recommendations:</strong> Suggestions for comfortable accommodation near the Canton Fair Complex.</p>
+
+                <p><strong>✔ Local Transportation Tips:</strong> Guidance on metro routes, taxis, and getting around Guangzhou efficiently.</p>
+
+                <p><strong>✔ Practical Travel Resources:</strong> Useful tips and information to help first-time and returning visitors have a hassle-free experience.</p>
+
+                <p>
+                  Whether you are attending the Canton Fair for the first time or are a regular visitor,
+                  Holidays Navigator helps you plan a more organized, comfortable, and productive trip.
+                </p>
+
+                <p>
+                  <strong> With Holidays Navigator, you can focus on exploring business opportunities while we help simplify your travel experience.</strong>
+                </p>
               </div>
             </div>
           </section>
+
 
           <section className="page-section-light">
             <div className="container text-center">
