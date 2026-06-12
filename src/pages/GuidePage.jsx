@@ -88,7 +88,7 @@ function GuidePage() {
               <h2 style={{ fontSize: 'clamp(1.75rem, 6.3vw, 2.5rem)', marginBottom: '30px', textAlign: 'center' }}>
                 Travel Information
               </h2>
-              <div style={{ maxWidth: '900px', margin: '0 auto', color: 'var(--text-muted)', lineHeight: '1.8' }}>
+              <div style={{ maxWidth: '900px', margin: '0 auto', color: 'var(--text-muted)', lineHeight: '1.8', textAlign: 'left' }}>
                 <p><strong> ✈️ Arriving from Guangzhou Airport : </strong>After landing at Guangzhou Baiyun International Airport, visitors can travel to the Canton Fair Complex by metro, taxi, or private transfer. The journey usually takes around 45–60 minutes depending on traffic conditions.</p>
 
                 <p><strong> 🚄 Travelling from Hong Kong : </strong>Visitors coming from Hong Kong can reach Guangzhou by high-speed train and continue to the exhibition venue by metro or taxi. Ferry services may also be available for certain routes.</p>
@@ -105,7 +105,7 @@ function GuidePage() {
               <h2 style={{ fontSize: 'clamp(1.75rem, 6.3vw, 2.5rem)', marginBottom: '30px', textAlign: 'center' }}>
                 <strong>Hotels &amp; Accommodation</strong>
               </h2>
-              <div style={{ maxWidth: '900px', margin: '0 auto', color: 'var(--text-muted)', lineHeight: '1.8' }}>
+              <div style={{ maxWidth: '900px', margin: '0 auto', color: 'var(--text-muted)', lineHeight: '1.8', textAlign: 'left' }}>
                 <p>Hotels near <strong>Pazhou Complex</strong> or in <strong>Haizhu / Tianhe / Yuexiu Districts</strong> are most convenient.</p>
 
                 <p><strong>Recommended options:</strong></p>
@@ -129,7 +129,7 @@ function GuidePage() {
                 <strong>How the Canton Fair Supports Importers</strong>
               </h2>
 
-              <div style={{ maxWidth: '900px', margin: '0 auto', color: 'var(--text-muted)', lineHeight: '1.8' }}>
+              <div style={{ maxWidth: '900px', margin: '0 auto', color: 'var(--text-muted)', lineHeight: '1.8', textAlign: 'left' }}>
                 <p>
                   The Canton Fair provides a valuable opportunity for businesses looking to source products directly from manufacturers. By attending the event, buyers can:
                 </p>
@@ -154,7 +154,7 @@ function GuidePage() {
                 <strong>Step-by-Step Importing Guide for New Visitors</strong>
               </h2>
 
-              <div style={{ maxWidth: '900px', margin: '0 auto', color: 'var(--text-muted)', lineHeight: '1.8' }}>
+              <div style={{ maxWidth: '900px', margin: '0 auto', color: 'var(--text-muted)', lineHeight: '1.8', textAlign: 'left' }}>
 
                 <p><b>1. Prepare Your Travel Plans : </b>
                   Arrange your visa, flights, accommodation, and travel schedule well in advance to avoid last-minute issues.</p>
@@ -210,7 +210,8 @@ function GuidePage() {
                   maxWidth: '900px',
                   margin: '0 auto',
                   color: 'var(--text-muted)',
-                  lineHeight: '1.8'
+                  lineHeight: '1.8',
+                  textAlign: 'left'
                 }}
               >
                 <p>

@@ -231,24 +231,4 @@
   }
 }
 
-/* Premium Desktop Home Link Slide & Fade Transition on Scroll */
-.desktop-nav .home-link {
-  opacity: 0;
-  max-width: 0;
-  margin-right: -15px; /* Offset the flexbox 15px gap when hidden */
-  overflow: hidden;
-  display: inline-block;
-  white-space: nowrap;
-  pointer-events: none;
-  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-              max-width 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-              margin 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-              color 0.3s ease;
-}
 
-.header.scrolled .desktop-nav .home-link {
-  opacity: 1;
-  max-width: 80px; /* Upper limit for text 'Home' */
-  margin-right: 0;
-  pointer-events: auto;
-}

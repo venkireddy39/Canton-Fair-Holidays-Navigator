@@ -81,11 +81,11 @@ section {
 
 .nav-links {
   display: flex;
-  gap: 15px;
+  gap: 20px;
 }
 
 .nav-links a {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--text-light);
   transition: color 0.3s ease;
@@ -1012,6 +1012,9 @@ section {
 .page-section-light .container {
   max-width: 1400px !important;
   margin: 0 auto;
+}
+
+.page-section-light:has(.explore-more-title) .container {
   text-align: center !important;
 }
 

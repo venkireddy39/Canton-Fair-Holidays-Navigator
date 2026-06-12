@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Star, ShieldCheck, Users, Globe, Building2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const TrustSection = () => {
   const stats = [
@@ -42,14 +43,7 @@ const TrustSection = () => {
       rating: 5,
       feedback: " Holidays navigator a good choice as travel partner. The service they provided to us right from planning, ticket booking, local conveyance, guide etc., was excellent. I recommend you all to take Holidays Navigator as your travel partner and you enjoy your vacation."
     },
-    {
-      id: 2,
-      name: "CA Mounika",
-      role: "★ ★ ★ ★ ★  ",
-      location: "Andhra Pradesh, india",
-      rating: 5,
-      feedback: "We have taken couple of trips with Holidays Navigator. We got the best price. The process of booking a vacation is simple with them. They understood our requirements clearly and helped with the exact itinerary."
-    },
+
     {
       id: 3,
       name: "Amit pandya",
@@ -64,23 +58,7 @@ const TrustSection = () => {
       role: "★ ★ ★ ★ ★  ",
       location: "Hyderabad, India",
       rating: 5,
-      feedback: "I recently had the pleasure of booking my flight tickets through Holiday Navigators, and I can confidently say that it was one of the best and responsible service provider I come across. From the moment I contacted them to the day I returned from my trip, Holiday Navigators went above and beyond to ensure my journey was seamless and memorable. Thank you, Holiday Navigators, for making my trip truly exceptional!"
-    },
-    {
-      id: 5,
-      name: "133.Sravya Samhitha",
-      role: "★ ★ ★ ★ ★  ",
-      location: "Karnataka, India",
-      rating: 5,
-      feedback: "It was a great experience with Holidays Navigator. Our driver was very well aware of all the places n guided us every day.The hotels given were amazing . Would like to plan a trip with Holidays navigator again for sure ."
-    },
-    {
-      id: 6,
-      name: "Teja Sai",
-      role: "★ ★ ★ ★ ★  ",
-      location: "Bangalore, India",
-      rating: 5,
-      feedback: "Firstly we had been to many trips with holidays navigator. The greatest part with them is they not only just book your tickets and send to trip unlike other travel companies, they are available anytime even in midnight to hear your call regarding any issue. They make sure you have the best trip possible.  Everything there is provided as per our convenience and best possible way. Thank you for making the trips possible👍💥"
+      feedback: " It was a great experience with Holidays Navigator. Our driver was very well aware of all the places n guided us every day. The hotels given were amazing. Would like to plan a trip with Holidays navigator again for sure."
     }
   ];
 
@@ -104,6 +82,7 @@ const TrustSection = () => {
       url: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=600&q=80",
       alt: "Business negotiations at factory sourcing display",
       title: "Supplier Negotiations"
+
     }
   ];
 
@@ -309,36 +288,30 @@ const TrustSection = () => {
                     {test.id === 1 ? (
                       <img
                         src="/testimonials1.png"
-                        alt={`${test.name}, satisfied Canton Fair travel customer from ${test.location}`}
+                        alt={test.name}
                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                       />
                     ) : test.id === 2 ? (
                       <img
                         src="https://tse3.mm.bing.net/th/id/OIP.6lC6Yk0OD4Kw8otd01kzyQHaFF?pid=Api&P=0&h=180"
-                        alt={`${test.name}, CA professional and Canton Fair tour testimonial from ${test.location}`}
+                        alt={test.name}
                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                       />
                     ) : test.id === 3 ? (
                       <img
                         src="/testimonials2.png"
-                        alt={`${test.name}, business owner and Canton Fair traveler from ${test.location}`}
+                        alt={test.name}
                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                       />
                     ) : test.id === 4 ? (
                       <img
                         src="/testimonials3.png"
-                        alt={`${test.name}, entrepreneur who booked Canton Fair travel package from ${test.location}`}
+                        alt={test.name}
                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                       />
                     ) : test.id === 5 ? (
                       <img
                         src="/testimonials4.png"
-                        alt={`${test.name}, satisfied Canton Fair customer from ${test.location}`}
-                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                      />
-                    ) : test.id === 6 ? (
-                      <img
-                        src="/testimonials5.png"
                         alt={test.name}
                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                       />
@@ -357,6 +330,26 @@ const TrustSection = () => {
                 </div>
               </motion.div>
             ))}
+          </div>
+
+          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '40px' }}>
+            <Link
+              to="/canton-fair-testimonials"
+              className="outline-button"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                padding: '12px 28px',
+                borderRadius: '30px',
+                fontSize: '15px',
+                fontWeight: '600',
+                transition: 'all 0.3s ease',
+                textDecoration: 'none'
+              }}
+            >
+              Show More Testimonials
+            </Link>
           </div>
         </div>
       </div>

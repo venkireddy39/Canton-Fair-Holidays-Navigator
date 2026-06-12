@@ -101,7 +101,7 @@ export default function Layout() {
 
             </div>
             <p style={{ margin: 0, fontSize: '0.8rem' }}>
-              <strong>Address:</strong> Kakatiya Hills, Madhapur Hyderabad, Telangana 500033
+              <strong>Address:</strong> 4th Floor, Trendz Uptown, Kakatiya Hills, Guttala_Begumpet, Kavuri Hills, Madhapur, Hyderabad, Telangana 500081
             </p>
           </div>
 
@@ -132,7 +132,7 @@ export default function Layout() {
               <li><a href="/canton-fair-phase-1-products" className="footer-link" style={{ color: 'inherit', textDecoration: 'none' }}>Phase1 Products</a></li>
               <li><a href="/canton-fair-phase-2-products" className="footer-link" style={{ color: 'inherit', textDecoration: 'none' }}>Phase2 Products</a></li>
               <li><a href="/canton-fair-phase-3-products" className="footer-link" style={{ color: 'inherit', textDecoration: 'none' }}>Phase3 Products</a></li>
-              
+
             </ul>
           </div>
 

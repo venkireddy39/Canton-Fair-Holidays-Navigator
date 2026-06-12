@@ -16,6 +16,7 @@ import PackagesPage from './pages/PackagesPage';
 import AboutUsPage from './pages/AboutUsPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import TermsPage from './pages/TermsPage';
+import TestimonialsPage from './pages/TestimonialsPage';
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,7 @@ const router = createBrowserRouter([
       { path: 'about-us', element: <AboutUsPage /> },
       { path: 'privacy-policy', element: <PrivacyPolicyPage /> },
       { path: 'terms-and-conditions', element: <TermsPage /> },
+      { path: 'canton-fair-testimonials', element: <TestimonialsPage /> },
     ]
   }
 ]);

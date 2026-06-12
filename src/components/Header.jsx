@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import { PhoneCall, Menu, X } from 'lucide-react';
+import { useLocation, Link } from 'react-router-dom';
 import './Header.css'; // Let's import specific Header styles for the menu
 
 const Header = ({ onBookNow }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,20 +29,22 @@ const Header = ({ onBookNow }) => {
     <header className={`header ${scrolled ? 'scrolled' : ''}`} role="banner" aria-label="Site Header">
       <div className="header-container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div className="logo logo-container">
-          <img
-            src={scrolled ? "/nobackgrounddark.png" : "/nobackgroundlight.png"}
-            alt="Holidays Navigator Logo"
-            title="Holidays Navigator"
-            className="logo-img"
-            fetchpriority="high"
-            width="200"
-            height="50"
-          />
+          <Link to="/" style={{ display: 'block', height: '100%' }}>
+            <img
+              src={scrolled ? "/nobackgrounddark.png" : "/nobackgroundlight.png"}
+              alt="Holidays Navigator Logo"
+              title="Holidays Navigator"
+              className="logo-img"
+              fetchpriority="high"
+              width="200"
+              height="50"
+            />
+          </Link>
         </div>
 
         {/* Desktop Nav */}
         <nav className="nav-links desktop-nav">
-          <a href="/#home" className="home-link">Home</a>
+          <a href="/#home">Home</a>
           <a href="/canton-fair-2026-guide">Canton Fair</a>
           <a href="/canton-fair-phase-1-products">Products</a>
           <a href="/canton-fair-packages">Packages</a>
